@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+
+
+const {image, title, descr, link = '/'} = Astro.props
+
+---
+<div class={`scroll-animation  bg-white border border-gray-100 rounded-2xl px-4 py-5 w-full max-w-[256px] h-[214px] flex flex-col justify-between |
+              sm:h-[285px] sm:max-w-[299px] sm:p-6 xl:h-[300px] `}>
+  <Image src={image} alt={title} class="max-w-[42px] sm:max-w-[52px] md:max-w-[76px]" />
+
+  <div class="">
+    <div class="text-xl text-black font-bold leading-135 -tracking-[0.6px] mb-2 | sm:text-2xl">{title}</div>
+    <p class="text-sm leading-135 text-gray-700 font-medium mb-4 -tracking-[0.14px] | sm:text-base sm:mb-5 sm:-tracking-[0.16px]">{descr}</p>
+    <a href={link} class="font-bold text-primary-500 leading-117 -tracking-[0.48px] text-hover">Learn More</a>
+  </div>
+</div>
+
+<style>
+
+</style>

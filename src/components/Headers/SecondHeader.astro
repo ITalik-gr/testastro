@@ -1,0 +1,57 @@
+---
+import Nav from "../Nav.astro";
+
+const {title, selectedText, titleStyle = "", headerStyle = "", descrStyle="", wrapperStyle = "", descr, textWrapper = "", form = false} = Astro.props
+
+function wrapTextWithBg(text, selectedText) {
+  if (!selectedText || !title) {
+    return text;
+  }
+
+  const wrappedText = text.replace(
+    new RegExp(`(${selectedText})`, 'gi'),
+    '<span class="text-bg py-1">$1</span>'
+  );
+
+  return wrappedText;
+}
+
+const wrappedTitle = wrapTextWithBg(title, selectedText);
+
+---
+
+<header id="header" class={`bg-black relative flex overflow-x-clip ${headerStyle}`}>
+  <Nav />
+
+  <!-- decorative Slots-->
+  <slot name="decorativeStar" />
+  <slot name="decorativeGrid" />
+  <slot name="decorativeColor" />
+
+  <div class="container xl:max-w-[1296px]">
+    <div class={`header-wrapper pt-[110px] pb-[140px] -mt-[1px] | md:pt-[209px] lg:pb-[155px] | ${wrapperStyle} `}>
+      <div class={`flex justify-center ${descr && 'flex-col-center'} ${form && 'lg:items-start'} ${textWrapper}`}>
+        <h1 class={`scroll-animation scroll-animation-scale -tracking-[1.26px] relative text-4xl leading-[109.5%] font-bold | 
+                    ${titleStyle} ${descr && 'mb-4'} | sm:text-center sm:text-5xl | 
+                    md:-tracking-[2.17px] |
+                    lg:text-[62px]`}>
+
+          <slot name="decorativeText" />
+
+          <Fragment set:html={wrappedTitle} />
+        </h1>
+        {descr && (<p class={`scroll-animation delay-[200ms] font-semibold text-sm text-[rgba(255,255,255,0.8)] balance relative z-30 
+                              -tracking-[0.14px] | 410:text-center sm:max-w-[424px] sm:-tracking-[0.16px] sm:text-center md:text-base |
+                              ${descrStyle}
+                              ${form && 'lg:text-left lg:max-w-[450px]'}`}>{descr}</p>)}
+
+      </div>
+      <slot name="form" />
+    </div>
+  </div>
+  
+</header>
+
+<style>
+
+</style>

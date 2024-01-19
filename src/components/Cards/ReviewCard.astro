@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+
+const {userImage, userTraffic, userName, userDescr, stars = 5} = Astro.props
+
+---
+<div class="px-4 pt-4 max-w-[260px] pb-4 border border-gray-100 rounded-2xl 410:max-w-[300px] md:px-6 md:pt-9 ">
+  <!-- Nav (image, increase info) -->
+  <div class="flex mb-8 justify-between">
+    <Image width={70} class="max-w-[70px] rounded-lg max-h-[70px] h-full w-full" src={userImage} alt={userName} />
+
+    <div class="rounded-xl bg-primary-50 px-3 py-[10px] flex justify-center flex-col">
+      <div class="leading-135 font-extrabold text-primary-500">{userTraffic}</div>
+      <div class="text-gray-600 font-semibold leading-135 text-sm">traffic increase</div>
+    </div>
+  </div>
+
+  <!-- Stars -->
+
+  <div class="flex items-center mb-2">
+      {Array.from({ length: stars }).map((_, index) => (
+        <svg class="mr-[2px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <g clip-path="url(#clip0_617_6850)">
+            <path d="M7.84645 1.21568C7.9719 0.914052 8.39919 0.914051 8.52464 1.21568L10.2154 5.28081C10.2683 5.40797 10.3879 5.49485 10.5252 5.50586L14.9138 5.85769C15.2395 5.8838 15.3715 6.29017 15.1234 6.50269L11.7797 9.36692C11.6751 9.45651 11.6294 9.59709 11.6614 9.73105L12.683 14.0136C12.7587 14.3314 12.4131 14.5825 12.1343 14.4123L8.37698 12.1173C8.25945 12.0455 8.11164 12.0455 7.99411 12.1173L4.23681 14.4123C3.95803 14.5825 3.61235 14.3314 3.68814 14.0136L4.7097 9.73105C4.74165 9.59709 4.69597 9.45651 4.59138 9.36692L1.24769 6.50269C0.999596 6.29017 1.13163 5.8838 1.45727 5.85769L5.84592 5.50586C5.98319 5.49485 6.10278 5.40797 6.15567 5.28081L7.84645 1.21568Z" fill="#FDB022"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_617_6850">
+              <rect width="16" height="16" fill="white" transform="translate(0.185547)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      ))}
+  </div>
+
+  <!-- Name -->
+
+  <div class="text-black text-base font-bold leading-135 mb-2">{userName}</div>
+
+  <!-- Descr -->
+
+  <div class="text-gray-700 font-medium leading-135 -tracking-[0.16px] text-base max-w-[249px]">
+    {userDescr}
+  </div>
+
+</div>
+
+
+<style>
+
+</style>

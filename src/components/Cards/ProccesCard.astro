@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+const {title = "", text, image, style = "", link = '#'} = Astro.props
+
+---
+<div class={`scroll-animation ${style} pb-12 pl-[46px] | lg:p-0`}>
+  <Image class="mb-4 max-w-[24px] | md:max-w-none md:mb-5" width={32} height={32} src={image} alt={title} />
+
+  <div class="leading-117 font-bold -tracking-[0.72px] text-white text-2xl mb-2 | md:text-3xl md:mb-3">
+    {title}
+  </div>
+
+  <p class="font-medium text-[rgba(255,255,255,0.77)] text-sm leading-[18.9px] mb-4 -tracking-[0.21px] | md:text-base | lg:max-w-[349px]" set:html={text} />
+  
+  <a href={link} class="font-extrabold -tracking-[0.16px] text-white hover:text-opacity-80 transition-all">Learn more</a>
+</div>  
+
+<style>
+
+</style>

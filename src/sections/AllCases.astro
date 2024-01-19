@@ -1,0 +1,114 @@
+---
+//? Section cases page
+
+import CaseCard from "../components/Cards/CaseCard.astro";
+
+
+import JobSage from '../images/Case/JobSage.svg';
+import ARC from '../images/Case/ARC.svg';
+import Udemy from '../images/Case/Udemy.svg';
+import SnackNation from '../images/Case/SnackNation.svg';
+import FollowUp from '../images/Case/FollowUp.svg';
+import PDF from '../images/Case/PDF.svg';
+import Machinery from '../images/Case/Machinery.svg';
+
+const Cases = [
+  {
+    name: "JobSage",
+    image: JobSage,
+    increase: "14,582%",
+    leads: "32%",
+    conversion: "3,3%",
+  },
+  {
+    name: "ARC Relocation",
+    image: ARC,
+    increase: "6,098%",
+    leads: "74%",
+    conversion: "12,1%",
+  },
+  {
+    name: "Online Courses Site",
+    image: Udemy,
+    increase: "84%",
+    leads: "632%",
+    conversion: "1,2%",
+  },
+  {
+    name: "Snack Nation",
+    image: SnackNation,
+    increase: "132%",
+    leads: "124%",
+    conversion: "6,9%",
+  },
+  {
+    name: "Follow Up Boss",
+    image: FollowUp,
+    increase: "12,421%",
+    leads: "332%",
+    conversion: "2,2%",
+  },
+  {
+    name: "PDF Simpli",
+    image: PDF,
+    increase: "84%",
+    leads: "98%",
+    conversion: "5,2%",
+  },
+  {
+    name: "Machinery eCommerce",
+    image: Machinery,
+    increase: "632%",
+    leads: "12%",
+    conversion: "3,1%",
+  },
+]
+
+
+const {} = Astro.props
+
+---
+<section class="bg-gray-50 pb-9 lg:pb-0 lg:-mb-2">
+  <div class="container max-w-[1084px]">
+    <div class="wrap flex-col-center -mt-[100px] relative z-30 | md:bg-white md:px-4 md:py-6 md:rounded-[32px] lg:-mt-[90px] lg:py-[46px] lg:px-[56px]">
+
+     <!-- Nav -->
+      <div class="scroll-animation hidden max-w-[937px] px-8 w-full mb-5 md:grid grid-cols-4 gap-0">
+        <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex">
+          CLIENT
+        </div>
+        <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-center pr-[90px]">
+          ROAS
+        </div>
+        <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-center md:pr-1 md:text-right">
+          Increase in Sales Leads 
+        </div>
+        <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-end">
+          Conv. Rate Increase
+        </div>
+      </div>
+
+       <!-- Cards -->
+       <div class="flex-col-center flex w-full last:mb-0">
+          {Cases.map((item) => {
+            return (
+              <CaseCard 
+                name={item.name}
+                image={item.image}
+                increase={item.increase}
+                leads={item.leads}
+                conversion={item.conversion}/>
+            )
+          })}
+       </div>
+
+
+     </div> 
+
+   </div>
+</section>
+
+
+<style>
+
+</style>

@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+const {Preview, userPic, userName, userPosition, cardStyle = ""} = Astro.props
+
+---
+<div data-threshold="0.3" class={`videoCard scroll-animation w-fit sm:mr-5 ${cardStyle}`}>
+
+  <div class="video relative rounded-[12px] min-w-[220px] w-full max-w-[230px] h-[380px] mb-4 
+              520:max-w-[420px]
+              md:h-[355px] md:mb-6 md:max-w-lg md:rounded-[20px]">
+
+    <Image width={512} src={Preview} class="w-full h-full object-cover rounded-[12px] md:max-w-lg" alt="Video Preview" />
+
+    <!-- Play Button -->
+    <div class="flex items-center justify-center py-3 px-[14px] absolute 
+                top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 17 21" fill="none">
+        <path d="M1 3.12037C1 2.14921 1 1.66363 1.20249 1.39595C1.37889 1.16277 1.64852 1.01847 1.9404 1.00104C2.27544 0.981034 2.67946 1.25039 3.48752 1.78909L14.0031 8.79946C14.6708 9.24459 15.0046 9.46715 15.1209 9.74767C15.2227 9.99293 15.2227 10.2686 15.1209 10.5138C15.0046 10.7943 14.6708 11.0169 14.0031 11.462L3.48752 18.4724C2.67946 19.0111 2.27544 19.2805 1.9404 19.2604C1.64852 19.243 1.37889 19.0987 1.20249 18.8655C1 18.5979 1 18.1123 1 17.1411V3.12037Z" fill="#8057FF" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <div class="flex items-center">
+
+    <Image width={58} src={userPic} alt={userName} class="mr-3" />
+
+    <div class="">
+      <div class="text-black leading-135 font-bold mb-[2px]">{userName}</div>
+      <div class="text-gray-500 leading-135 font-semibold text-xs max-w-[150px] 
+                    md:text-sm md:max-w-none">{userPosition}</div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+
+</style>

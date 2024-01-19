@@ -1,0 +1,164 @@
+---
+import '../styles/main.css'
+import MainLayout from "../layouts/MainLayout.astro";
+import MainButton from '../components/Buttons/MainButton.astro';
+import HeaderGrid from '../images/header-grid.svg'
+import { Image } from 'astro:assets';
+import Nav from '../components/Nav.astro';
+import OurCase from '../sections/Base/OurCase.astro';
+import InsaneGrowth from '../sections/InsaneGrowth/InsaneGrowth.astro';
+
+
+import Reviews from '../sections/Reviews.astro';
+import Faq from '../sections/Faq.astro';
+import FreeAudit from '../sections/Base/FreeAudit.astro';
+import Footer from '../sections/Base/Footer.astro';
+import AdditionalServices from '../sections/AdditionalServices.astro';
+import BreakdownByState from '../sections/BreakdownByState.astro'
+import MarketsStats from '../sections/MarketsStats.astro';
+import { Dashboard } from '../sections/Dashboard.jsx';
+import InfoCard from '../components/Cards/InfoCard.astro';
+import Parthners from '../sections/Base/Parthners.astro';
+
+
+const {} = Astro.props
+
+---
+
+<MainLayout>
+
+  <header class="header bg-[#0F0F11] relative overflow-x-clip">
+    <Nav />
+  
+    <div class="header-wrapper pb-16 pt-[124px] -mt-[1px] lg:pt-[205px]">
+  
+      <!-- Decorate -->
+      <Image src={HeaderGrid} width={1464} height={525} alt="Header Background" 
+             class="absolute z-0 -top-5 left-1/2 -translate-x-1/2 w-[1464px] h-[525px] object-cover 2xl:w-[1700px]" />
+  
+      <div class="absolute bg-[rgba(129,87,255,0.4)] -top-4 -right-72 md:-right-20 w-[408px] h-[149px] rounded-full blur-[184px]"></div>
+      <div class="absolute bg-[rgba(129,87,255,0.4)] top-44 left-1/2 -translate-x-1/2 hidden sm:flex w-[320px] h-[120px] rounded-full blur-[184px]"></div>
+  
+      <!-- Stars -->
+      <div class="star absolute top-44 right-6 md:right-24 md:top-[400px]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+          <g opacity="0.5" clip-path="url(#clip0_840_999)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70726 9.04654C9.52023 8.7453 9.34816 8.44223 9.19061 8.13317C8.95411 7.66965 8.78082 7.17596 8.57014 6.70186C8.48059 6.5008 8.23888 5.97999 8.21744 5.89962C8.03408 5.19784 8.52936 4.87615 8.67897 4.79366C8.75049 4.75164 9.49497 4.34495 10.0176 5.14129C10.6573 6.11469 11.1597 7.15281 11.5139 8.22614C12.0476 9.0434 12.7009 9.80743 13.4135 10.4496C16.2481 13.0034 19.294 12.117 22.445 10.7928C22.9285 10.5863 23.4888 10.8026 23.7122 11.2757C23.9371 11.7525 23.7477 12.3225 23.2813 12.5644C21.5833 13.4592 19.0271 16.1616 18.547 18.0817C18.4467 18.4836 18.6199 19.283 18.7446 20.0852C18.9164 21.1993 19.0375 22.3213 18.8856 22.876C18.8636 22.9614 18.5453 23.8728 18.4088 24.0434C18.0795 24.4499 17.6845 24.4546 17.4408 24.41C17.1971 24.3654 16.8789 24.2113 16.6264 23.8435C16.3625 23.4591 16.0852 22.5623 15.9951 22.3827C15.6681 21.7313 14.9932 20.4666 14.2542 19.4447C13.8561 18.8945 13.4676 18.3956 13.0919 18.2226C11.7013 17.5821 10.2187 18.3675 8.98752 19.0712C8.84555 19.1506 8.70506 19.2336 8.56345 19.3128C8.09776 19.686 7.58295 20.0327 7.01682 20.3451C6.16236 20.8181 5.67683 20.0533 5.6465 20.002C5.58065 19.8889 5.26541 19.2963 5.84076 18.7721C5.90414 18.7164 6.39962 18.3734 6.59004 18.2402C6.85555 18.0551 7.13028 17.8832 7.40759 17.7145C10.082 15.5071 10.6507 12.1498 9.70726 9.04654ZM12.1123 11.9206C14.2487 13.8391 16.4777 14.2764 18.7731 13.9477L18.7727 13.9479C17.7517 15.1598 16.9182 16.4945 16.6416 17.6054C16.5363 18.0263 16.5847 18.7664 16.6872 19.5777C16.3023 18.9414 15.8621 18.2769 15.4189 17.7367C14.9137 17.12 14.3829 16.6539 13.9149 16.438C13.012 16.0224 12.0712 15.9704 11.1485 16.1317C11.7944 14.8186 12.1045 13.3842 12.1123 11.9206Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_840_999">
+              <rect width="22" height="22" fill="white" transform="translate(0 8.33667) rotate(-22.2681)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+  
+      <div class="star hidden lg:flex absolute top-44 left-32">
+        <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+          <g opacity="0.5" clip-path="url(#clip0_840_999)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70726 9.04654C9.52023 8.7453 9.34816 8.44223 9.19061 8.13317C8.95411 7.66965 8.78082 7.17596 8.57014 6.70186C8.48059 6.5008 8.23888 5.97999 8.21744 5.89962C8.03408 5.19784 8.52936 4.87615 8.67897 4.79366C8.75049 4.75164 9.49497 4.34495 10.0176 5.14129C10.6573 6.11469 11.1597 7.15281 11.5139 8.22614C12.0476 9.0434 12.7009 9.80743 13.4135 10.4496C16.2481 13.0034 19.294 12.117 22.445 10.7928C22.9285 10.5863 23.4888 10.8026 23.7122 11.2757C23.9371 11.7525 23.7477 12.3225 23.2813 12.5644C21.5833 13.4592 19.0271 16.1616 18.547 18.0817C18.4467 18.4836 18.6199 19.283 18.7446 20.0852C18.9164 21.1993 19.0375 22.3213 18.8856 22.876C18.8636 22.9614 18.5453 23.8728 18.4088 24.0434C18.0795 24.4499 17.6845 24.4546 17.4408 24.41C17.1971 24.3654 16.8789 24.2113 16.6264 23.8435C16.3625 23.4591 16.0852 22.5623 15.9951 22.3827C15.6681 21.7313 14.9932 20.4666 14.2542 19.4447C13.8561 18.8945 13.4676 18.3956 13.0919 18.2226C11.7013 17.5821 10.2187 18.3675 8.98752 19.0712C8.84555 19.1506 8.70506 19.2336 8.56345 19.3128C8.09776 19.686 7.58295 20.0327 7.01682 20.3451C6.16236 20.8181 5.67683 20.0533 5.6465 20.002C5.58065 19.8889 5.26541 19.2963 5.84076 18.7721C5.90414 18.7164 6.39962 18.3734 6.59004 18.2402C6.85555 18.0551 7.13028 17.8832 7.40759 17.7145C10.082 15.5071 10.6507 12.1498 9.70726 9.04654ZM12.1123 11.9206C14.2487 13.8391 16.4777 14.2764 18.7731 13.9477L18.7727 13.9479C17.7517 15.1598 16.9182 16.4945 16.6416 17.6054C16.5363 18.0263 16.5847 18.7664 16.6872 19.5777C16.3023 18.9414 15.8621 18.2769 15.4189 17.7367C14.9137 17.12 14.3829 16.6539 13.9149 16.438C13.012 16.0224 12.0712 15.9704 11.1485 16.1317C11.7944 14.8186 12.1045 13.3842 12.1123 11.9206Z" fill="white"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_840_999">
+              <rect width="22" height="22" fill="white" transform="translate(0 8.33667) rotate(-22.2681)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+  
+      <!-- Content -->
+    
+      <div class="container">
+        <div class="wrap z-20 relative flex justify-center sm:items-center flex-col items-center">
+  
+          <!-- Header text + btn -->
+          <div class="w-full text-center flex flex-col items-center">
+  
+            <!-- Mobile top info link -->
+            <div class="w-full flex justify-center sm:hidden z-10">
+              <a href="#" class="text-sm px-[10px] py-[10px] bg-gray-900 rounded-3xl text-white flex items-center w-max mb-4 sm:hidden">
+                Get a free audit. Time is limited
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-[10px] flex" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                  <path d="M3.3335 8.49998H12.6668M12.6668 8.49998L8.00016 3.83331M12.6668 8.49998L8.00016 13.1666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+      
+            <!-- Descktop top info link-->
+            <a href="#" class="hidden sm:flex px-[14px] py-[12px] z-10 bg-gray-800 rounded-3xl text-white items-center w-max mb-6">
+              😎 Hurry up and get a free audit. Time is limited
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-[10px] flex" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path d="M3.3335 8.49998H12.6668M12.6668 8.49998L8.00016 3.83331M12.6668 8.49998L8.00016 13.1666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+      
+            <!-- Title -->
+            <h1 class="text-4xl font-bold leading-[109.5%] tracking-[-1.26px] text-white mb-4 z-10 max-w-sm
+                      sm:text-center sm:text-[48px] sm:max-w-lg
+                      lg:tracking-[-2.87px] lg:text-[62px] lg:max-w-[900px] ">
+                      PPC Agency for Dentists in USA
+            </h1>
+            
+            <p class="font-semibold text-white text-opacity-80 mb-6 z-10 
+                      sm:text-center sm:max-w-none sm:mb-[37px]">
+              Paid ad strategy that drives massive growth
+            </p>
+      
+            <MainButton title="Get Free Audit" style="w-full max-w-sm h-[60px] mb-[72px] md:mb-[80px] sm:max-w-[203px] sm:btn-shadow" />
+          </div>
+
+          <!-- Stats numbers -->
+          <div class="child:mb-4 last:m-0 w-full flex flex-col-center | 
+                      md:flex-row md:child:max-w-[32%] md:child:mb-0 md:child:mr-5 lg:child:max-w-xs">
+
+                      <InfoCard name="Avg. Search volume" value="188K" />
+                      <InfoCard name="Avg. Traffic potential" value="32K" />
+                      <InfoCard name="Estimated CPC" value="$3.3" />
+          </div>
+
+          <!-- Decorate -->
+          <div class="mt-[62px] hidden lg:flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="174" height="177" viewBox="0 0 174 177" fill="none">
+              <g opacity="0.5">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M87.0731 71.5064C85.2872 70.1698 83.3266 69.0287 81.1754 68.1098C73.6271 64.8838 64.0044 69.0153 57.1151 75.9945C50.2282 82.9708 46.218 92.6527 49.3169 99.9609C51.0881 104.14 53.5998 106.463 56.4318 107.493C59.2493 108.518 62.44 108.257 65.6856 107.068C74.7311 103.749 84.2704 93.0827 86.5397 86.6129C87.5878 83.6196 88.4322 80.5569 89.0925 77.4494C95.2133 84.2308 98.235 94.2609 99.3437 105.395C101.754 129.593 95.0208 159.078 89.5799 173.769C89.2876 174.558 89.6917 175.433 90.481 175.725C91.2703 176.017 92.1477 175.615 92.4401 174.826C97.9884 159.844 104.835 129.772 102.376 105.094C101.107 92.3468 97.3283 81.0495 89.7851 73.8085C93.724 50.2336 88.0969 24.0484 83.5031 1.82847C83.3359 1.00564 82.5265 0.474535 81.7014 0.64477C80.8792 0.817351 80.3474 1.62135 80.5176 2.44654C84.9223 23.7588 90.4127 48.7853 87.0731 71.5064ZM86.498 74.9317C84.5819 73.3105 82.4147 71.9523 79.9735 70.912C73.4412 68.1189 65.2458 72.0925 59.2822 78.1344C55.6283 81.8391 52.8024 86.3657 51.7359 90.801C51.0642 93.5891 51.0915 96.3332 52.1264 98.7708C53.4824 101.97 55.3077 103.842 57.4744 104.627C59.6533 105.422 62.1215 105.128 64.6339 104.204C72.8788 101.181 81.5963 91.4942 83.6612 85.6048C84.8801 82.1314 85.8101 78.5665 86.498 74.9317Z" fill="#8057FF"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--  -->
+  <MarketsStats />
+
+  <Dashboard client:only />
+
+  <!-- Parthners -->
+  <Parthners sectionStyle="mt-16 lg:mt-[100px]" />
+
+  <!--  -->
+
+  <!--  -->
+
+  <OurCase line={false} />
+
+  <InsaneGrowth style="!mb-0" />
+
+  <BreakdownByState />
+
+  <Reviews />
+
+  <AdditionalServices sectionStyle="pt-24" />
+
+  <Faq />
+
+  <FreeAudit />
+
+  <Footer />
+
+</MainLayout>
+
+<style>
+
+</style>

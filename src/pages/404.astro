@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import Nav from '../components/Nav.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import HeaderGrid from '../images/header-grid.svg'
+import '../styles/main.css'
+
+const {} = Astro.props
+
+---
+<MainLayout>
+  <Nav />
+
+
+  <section class="overflow-x-clip error-page-section pt-[110px] md:pt-44 lg:pt-[274px]">
+
+    <Image src={HeaderGrid} width={1464} height={525} alt="Header Background" 
+    class="absolute z-0 top-7 left-1/2 -translate-x-1/2 w-[1464px] h-[525px] opacity-70 object-cover 2xl:w-[1700px]" />
+
+    <div class="container h-full">
+      <div class="flex-col-center justify-between h-full sm:justify-start">
+
+        <div class="flex-col-center">
+          <div class="relative z-20 font-bold -tracking-[3.36px] text-8xl mb-2 text-white md:text-9xl lg:text-[200px] lg:-tracking-[7px] lg:mb-0">
+            404
+          </div>
+  
+          <p class="relative z-20 text-white text-opacity-80 -tracking-[0.16px]">Something went wrong</p>
+        </div>
+    
+        <div class="relative flex-col-center w-full z-20 sm:flex-row sm:mt-[62px]">
+          <a href="/" class="btn w-full max-w-xs mb-4 sm:mr-5 sm:mb-0 sm:max-w-[230px] sm:h-[60px]">Go to home page</a>
+          <a href="#" onclick="window.history.go(-1);" class="btn w-full max-w-xs sm:max-w-[230px] sm:h-[60px]">Go back</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</MainLayout>
+
+<style>
+  body {
+    /* height: 100vh; */
+    background-color: #0C0C0E;
+  }
+
+  .error-page-section {
+    height: calc(100vh - 61px);
+  }
+</style>

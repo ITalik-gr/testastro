@@ -1,0 +1,85 @@
+---
+import ReviewCard from "../Cards/ReviewCard.astro";
+
+import User_2 from '../../images/Users/user-2.png';
+import User_3 from '../../images/Users/user-3.png';
+import User_4 from '../../images/Users/user-4.png';
+import User_5 from '../../images/Users/user-5.png';
+
+const {} = Astro.props
+
+
+---
+<div data-aligh-left="true"  class="slider scroll-animation flex pl-5 child:mr-5 sm:pl-0">
+
+    <div class=" slider-item ite">
+      <ReviewCard 
+        userImage={User_4} 
+        userName="Joe Terrel" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+12,421%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_2} 
+        userName="Brandon Monroe" 
+        userDescr="We've seen impressive growth in consumer-intent keywords!" 
+        userTraffic="+3,921%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_5} 
+        userName="Eric Hung" 
+        userDescr="Easy to work with and communication was great!" 
+        userTraffic="+ 421%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_3} 
+        userName="Arlene McCoy" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+8,732%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_4} 
+        userName="Joe Terrel" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+12,421%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_3} 
+        userName="Arlene McCoy" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+8,732%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_4} 
+        userName="Joe Terrel" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+12,421%" />
+    </div>
+
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_5} 
+        userName="Eric Hung" 
+        userDescr="Easy to work with and communication was great!" 
+        userTraffic="+ 421%" />
+    </div>
+    <div class=" slider-item">
+      <ReviewCard 
+        userImage={User_3} 
+        userName="Arlene McCoy" 
+        userDescr="Nothing but glowing praise for them - Highly recommended." 
+        userTraffic="+8,732%" />
+    </div>
+
+
+  
+
+</div>
+
+

@@ -1,0 +1,61 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+const { 
+	transition = true,
+	pageTitle = "PPC.io", 
+	// default
+	meta = 	{
+		title: "PPC.io",
+		descr: "PPC.io description",
+		metaImage: "https:metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png",
+	},
+	bodyClass = ""
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+	
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		{transition && <ViewTransitions />}
+		<title>{pageTitle}</title>
+    <meta name="title" content={meta.title}>
+    <meta name="description" content={meta.descr}>
+
+     <!-- Open Graph / Facebook -->
+     <meta property="og:type" content="website">
+     <!-- <meta property="og:url" content="https:metatags.io/"> -->
+     <meta property="og:title" content={meta.title}>
+     <meta property="og:description" content={meta.descr}>
+     <meta property="og:image" content={meta.metaImage}>
+
+     <!-- Twitter -->
+     <meta property="twitter:card" content="summary_large_image">
+     <!-- <meta property="twitter:url" content="https:metatags.io/"> -->
+     <meta property="twitter:title" content={meta.title}>
+     <meta property="twitter:description" content={meta.descr}>
+     <meta property="twitter:image" content={meta.metaImage}>
+
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+
+		<meta name="msapplication-TileColor" content="#0C0C0E">
+		<meta name="theme-color" content="#0C0C0E">
+		
+	</head>
+	<body class={`${bodyClass}`} style="overflow-x: hidden;">
+		
+		<slot />
+
+		
+		<script src="../scripts/scroll-animation.js"></script>
+		<script src="../scripts/slider.js"></script>
+	</body>
+</html>
+

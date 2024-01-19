@@ -1,0 +1,400 @@
+---
+import { Image } from 'astro:assets';
+import InstagramIcon from '../images/Icons/Instagram.svg';
+import TwitterIcon from '../images/Icons/Twitter.svg';
+import LinkedinIcon from '../images/Icons/LinkedIn.svg';
+
+import industries from '../data/industries.json'
+
+
+const {styles} = Astro.props
+
+
+
+---
+
+  <nav class={`opacityAnim absolute top-6 w-full nav z-[9999] bg-[#0F0F11] ease-in bg-opacity-0 md:top-[33px] md:pb-[24px]
+              md:opacity-0 md:w-full ${styles}`}>
+
+    <div class="container md:max-lg:max-w-[918px]  xl:max-w-[1296px]">
+      <div class="flex justify-between items-center">
+
+        <!-- Logo -->
+
+        <a aria-label="Home Page" href="/">
+          <svg class="cursor-pointer hidden lg:flex" xmlns="http://www.w3.org/2000/svg" width="91" height="40" viewBox="0 0 91 40" fill="none">
+            <path d="M0.30659 10.2869L3.73267 6.02718C3.9921 5.70463 4.38255 5.51721 4.79508 5.51721H17.7728C18.5275 5.51721 19.1392 6.13241 19.1392 6.8913V19.6508C19.1392 20.0152 18.9953 20.3647 18.739 20.6224L14.5031 24.8821C13.6423 25.7477 12.1705 25.1347 12.1705 23.9105V13.8992C12.1705 13.1403 11.5588 12.5251 10.8041 12.5251H1.36899C0.219837 12.5251 -0.416078 11.1854 0.30659 10.2869Z" fill="white"/>
+            <path d="M3.74105 19.824C3.53218 20.071 3.41772 20.383 3.41772 20.7052V33.1078C3.41772 34.3949 5.04515 34.9738 5.8714 33.9806L10.1648 28.8197C10.3692 28.574 10.481 28.2654 10.481 27.9469V15.6278C10.481 14.3462 8.86513 13.7641 8.03442 14.7466L3.74105 19.824Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M82.2432 27.1558C80.7011 27.1558 79.3375 26.8245 78.1524 26.1618C76.9673 25.4847 76.0392 24.5627 75.3681 23.3958C74.697 22.2145 74.3615 20.8676 74.3615 19.3549C74.3615 17.8279 74.697 16.4809 75.3681 15.314C76.0392 14.1327 76.9601 13.2107 78.131 12.548C79.3161 11.8709 80.6725 11.5324 82.2003 11.5324C83.7281 11.5324 85.0774 11.8709 86.2483 12.548C87.4334 13.2107 88.3615 14.1327 89.0326 15.314C89.7037 16.4809 90.0392 17.8279 90.0392 19.3549C90.0392 20.8676 89.7037 22.2145 89.0326 23.3958C88.3758 24.5627 87.4619 25.4847 86.2911 26.1618C85.1203 26.8245 83.771 27.1558 82.2432 27.1558ZM82.2432 23.9577C83.0856 23.9577 83.8281 23.7632 84.4706 23.3742C85.1131 22.9853 85.6129 22.445 85.9698 21.7535C86.3268 21.0476 86.5053 20.2481 86.5053 19.3549C86.5053 18.4473 86.3197 17.6478 85.9484 16.9563C85.5772 16.2504 85.0703 15.703 84.4278 15.314C83.7852 14.9106 83.0428 14.7089 82.2003 14.7089C81.3579 14.7089 80.6154 14.9106 79.9729 15.314C79.3304 15.703 78.8235 16.2504 78.4522 16.9563C78.081 17.6478 77.8954 18.4473 77.8954 19.3549C77.8954 20.2481 78.081 21.0476 78.4522 21.7535C78.8235 22.445 79.3375 22.9853 79.9943 23.3742C80.6511 23.7632 81.4007 23.9577 82.2432 23.9577Z" fill="white"/>
+            <path d="M70.102 11.7701V26.8965H73.5503V11.7701H70.102Z" fill="white"/>
+            <path d="M67.0906 27.2207C66.5481 27.2207 66.084 27.0262 65.6985 26.6372C65.313 26.2482 65.1202 25.78 65.1202 25.2326C65.1202 24.6996 65.313 24.2386 65.6985 23.8496C66.084 23.4607 66.5481 23.2662 67.0906 23.2662C67.6189 23.2662 68.0759 23.4607 68.4614 23.8496C68.8469 24.2386 69.0396 24.6996 69.0396 25.2326C69.0396 25.78 68.8469 26.2482 68.4614 26.6372C68.0759 27.0262 67.6189 27.2207 67.0906 27.2207Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M54.228 26.1618C55.3702 26.8245 56.6839 27.1558 58.1688 27.1558C59.2683 27.1558 60.2749 26.9613 61.1887 26.5724C62.1025 26.1834 62.895 25.6432 63.5661 24.9517C64.2372 24.2458 64.7441 23.4318 65.0867 22.5099L61.8527 21.4078C61.6099 21.912 61.3172 22.3586 60.9745 22.7476C60.6461 23.1365 60.2535 23.439 59.7966 23.6551C59.3397 23.8712 58.8185 23.9793 58.2331 23.9793C57.4335 23.9793 56.7196 23.7848 56.0913 23.3958C55.4773 22.9925 54.9919 22.445 54.6349 21.7535C54.2922 21.0476 54.1209 20.2409 54.1209 19.3333C54.1209 18.4257 54.2922 17.6262 54.6349 16.9347C54.9776 16.2288 55.4559 15.6813 56.0699 15.2924C56.6839 14.9034 57.3835 14.7089 58.1688 14.7089C58.7257 14.7089 59.2326 14.8098 59.6895 15.0115C60.1607 15.2131 60.5747 15.5013 60.9317 15.8758C61.3029 16.2504 61.5957 16.6898 61.8098 17.194L65.0439 16.0919C64.6869 15.1843 64.1729 14.3848 63.5018 13.6933C62.845 13.0018 62.0597 12.4688 61.1459 12.0942C60.2463 11.7053 59.254 11.5108 58.1688 11.5108C56.6839 11.5108 55.3702 11.8493 54.228 12.5264C53.1 13.1891 52.2076 14.1111 51.5507 15.2924C51.3284 15.6962 51.1445 16.1216 50.9991 16.5685C50.9474 15.6956 50.7083 14.9173 50.2816 14.2335C49.8104 13.4556 49.1536 12.8433 48.3111 12.3968C47.4687 11.9502 46.5049 11.7341 45.4198 11.7485L42.5284 11.7701H39.5299V26.8965H42.9781V22.1209H45.5268C46.5977 22.1209 47.5472 21.8976 48.3754 21.451C49.2035 21.0044 49.8461 20.3922 50.303 19.6142C50.4113 19.432 50.5072 19.2445 50.5906 19.0517C50.5882 19.1449 50.5869 19.2387 50.5869 19.3333C50.5869 20.8604 50.9082 22.2145 51.5507 23.3958C52.2076 24.5627 53.1 25.4847 54.228 26.1618ZM42.9781 18.9227V14.9466H45.3341C45.7624 14.9466 46.1337 15.0331 46.4478 15.2059C46.7762 15.3644 47.0261 15.5949 47.1974 15.8974C47.383 16.2 47.4758 16.5457 47.4758 16.9347C47.4758 17.5253 47.2902 18.0079 46.919 18.3825C46.5477 18.7427 46.0551 18.9227 45.4412 18.9227H42.9781Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.1072 22.1209V26.8965H27.6589V11.7701H30.6574L33.5488 11.7485C34.634 11.7341 35.5978 11.9502 36.4402 12.3968C37.2826 12.8433 37.9394 13.4556 38.4106 14.2335C38.8961 15.0115 39.1388 15.9118 39.1388 16.9347C39.1388 17.9287 38.9032 18.8219 38.4321 19.6142C37.9751 20.3922 37.3326 21.0044 36.5045 21.451C35.6763 21.8976 34.7268 22.1209 33.6559 22.1209H31.1072ZM31.1072 14.9466H33.4631C33.8915 14.9466 34.2627 15.0331 34.5769 15.2059C34.9053 15.3644 35.1551 15.5949 35.3265 15.8974C35.5121 16.2 35.6049 16.5457 35.6049 16.9347C35.6049 17.5253 35.4193 18.0079 35.048 18.3825C34.6768 18.7427 34.1842 18.9227 33.5702 18.9227H31.1072V14.9466Z" fill="white"/>
+          </svg>
+          <svg class="cursor-pointer lg:hidden" xmlns="http://www.w3.org/2000/svg" width="29" height="37" viewBox="0 0 29 37" fill="none">
+            <path d="M3.78248 7.86193L7.7467 2.96482C8.04688 2.59401 8.49865 2.37854 8.97598 2.37854H23.9921C24.8653 2.37854 25.5732 3.0858 25.5732 3.95825V18.6271C25.5732 19.0461 25.4066 19.4479 25.1101 19.7441L20.2089 24.6413C19.2129 25.6364 17.5099 24.9316 17.5099 23.5242V12.0148C17.5099 11.1423 16.802 10.4351 15.9289 10.4351H5.01175C3.6821 10.4351 2.9463 8.89488 3.78248 7.86193Z" fill="white"/>
+            <path d="M7.7564 18.8263C7.51472 19.1102 7.38228 19.4689 7.38228 19.8393V34.0979C7.38228 35.5776 9.26533 36.2431 10.2214 35.1012L15.1891 29.1681C15.4256 28.8856 15.555 28.5308 15.555 28.1647V14.0021C15.555 12.5287 13.6853 11.8596 12.7241 12.989L7.7564 18.8263Z" fill="white"/>
+          </svg>
+        </a>
+  
+        <!-- List -->
+        <ul class="hidden child:mr-7 last:mr-0 z-20 md:flex lg:child:mr-14">
+          <li>
+            <a class="font-semibold tracking-tighter text-white 
+                      transition-all duration-300 hover:text-primary-300" href="/cases">Case studies</a></li>
+
+          <li  class="group relative z-30">
+            <a class="font-semibold tracking-tighter text-white flex items-center | 
+                      transition-all duration-300 group-hover:text-primary-300" href="#">
+              Services
+              
+              <svg class="ml-[6px] group-hover:rotate-180 group-hover:translate-y-[1px] transition-all" xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                <path class="group-hover:stroke-primary-300" d="M3.5 6.75L7 10.25L10.5 6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+           <!-- Dropdown wrapper -->
+            <div class="absolute -left-64 -z-10 pt-6 -mt-2 top-7 hidden group-hover:dropdown-active max-lg:-left-40">
+               <!-- Dropdown block -->
+              <div class="bg-[#161619] px-7 pt-8 pb-10 opacity-0 justify-between w-[563px] transition-all 
+                            h-[239px] rounded-xl dropdown-block-shadow group-hover:flex group-hover:opacity-100 z-20 relative
+                          ">
+                <!-- Left block -->
+                <div class="mr-[120px]">
+                  <div class="text-sm text-gray-400 mb-6 font-bold leading-135 
+                              uppercase -tracking-[0.14px]">Ad Management</div>
+                  
+                  <ul class="child:mb-5 last:mb-0">
+                    <li class="">
+                      <a href="/services/GoogleAds" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8.59533 3.00933L13.9133 12.3427C13.9569 12.4194 13.9847 12.5041 13.995 12.5917C14.0054 12.6794 13.9981 12.7682 13.9736 12.853C13.9491 12.9378 13.908 13.0168 13.8525 13.0854C13.797 13.1541 13.7284 13.2109 13.6507 13.2527C13.5484 13.3084 13.4338 13.3375 13.3173 13.3373H11L8 8.004L6.33333 10.6707H7.33333L8.66667 13.3373H2.682C2.30533 13.3373 2 13.0373 2 12.6707C2 12.5567 2.03 12.444 2.08667 12.344L7.40467 3.01533C7.46539 2.91131 7.5523 2.82501 7.65675 2.76503C7.76121 2.70506 7.87955 2.6735 8 2.6735C8.12045 2.6735 8.23879 2.70506 8.34324 2.76503C8.4477 2.82501 8.53461 2.91131 8.59533 3.01533V3.00933Z" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                        Google Adwords 
+                      </a>
+                    </li>
+
+                    <li class="">
+                      <a href="/services/Amazon" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M11.3333 8.33333C9.80164 9.05928 8.1123 9.38936 6.42 9.29333C4.80543 9.02161 3.28532 8.34754 2 7.33333M13 10C13.6047 9.05933 13.9673 7.78467 14 6.66667C13.202 6.15133 12.282 6.04333 11.3333 6" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Amazon PPC 
+                      </a>
+                    </li>
+
+                    <li class="">
+                      <a href="/services/Facebook" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M4.66699 6.66667V9.33333H6.66699V14H9.33366V9.33333H11.3337L12.0003 6.66667H9.33366V5.33333C9.33366 5.15652 9.4039 4.98695 9.52892 4.86193C9.65395 4.7369 9.82351 4.66667 10.0003 4.66667H12.0003V2H10.0003C9.11627 2 8.26842 2.35119 7.6433 2.97631C7.01818 3.60143 6.66699 4.44928 6.66699 5.33333V6.66667H4.66699Z" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Facebook PPC 
+                      </a>
+                    </li>
+
+                    <li class="">
+                      <a href="/services/Linkedin" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M4.62663 3.33333C4.62645 3.68695 4.48581 4.02602 4.23563 4.27594C3.98546 4.52587 3.64625 4.66617 3.29263 4.666C2.93901 4.66582 2.59994 4.52517 2.35001 4.275C2.10009 4.02483 1.95978 3.68562 1.95996 3.332C1.96014 2.97837 2.10078 2.6393 2.35096 2.38938C2.60113 2.13946 2.94034 1.99915 3.29396 1.99933C3.64758 1.99951 3.98665 2.14015 4.23658 2.39032C4.4865 2.6405 4.6268 2.97971 4.62663 3.33333ZM4.66663 5.65333H1.99996V14H4.66663V5.65333ZM8.87996 5.65333H6.22663V14H8.85329V9.62C8.85329 7.18 12.0333 6.95333 12.0333 9.62V14H14.6666V8.71333C14.6666 4.6 9.95996 4.75333 8.85329 6.77333L8.87996 5.65333Z" fill="#9979FF"/>
+                        </svg>
+                        Linkedin PPC 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Right block -->
+                <div class="">
+                  <div class="text-sm text-gray-400 mb-6 font-bold leading-135 
+                              uppercase -tracking-[0.14px]">Additional services</div>
+                  
+                  <ul class="[&>*:last-child]:mb-0">
+                    <li class="mb-5">
+                      <a href="/services/WhiteLabel" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M9.33333 6.73667C9.33333 6.63993 9.31428 6.54413 9.27726 6.45476C9.24024 6.36538 9.18597 6.28417 9.11757 6.21576C9.04916 6.14736 8.96795 6.0931 8.87858 6.05608C8.7892 6.01905 8.69341 6 8.59667 6H7.40333C7.30659 6 7.2108 6.01905 7.12142 6.05608C7.03205 6.0931 6.95084 6.14736 6.88243 6.21576C6.81402 6.28417 6.75976 6.36538 6.72274 6.45476C6.68572 6.54413 6.66667 6.63993 6.66667 6.73667V13.2633C6.66667 13.4587 6.74428 13.6461 6.88243 13.7842C7.02058 13.9224 7.20796 14 7.40333 14H8.59667C8.79204 14 8.97942 13.9224 9.11757 13.7842C9.25572 13.6461 9.33333 13.4587 9.33333 13.2633V6.73667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M4.66667 2.73667C4.66667 2.54129 4.58905 2.35392 4.4509 2.21576C4.31275 2.07761 4.12538 2 3.93 2H2.73667C2.54129 2 2.35392 2.07761 2.21576 2.21576C2.07761 2.35392 2 2.54129 2 2.73667V13.2633C2 13.4587 2.07761 13.6461 2.21576 13.7842C2.35392 13.9224 2.54129 14 2.73667 14H3.93C4.12538 14 4.31275 13.9224 4.4509 13.7842C4.58905 13.6461 4.66667 13.4587 4.66667 13.2633V2.73667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14 12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14C12.313 14 11.9739 13.8595 11.7239 13.6095C11.4738 13.3594 11.3333 13.0203 11.3333 12.6667C11.3333 12.313 11.4738 11.9739 11.7239 11.7239C11.9739 11.4738 12.313 11.3333 12.6667 11.3333C13.0203 11.3333 13.3594 11.4738 13.6095 11.7239C13.8595 11.9739 14 12.313 14 12.6667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        White Label PPC Services  
+                      </a>
+                    </li>
+
+                    <li class="mb-5">
+                      <a href="/services/LandingPage" class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M10 6C10.5304 6 11.0391 6.21071 11.4142 6.58579C11.7893 6.96086 12 7.46957 12 8C12 8.53043 11.7893 9.03914 11.4142 9.41421C11.0391 9.78929 10.5304 10 10 10C9.46957 10 8.96086 9.78929 8.58579 9.41421C8.21071 9.03914 8 8.53043 8 8C8 7.46957 8.21071 6.96086 8.58579 6.58579C8.96086 6.21071 9.46957 6 10 6ZM10 6C10.5304 6 11.0391 5.78929 11.4142 5.41421C11.7893 5.03914 12 4.53043 12 4C12 3.46957 11.7893 2.96086 11.4142 2.58579C11.0391 2.21071 10.5304 2 10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4C4 4.53043 4.21071 5.03914 4.58579 5.41421C4.96086 5.78929 5.46957 6 6 6M10 6H6M6 6C5.46957 6 4.96086 6.21071 4.58579 6.58579C4.21071 6.96086 4 7.46957 4 8C4 8.53043 4.21071 9.03914 4.58579 9.41421C4.96086 9.78929 5.46957 10 6 10M6 10H8M6 10C5.60444 10 5.21776 10.1173 4.88886 10.3371C4.55996 10.5568 4.30362 10.8692 4.15224 11.2346C4.00087 11.6001 3.96126 12.0022 4.03843 12.3902C4.1156 12.7781 4.30608 13.1345 4.58579 13.4142C4.86549 13.6939 5.22186 13.8844 5.60982 13.9616C5.99778 14.0387 6.39992 13.9991 6.76537 13.8478C7.13082 13.6964 7.44318 13.44 7.66294 13.1111C7.8827 12.7822 8 12.3956 8 12V2" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Beautiful Design that converts 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li  class="group relative z-30">
+            <a class="font-semibold tracking-tighter text-white flex items-center | 
+                      transition-all duration-300 group-hover:text-primary-300" href="#">
+              Industries
+              
+              <svg class="ml-[6px] group-hover:rotate-180 group-hover:translate-y-[1px] transition-all" xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                <path class="group-hover:stroke-primary-300" d="M3.5 6.75L7 10.25L10.5 6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+           <!-- Dropdown wrapper -->
+            <div class="absolute -left-64 -z-10 pt-6 -mt-2 top-7 hidden group-hover:dropdown-active max-lg:-left-40">
+               <!-- Dropdown block -->
+              <div class="bg-[#161619] px-7 pt-8 pb-10 opacity-0 justify-between w-[563px] transition-all 
+                            h-auto rounded-xl dropdown-block-shadow group-hover:flex group-hover:opacity-100 z-20 relative
+                          ">
+                <!-- Left block -->
+                <div class="mr-[89px]">
+                  <div class="text-sm text-gray-400 mb-6 font-bold leading-135 
+                              uppercase -tracking-[0.14px]">Primary</div>
+                  
+                  <ul class="child:mb-5 last:mb-0">
+                    {industries["Links"]["Primary"].map((item) => {
+                      const name = item.replace(/-/g, ' ');
+                      return (
+                      <li class="">
+                        <a href={`/industries/${item}`} class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                          {name}
+                        </a>
+                      </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+                <!-- Right block -->
+                <div class="">
+                  <div class="text-sm text-gray-400 mb-6 font-bold leading-135 
+                              uppercase -tracking-[0.14px]">Others</div>
+                  
+                  <ul class="child:mb-5 last:mb-0">
+
+                    {industries["Links"]["Others"].map((item) => {
+                      const name = item.replace(/-/g, ' ');
+                      return (
+                      <li class="">
+                        <a href={`/industries/${item}`} class="font-semibold !text-white -tracking-[0.48px] leading-117 flex items-center">
+                          {name}
+                        </a>
+                      </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li><a class="font-semibold tracking-tighter text-white 
+                                      transition-all duration-300 hover:text-primary-300" href="/pricing">Pricing</a></li>
+          <li><a class="font-semibold tracking-tighter text-white 
+                                      transition-all duration-300 hover:text-primary-300" href="/about-us">About</a></li>
+          <li><a class="font-semibold tracking-tighter text-white 
+                                      transition-all duration-300 hover:text-primary-300" href="/blog">Blog</a></li>
+        </ul>
+        
+        <!-- Contact link -->
+        <a href="/contact" class="hidden text-sm  items-center text-white font-bold z-20 lg:text-base md:flex">
+          Contact Us
+          <svg xmlns="http://www.w3.org/2000/svg" class="nav-arrow ml-[7px]" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        
+        <!-- mobile hamburger -->
+        <div class="hamburger w-6 md:hidden relative h-4 cursor-pointer">
+          <span class="w-full h-[2px] bg-white rounded-lg absolute top-0"></span>
+          <span class="w-full h-[2px] bg-white rounded-lg absolute top-1/2 -translate-y-1/2"></span>
+          <span class="w-full h-[2px] bg-white rounded-lg absolute bottom-0"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="menu bg-[#0F0F11] fixed right-0 -translate-y-[150vh] opacity-0 transition-all duration-300 w-full h-[100dvh] z-50 top-0 pt-28 overflow-auto pb-10 lg:hidden">
+    <!-- <div class="absolute -top-9 h-11 left-0 w-full bg-[#0F0F11]"></div> -->
+    <div class="container">
+      <div class="wrap sm:flex sm:flex-wrap">
+
+        <!-- about -->
+        <div class="mb-[52px] sm:mr-[75px] md:mr-[135px]">
+          <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">About</div>
+
+          <div class="list max-w-[250px] sm:columns-auto">
+            <a href="/cases" class="font-semibold text-white leading-135 mb-6 block">Case studies</a>
+            <a href="/pricing" class="font-semibold text-white leading-135 mb-6 block">Pricing</a>
+            <a href="/about-us" class="font-semibold text-white leading-135 mb-6 block">About Us</a>
+            <a href="/blog" class="font-semibold text-white leading-135 block">Blog</a>
+          </div>
+        </div>
+
+        <!-- ad -->
+        <div class="mb-[52px] sm:mr-[75px] lg:mr-[105px] xl:mb-[85px]">
+          <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Ad Management</div>
+          <div class="list">
+            <a href="/services/GoogleAds" class="font-bold text-white leading-135 mb-6 flex items-center">
+              <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8.59533 3.00935L13.9133 12.3427C13.9569 12.4194 13.9847 12.5041 13.995 12.5918C14.0054 12.6794 13.9981 12.7682 13.9736 12.853C13.9491 12.9378 13.908 13.0168 13.8525 13.0855C13.797 13.1541 13.7284 13.2109 13.6507 13.2527C13.5484 13.3085 13.4338 13.3376 13.3173 13.3374H11L8 8.00402L6.33333 10.6707H7.33333L8.66667 13.3374H2.682C2.30533 13.3374 2 13.0374 2 12.6707C2 12.5567 2.03 12.444 2.08667 12.344L7.40467 3.01535C7.46539 2.91133 7.5523 2.82503 7.65675 2.76506C7.76121 2.70508 7.87955 2.67352 8 2.67352C8.12045 2.67352 8.23879 2.70508 8.34324 2.76506C8.4477 2.82503 8.53461 2.91133 8.59533 3.01535V3.00935Z" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Google Adwords 
+            </a>
+            <a href="/" class="font-bold text-white leading-135 mb-6 flex items-center">
+              <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M11.3333 8.33333C9.80164 9.05928 8.1123 9.38936 6.42 9.29333C4.80543 9.02161 3.28532 8.34754 2 7.33333M13 10C13.6047 9.05933 13.9673 7.78467 14 6.66667C13.202 6.15133 12.282 6.04333 11.3333 6" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Amazon PPC
+            </a>
+            <a href="/services/Facebook" class="font-bold text-white leading-135 mb-6 flex items-center">
+              <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4.66699 6.66667V9.33333H6.66699V14H9.33366V9.33333H11.3337L12.0003 6.66667H9.33366V5.33333C9.33366 5.15652 9.4039 4.98695 9.52892 4.86193C9.65395 4.7369 9.82351 4.66667 10.0003 4.66667H12.0003V2H10.0003C9.11627 2 8.26842 2.35119 7.6433 2.97631C7.01818 3.60143 6.66699 4.44928 6.66699 5.33333V6.66667H4.66699Z" stroke="#9979FF" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Facebook PPC
+            </a>
+          </div>
+        </div>
+
+        <!-- additional -->
+        <div class="mb-[52px] sm:mr-[75px] lg:mr-[105px] xl:mb-[85px]">
+          <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Additional services</div>
+          <div class="list">
+            <a href="/services/WhiteLabel" class="font-bold text-white leading-135 mb-6 flex items-center">
+              <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M9.33333 6.73667C9.33333 6.63993 9.31428 6.54413 9.27726 6.45476C9.24024 6.36538 9.18597 6.28417 9.11757 6.21576C9.04916 6.14736 8.96795 6.0931 8.87858 6.05608C8.7892 6.01905 8.69341 6 8.59667 6H7.40333C7.30659 6 7.2108 6.01905 7.12142 6.05608C7.03205 6.0931 6.95084 6.14736 6.88243 6.21576C6.81402 6.28417 6.75976 6.36538 6.72274 6.45476C6.68572 6.54413 6.66667 6.63993 6.66667 6.73667V13.2633C6.66667 13.4587 6.74428 13.6461 6.88243 13.7842C7.02058 13.9224 7.20796 14 7.40333 14H8.59667C8.79204 14 8.97942 13.9224 9.11757 13.7842C9.25572 13.6461 9.33333 13.4587 9.33333 13.2633V6.73667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.66667 2.73667C4.66667 2.54129 4.58905 2.35392 4.4509 2.21576C4.31275 2.07761 4.12538 2 3.93 2H2.73667C2.54129 2 2.35392 2.07761 2.21576 2.21576C2.07761 2.35392 2 2.54129 2 2.73667V13.2633C2 13.4587 2.07761 13.6461 2.21576 13.7842C2.35392 13.9224 2.54129 14 2.73667 14H3.93C4.12538 14 4.31275 13.9224 4.4509 13.7842C4.58905 13.6461 4.66667 13.4587 4.66667 13.2633V2.73667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14C12.313 14 11.9739 13.8595 11.7239 13.6095C11.4738 13.3594 11.3333 13.0203 11.3333 12.6667C11.3333 12.313 11.4738 11.9739 11.7239 11.7239C11.9739 11.4738 12.313 11.3333 12.6667 11.3333C13.0203 11.3333 13.3594 11.4738 13.6095 11.7239C13.8595 11.9739 14 12.313 14 12.6667Z" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              White Label PPC Services
+            </a>
+            <a href="/services/LandingPage" class="font-bold text-white leading-135 mb-6 flex items-center">
+              <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 6C10.5304 6 11.0391 6.21071 11.4142 6.58579C11.7893 6.96086 12 7.46957 12 8C12 8.53043 11.7893 9.03914 11.4142 9.41421C11.0391 9.78929 10.5304 10 10 10C9.46957 10 8.96086 9.78929 8.58579 9.41421C8.21071 9.03914 8 8.53043 8 8C8 7.46957 8.21071 6.96086 8.58579 6.58579C8.96086 6.21071 9.46957 6 10 6ZM10 6C10.5304 6 11.0391 5.78929 11.4142 5.41421C11.7893 5.03914 12 4.53043 12 4C12 3.46957 11.7893 2.96086 11.4142 2.58579C11.0391 2.21071 10.5304 2 10 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4C4 4.53043 4.21071 5.03914 4.58579 5.41421C4.96086 5.78929 5.46957 6 6 6M10 6H6M6 6C5.46957 6 4.96086 6.21071 4.58579 6.58579C4.21071 6.96086 4 7.46957 4 8C4 8.53043 4.21071 9.03914 4.58579 9.41421C4.96086 9.78929 5.46957 10 6 10M6 10H8M6 10C5.60444 10 5.21776 10.1173 4.88886 10.3371C4.55996 10.5568 4.30362 10.8692 4.15224 11.2346C4.00087 11.6001 3.96126 12.0022 4.03843 12.3902C4.1156 12.7781 4.30608 13.1345 4.58579 13.4142C4.86549 13.6939 5.22186 13.8844 5.60982 13.9616C5.99778 14.0387 6.39992 13.9991 6.76537 13.8478C7.13082 13.6964 7.44318 13.44 7.66294 13.1111C7.8827 12.7822 8 12.3956 8 12V2" stroke="#17B26A" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Beautiful Design that converts
+            </a>
+          </div>
+        </div>
+
+        <!-- Industries -->
+        <div class="menu-accordion max-h-5 h-full overflow-hidden transition-all duration-300 mb-[52px] sm:mr-[75px] lg:mr-[105px] xl:mb-[85px]">
+          <div class="menu-accordion-toggle cursor-pointer text-sm text-gray-400 mb-[22px] font-bold uppercase flex justify-between
+           items-center">
+            Industries
+            <svg class="transition-all" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M6 9L12 15L18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <!-- Primary -->
+          <div class="">
+            <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Primary</div>
+
+            <div class="list">
+              
+              {industries["Links"]["Primary"].map((item) => {
+                const name = item.replace(/-/g, ' ');
+                return (
+                  <a href={`/industries/${item}`} class="font-bold text-white leading-135 mb-6 flex items-center">
+                    {name}
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+
+          <!-- Others -->
+          <div class="">
+            <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Others</div>
+
+            <div class="list">
+              {industries["Links"]["Others"].map((item) => {
+                const name = item.replace(/-/g, ' ');
+                return (
+                  <a href={`/industries/${item}`} class="font-bold text-white leading-135 mb-6 flex items-center">
+                    {name}
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- conact  -->
+        <div class="mb-[52px] sm:mr-[56px] md:mr-[117px]">
+          <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Contact</div>
+          <div class="list max-w-[250px] sm:columns-auto">
+            <a href="/contact" class="font-bold text-white leading-135 block mb-6">Contact Us</a>
+            <a href="/free-audit" class="font-bold text-white leading-135 block">Get Free Audit</a>
+          </div>
+        </div>
+
+        <!-- social -->
+        <div class="mb-[24px]">
+          <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase hidden sm:flex">Social</div>
+          <div class="list flex max-w-[250px] sm:flex-col">
+
+            <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+              <Image src={InstagramIcon} class='w-6 sm:w-4' alt="Instagram" />
+              <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">Instagram</span>
+            </a>
+
+            <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+              <Image src={TwitterIcon} class='w-6 sm:w-4' alt="Twitter" />
+              <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">X (Twitter)</span>
+            </a>
+
+            <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+              <Image src={LinkedinIcon} class='w-6 sm:w-4' alt="LinkedIn" />
+              <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">Linkedin</span>
+            </a>
+
+        
+          </div>
+        </div>
+
+        
+
+
+      </div>
+    </div>
+  </div>
+
+
+<style>
+
+</style>
+
+<script>
+
+// When you click on a menu hamburger, show the menu. The following entry for ViewTransition to work
+
+
+document.addEventListener('astro:page-load', () => {
+
+
+const menuAccordion = document.querySelector('.menu-accordion'),
+      menuAccordionToggle = document.querySelector('.menu-accordion-toggle');
+
+menuAccordionToggle.addEventListener('click', () => {
+
+  menuAccordion.classList.toggle('!max-h-[650px]')
+  menuAccordionToggle.classList.toggle('!text-primary-400')
+  menuAccordionToggle.querySelector('svg').classList.toggle('rotate-[180deg]')
+})
+
+
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.menu').classList.toggle('menu-active')
+    document.querySelector('.hamburger').classList.toggle('hamburger-active')
+    document.querySelector('body').classList.toggle('overflow-hidden')
+    document.querySelector('.nav').classList.toggle('nav-menu-active')
+  })
+
+
+});
+
+
+
+</script>

@@ -1,0 +1,64 @@
+---
+import Accordion from "../components/Accordion.astro";
+import MainButton from "../components/Buttons/MainButton.astro";
+
+
+const {} = Astro.props
+
+---
+
+<section class="faq bg-gray-50 pt-9 pb-10 md:pt-[120px] md:pb-20">
+  <div class="container max-w-[1084px]">
+    <div data-threshold="0.6" class="scroll-animation wrap flex flex-col items-center justify-center lg:flex-row lg:items-start">
+
+      <!-- Text block -->
+      <div class="relative rounded-2xl w-full bg-white px-4 pt-[24px] pb-7 flex flex-col
+                  justify-between max-w-[576px] max-h-[241px] h-full mb-4 sm:px-6
+                  sm:flex-row sm:items-center sm:mb-6
+                  lg:flex-col lg:max-w-[406px] lg:items-start lg:h-[439px] lg:max-h-full lg:mr-5">
+
+        <div class="">
+          <div class="leading-117 text-sm text-primary-500 font-bold mb-[6px] | sm:text-base">Support</div>
+          <div class="text-[28px] -tracking-[1.56px] font-bold mb-3 leading-117 | sm:text-[42px] md:text-[52px]">FAQs</div>
+          <p class="max-w-[305px] text-sm leading-135 font-medium text-gray-700 -tracking-[0.16px] mb-4  |
+                    sm:max-w-[297px] sm:text-base"> 
+            Everything you need to know about the product and billing. If you have additional questions contact us
+          </p>
+        </div>
+
+        <MainButton title="Contact Us" link="/contact" style="w-full max-w-[248px] sm:max-w-[192px] sm:h-[60px] lg:max-w-[358px]" />
+
+        <!-- Decorate line -->
+        <svg class="hidden absolute -top-16 -left-20 lg:flex" xmlns="http://www.w3.org/2000/svg" width="93" height="130" viewBox="0 0 93 130" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M82.5924 45.8968C85.0367 35.7195 86.7891 25.1589 92.3886 16.1285C92.7202 15.5898 92.5575 14.8839 92.0197 14.5479C91.4809 14.2163 90.7751 14.379 90.439 14.9168C84.7096 24.1586 82.8613 34.9472 80.3615 45.3613C80.2106 45.9763 80.5931 46.5981 81.2092 46.7445C81.8243 46.8954 82.4415 46.5119 82.5924 45.8968Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M67.5423 43.6256C65.2932 39.8064 63.8427 35.8539 63.657 31.4129C63.6309 30.7786 63.0957 30.2883 62.4638 30.3121C61.8309 30.3404 61.3388 30.8774 61.3658 31.5072C61.5671 36.3363 63.122 40.635 65.5657 44.7869C65.8863 45.3343 66.5896 45.5182 67.1358 45.1945C67.6807 44.8752 67.8639 44.1685 67.5423 43.6256Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M33.6029 45.615C28.905 43.0763 25.6027 39.3547 23.7193 34.3332C23.497 33.7412 22.8355 33.4395 22.2425 33.6641C21.6505 33.8841 21.3495 34.5468 21.5719 35.1388C23.6578 40.6964 27.3106 44.8218 32.5121 47.6329C33.0684 47.9354 33.766 47.7239 34.0663 47.1691C34.368 46.6099 34.1601 45.913 33.6029 45.615Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9767 94.5434C16.8138 95.6335 17.7494 96.6509 18.7815 97.567C19.2408 97.9753 20.2405 98.7343 21.1762 99.0198C22.1723 99.3276 23.1032 99.1663 23.7451 98.3752C24.5968 97.3242 24.7368 96.3689 24.5309 95.5646C24.3336 94.7902 23.7681 94.0964 22.9264 93.5543C21.3175 92.519 18.621 92.043 17.0202 92.0604C16.2616 90.9262 15.6115 89.7214 15.0733 88.4657C11.0651 79.1122 15.744 67.66 26.3127 60.3446C30.0128 57.7847 36.6681 57.6003 43.6636 58.2631C54.5561 59.2939 66.2685 62.5558 69.7236 63.4013C70.5772 63.6081 71.104 63.6368 71.2155 63.6138C71.7613 63.5106 71.9713 63.1662 72.0765 62.9167C72.2247 62.5544 72.2175 62.2385 72.144 61.9694C72.0421 61.605 71.7967 61.2707 71.3559 61.0446C71.112 60.9219 70.7562 60.8267 70.3708 60.7533C70.1029 60.7051 69.8007 60.6965 69.6216 60.6018C68.476 59.9897 67.3744 59.312 66.2624 58.6415C62.5221 56.3976 59.1224 53.8045 55.7695 51.0151C45.1156 42.1531 33.7378 33.3515 26.8054 21.0849C26.4943 20.5347 25.7944 20.3374 25.2429 20.6506C24.6924 20.9594 24.498 21.6589 24.8086 22.2136C31.8775 34.7254 43.438 43.7399 54.3026 52.7786C57.1549 55.1508 60.0415 57.3849 63.1319 59.3907C57.2055 57.9816 48.9528 56.2604 41.4261 55.7837C34.7322 55.3593 28.6044 55.9714 25.0074 58.4596C13.4296 66.4732 8.57351 79.1259 12.9654 89.3689C13.4357 90.4646 13.983 91.5299 14.6065 92.5459C5.20919 95.3928 -0.295651 104.627 1.83088 114.289C1.96648 114.909 2.57908 115.299 3.19686 115.164C3.81561 115.025 4.20667 114.415 4.07108 113.794C2.15501 105.087 7.31679 96.7887 15.9767 94.5434ZM18.9281 94.4971C19.3631 94.9706 19.8228 95.4212 20.3052 95.8533C20.5647 96.0827 21.0704 96.4916 21.5996 96.732C21.7239 96.7868 21.9266 96.835 22.0207 96.8552C22.2397 96.5785 22.3653 96.3522 22.3086 96.1335C22.2396 95.8607 21.9795 95.6734 21.6848 95.4834C20.9457 95.0056 19.9004 94.6778 18.9281 94.4971Z" fill="#8057FF"/>
+        </svg>
+      </div>
+
+      <div class="">
+        <Accordion 
+          title="Which ad platforms do you work on?"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae officiis odio veniam. Amet recusandae quis est quo, enim illum?"/>
+        <Accordion 
+          title="What do I get for my money?"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae officiis odio veniam. Amet recusandae quis est quo, enim illum?"/>
+        <Accordion 
+          title="What separates you from competitors?"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae officiis odio veniam. Amet recusandae quis est quo, enim illum?"/>
+        <Accordion 
+          title="What services do you provide?"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae officiis odio veniam. Amet recusandae quis est quo, enim illum?"/>
+        <Accordion 
+          title="Why do I need a PPC agency?"
+          text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque beatae officiis odio veniam. Amet recusandae quis est quo, enim illum?"/>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>

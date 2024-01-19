@@ -1,0 +1,130 @@
+---
+
+const {} = Astro.props
+
+
+
+---
+
+<form action="" class="scroll-animation delay-100 bg-white px-4 py-6 flex-col-center flex rounded-xl absolute top-[86%] overflow-hidden
+                        left-1/2 max-w-[360px] -translate-x-1/2 w-[89%] | 
+                        lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:pt-8 lg:px-[39px] lg:pb-[44px]
+                        lg:max-w-[444px] lg:-mb-[275px]">
+
+  <label for="name" class="w-full mb-6">
+    <input min="2" id="name" name="name" placeholder="Your name" type="text" class="input-base ">
+  </label>
+
+  <label for="email" class="w-full mb-6">
+    <input id="email" name="email" placeholder="Your Email" type="email" class="input-base peer">
+    <div class="mt-1 text-error-500 hidden font-semibold text-xs peer-invalid:block">Please enter valid email</div> 
+  </label>
+
+  <label for="website" class="w-full mb-6">
+    <input id="website" name="website" placeholder="Your Website" type="text" class="input-base peer">
+    <div class="mt-1 text-error-500 hidden font-semibold text-xs peer-invalid:block">Please enter valid link</div> 
+  </label>
+
+  <label for="message" class="w-full mb-6 | lg:mb-8">
+    <textarea id="message" name="message" placeholder="Message" class={`input-base xl:h-[103px]`}></textarea>
+  </label>
+ 
+  <button class="btn submit-btn outline-none w-full mb-6 h-[44px | lg:h-[59px]]">Submit</button>
+
+  <p class="text-sm text-gray-400 -tracking-[0.36px] font-medium text-center | ">
+    By submitting this form I accept the <a class="underline ont-medium" target="_blank" href="https://www.iubenda.com/privacy-policy/18613093/full-legal">privacy policy</a> of this site
+  </p>
+
+  <div class="hidden form-invalid-error text-error-500 font-semibold text-xs mt-3">Please fill required forms</div>
+
+  <!-- Notification after sending a message (flex)-->
+  <div class="absolute hidden flex-col-center justify-between bg-white w-full h-full pt-[116px] pb-4 px-[16px] | lg:pt-[166px] lg:px-[39px] lg:pb-9">
+
+    <div class="flex flex-col-center">
+      <div class="mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path opacity="0.4" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 24L21 30L33 18" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+  
+      <div class="text-black -tracking-[0.32px] text-xl font-bold mb-3 | lg:text-[32px]">Message Sent!</div>
+      <div class="font-medium text-gray-700">We will contact you soon</div>
+    </div>
+
+    <button class="btn again-btn outline-none w-full mb-6 h-[44px | lg:h-[59px]]">Submit</button>
+  </div>
+
+</form>
+
+
+<style>
+
+</style>
+<script>
+
+  const btn = document.querySelector('.submit-btn'),
+        inputs = document.querySelectorAll('input'),
+        formError = document.querySelector('.form-invalid-error');
+
+  if(window.innerWidth >= 1024) {
+    btn.innerHTML = 'Send Message'
+  } else {
+    btn.innerHTML = 'Submit'
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault()
+    let isValid = true;
+    let isEmpty = false;
+
+    inputs.forEach((input) => {
+      if(input.value || input.value.trim() !== '') {
+        isEmpty = true
+        input.classList.remove("!border-error-400")
+        return
+      } else {
+        isEmpty = false;
+        input.classList.add("!border-error-400")
+      }
+    })
+
+    formError.classList.toggle('hidden', isEmpty)
+
+    if(isEmpty) {
+      inputs.forEach((input) => {
+        let inputType = input.getAttribute("name");
+
+        if(inputType == "name") {
+          if(!input.value || input.value === '' || input.value.length < 2){
+            isValid = false;
+            input.setCustomValidity("invalid")
+          } else {
+            input.setCustomValidity("")
+          }
+        } else if(inputType == "email") {
+          if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input.value)) {
+            isValid = false;
+            input.setCustomValidity("invalid")
+          } else {
+            input.setCustomValidity("")
+          }
+        } else if (inputType === "website") {
+            try {
+                new URL(input.value);
+                input.setCustomValidity("")
+            } catch (err) {
+                input.setCustomValidity("invalid")
+                isValid = false;
+                return;
+            }
+          } 
+      })
+    }
+
+
+      
+
+  })
+
+</script>

@@ -1,0 +1,72 @@
+---
+import BlockText from '../components/BlockText.astro';
+import ApproachCard from '../components/Cards/ApproachCard.astro';
+
+
+const {
+  title = "Stop wasted ad spend!", 
+  subtitle = "Finally, a scientific approach to paid ads", 
+  descr = "We're a top PPC marketing firm, delivering cost-effective, creative solutions to boost your business with quality leads and sales.", 
+  line = true
+} = Astro.props
+
+---
+<section class={`bg-gray-50 pt-16 pb-10 mb-8 ${line && "-mt-12"}
+                  md:pt-[184px] md:mt-0 md:rounded-b-[65px] md:mb-28 md:pb-20 `}>
+  <div class="container xl:flex-col-center">
+    <!-- Decorate line -->
+    {line && <div class="w-full flex justify-center">
+        <svg class="decorate-line -mb-2 w-full min-h-full z-40 max-w-[25px] max-h-[147px] sm:mb-16 md:max-h-none md:max-w-none" xmlns="http://www.w3.org/2000/svg" width="56" height="175" viewBox="0 0 56 175" fill="none">
+          <path d="M34.1413 1C38.808 24.6667 44.7208 74.3185 37.1413 87.5C25.6411 107.5 -0.131944 119.414 2.14112 91C4.14111 66 26.7822 65.3206 34.1411 69C41.5 72.6794 67.6412 88.5 43.6412 174" stroke="#8057FF" stroke-width="3"/>
+        </svg>
+    </div>}
+
+    <BlockText
+      title={title} 
+      subtitle={subtitle}
+      descr={descr}
+      descrStyle="sm:max-w-[513px]"
+    />
+
+    <!-- Approach Cards -->
+    <div class="flex justify-center items-center flex-col mt-14 md:flex-row md:flex-wrap lg:max-w-6xl lg:mt-16">
+
+    <!--? wrapText - part of the main text to be highlighted -->
+    <!--? image - The component itself contains imported photos. In the props, you need to enter the name -->
+
+        <ApproachCard
+          title="We don’t charge based on ad spend " 
+          wrapText="ad spend"
+          descr="This model incentivizes agencies to make you spend more and more. " 
+          image="Coins"
+          cardStyle="md:mr-5" />
+
+          <ApproachCard
+          title="Tracking" 
+          descr="We track everything to perfection so you know exactly what impact Ads are having." 
+          image="Chart" 
+          cardStyle="md:-mb-16 delay-[150ms]"/>
+
+        <ApproachCard 
+          title="Scientific approach" 
+          descr="We take a scientific approach to PPC - Using data, testing, experiments. " 
+          image="Atom" 
+          cardStyle="md:mr-5 delay-[300ms]" />
+
+
+        <ApproachCard 
+          title="We’re small and effective" 
+          wrapText="effective"
+          descr="Stop wasting time with big agencies who don’t care ." 
+          image="Fast"
+          cardStyle="md:-mb-16 delay-[450ms]" />
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+<script src="../scripts/decorate-animation.js"></script>

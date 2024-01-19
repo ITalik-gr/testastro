@@ -1,0 +1,15 @@
+---
+import ServicesLinkCard from "./Cards/ServicesLinkCard.astro";
+
+const {link = "/services/GoogleAds", style = "", title = "Contact Us"} = Astro.props
+
+---
+
+<div class="container flex justify-center scroll-animation">
+  <ServicesLinkCard title={title} style={style} link={link} />
+</div>
+
+
+<style>
+
+</style>

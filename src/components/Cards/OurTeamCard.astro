@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import TeamUser1 from '../../images/OurTeam/TeamUser-1.png';
+
+const {image = TeamUser1, name = "Jacob Jones", link = "#", position = "Founder"} = Astro.props
+
+---
+<div class="relative max-w-[168px] rounded-2xl min-w-[168px] | md:max-w-[234px] md:min-w-[234px]">
+  <div class="">
+    <Image class="w-full" src={image} alt={name} />
+  </div>
+
+  <div class="rounded-xl bg-white p-2 absolute bottom-2 left-2 w-full max-w-[152px] | md:max-w-[210px] md:left-3 md:bottom-3">
+    <div class="mb-1 text-sm leading-126 -tracking[0.21px] font-bold text-black | md:text-lg">
+      {name}
+    </div>
+    <div class="text-gray-600 font-semibold text-xs -tracking-[0.24px] leading-126 | md:text-base">
+      {position}
+    </div>
+  </div>
+
+  <a href={link} class="absolute top-4 right-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M3.35782 1.68496C3.3576 2.13161 3.1805 2.55989 2.86548 2.87556C2.55047 3.19124 2.12334 3.36846 1.67807 3.36823C1.2328 3.36801 0.805847 3.19036 0.491147 2.87437C0.176448 2.55838 -0.000222427 2.12993 2.10167e-07 1.68328C0.000222847 1.23662 0.177321 0.808346 0.492335 0.492671C0.807349 0.176996 1.23447 -0.000223117 1.67975 2.10819e-07C2.12502 0.000223539 2.55197 0.177871 2.86667 0.493862C3.18137 0.809853 3.35804 1.2383 3.35782 1.68496ZM3.40819 4.61532H0.0503674V15.1579H3.40819V4.61532ZM8.71354 4.61532H5.37251V15.1579H8.67996V9.62557C8.67996 6.54364 12.6842 6.25734 12.6842 9.62557V15.1579H16V8.48037C16 3.28487 10.0735 3.47854 8.67996 6.02998L8.71354 4.61532Z" fill="white"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+
+</style>

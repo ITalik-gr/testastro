@@ -1,0 +1,24 @@
+---
+
+
+const {icon, title, descr} = Astro.props
+
+
+---
+<div class="step-card md:w-[280px] md:mr-[90px]">
+  <div class="mb-4 sm:mb-5 md:mb-7 lg:mb-11">
+    <img src={icon} alt={title}>
+  </div>
+
+  <div class="mb-2 text-2xl font-bold text-white leading-117 balance -tracking-[0.72px] sm:text-3xl lg:mb-6 lg:text-[32px] lg:-tracking-[0.97px]">
+    {title}
+  </div>
+
+  <p class="font-medium text-sm leading-135 text-white text-opacity-80 -tracking-[0.21px] sm:text-base md:max-w-[274px] lg:max-w-[280px]">
+    {descr}
+  </p>
+</div>
+
+<style>
+
+</style>

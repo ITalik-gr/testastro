@@ -1,0 +1,35 @@
+---
+import BlogCard from '../Cards/BlogCard.astro';
+import BlogImage_1 from '../../images/Blog/blog-image-1.png'
+import BlogImage_2 from '../../images/Blog/blog-image-2.png'
+import BlogImage_3 from '../../images/Blog/blog-image-3.png'
+
+const {} = Astro.props
+
+---
+<div class="scroll-animation delay-150 wrap flex justify-between flex-row overflow-y-hidden child:mr-4 last:mr-0 | sm:overflow-x-auto">
+  <BlogCard 
+    image={BlogImage_1} 
+    title="How to Perform PPC Competitor Analysis like a Pro"
+    date="October 20, 2022"
+    readTime="5 min read"
+     />
+
+  <BlogCard 
+    image={BlogImage_2} 
+    title="Why a Google Ads Agency Can Drive Improved Revenue"
+    date="October 20, 2022"
+    readTime="5 min read"
+     />
+
+  <BlogCard 
+    image={BlogImage_3} 
+    title="10 Amazing PPC Benefits To Inspire Your Next Campaign"
+    date="October 20, 2022"
+    readTime="5 min read"
+     />
+</div>
+
+<style>
+
+</style>

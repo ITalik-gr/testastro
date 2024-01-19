@@ -1,0 +1,290 @@
+---
+import { Image } from "astro:assets";
+
+import QuizTextBlock from "./QuizTextBlock.astro";
+import UserPicIcon from '../../images/Icons/user.svg';
+import MailIcon from '../../images/Icons/mail.svg';
+import GlobeIcon from '../../images/Icons/globe.svg';
+import PhoneIcon from '../../images/Icons/phone-2.svg';
+import FormCheckbox from "./FormCheckbox.astro";
+import FormRaido from "./FormRaido.astro";
+
+const {} = Astro.props
+
+
+---
+<form class="scroll-animation delay-150 bg-white px-4 py-6 flex-col-center flex rounded-xl absolute top-[86%] z-40 overflow-hidden min-h-full
+              left-1/2 max-w-[360px] -translate-x-1/2 w-[89%] | 
+              md:max-w-[450px]
+              lg:relative lg:top-auto lg:left-auto lg:translate-x-0 lg:pt-8 lg:px-[39px] lg:pb-[44px]
+              lg:max-w-[444px] lg:-mb-[275px] | xl:max-w-[670px] xl:px-9 xl:pb-[40px] xl:pt-8 xl:rounded-[32px] xl:overflow-visible">
+  
+  <!-- Deocrative -->
+  <svg class="hidden absolute -top-[1.45rem] -left-12 | xl:flex" xmlns="http://www.w3.org/2000/svg" width="44" height="41" viewBox="0 0 44 41" fill="none">
+    <g opacity="0.5">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5445 12.468C37.1863 9.10119 36.2933 5.51789 35.4535 2.03893C35.2753 1.28933 35.7246 0.525573 36.4612 0.389383C37.1924 0.198847 37.932 0.667077 38.1043 1.36239C38.9152 4.73463 39.7685 8.21178 41.0723 11.4198C41.3538 12.103 41.0185 12.9096 40.3215 13.2063C39.6251 13.5029 38.8264 13.1513 38.5445 12.468Z" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8829 24.5238C19.5601 19.5615 13.894 13.8125 7.43014 8.9757C6.82905 8.54747 6.70394 7.68211 7.15491 7.0829C7.60642 6.48363 8.46036 6.33472 9.06744 6.81725C15.5482 11.6522 21.2305 17.3994 27.5701 22.3598C28.1642 22.8438 28.2676 23.7113 27.8019 24.3121C27.3309 24.8586 26.477 25.0077 25.8829 24.5238Z" fill="white"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.09141 37.4224C8.37528 37.225 11.6591 37.0274 14.9435 36.83C15.6916 36.7475 16.3411 37.3356 16.3885 38.0996C16.4354 38.8637 15.8585 39.4765 15.1099 39.559C11.8206 39.757 8.53185 39.9551 5.2431 40.153C4.48904 40.1812 3.84337 39.5929 3.80026 38.8284C3.76315 38.1182 4.33789 37.4505 5.09141 37.4224Z" fill="white"/>
+    </g>
+  </svg>
+
+    
+  <div data-step="1" class="step_1 step w-full">
+
+    <QuizTextBlock title="What do you need help with?" descr="Select all that apply" subtitle="Answer questions for perfect match"/>
+    <!-- Checkbox -->
+    <div class="xl:flex xl:flex-wrap xl:justify-between xl:mb-1">
+
+      <FormCheckbox value="Google Ads" i="1" />
+      <FormCheckbox value="Social Ads" i="2" />
+      <FormCheckbox value="Landing Pages" i="3" />
+      <FormCheckbox value="Conversion Rate Optimization" i="4" />
+      <FormCheckbox value="Lead Nurturing" i="5" />
+
+    </div>
+
+    <button data-step="1" class="next-step btn w-full">Continue</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div data-step="2" class="step_2 step hidden w-full">
+
+    <QuizTextBlock title="What's your monthly ads budget?" descr="An estimate is fine" subtitle="Almost here"/>
+
+    <div class="xl:flex xl:flex-wrap xl:justify-between xl:mb-1">
+
+      <FormRaido value="Under $5K" i="1" />
+      <FormRaido value="$5K - $10K" i="2" />
+      <FormRaido value="$10K - $50K" i="3" />
+      <FormRaido value="$50K - $100K" i="4" />
+      <FormRaido value="$100K+" i="5" />
+
+    </div>
+
+    <button data-step="2" class="next-step btn w-full">Continue</button>
+  </div>
+
+  <!-- Step 3 -->
+  <div data-step="3" class="step-3 step hidden w-full">
+
+    <QuizTextBlock title="What's your monthly ads budget?" descr="An estimate is fine" subtitle="Almost here"/>
+
+
+    <div class="w-full flex flex-col items-center justify-center child:w-full xl:flex-row xl:flex-wrap xl:justify-between xl:mb-9">
+
+      <div class="input-wrap flex items-center py-[14px] px-4 rounded-xl border border-gray-100  mb-6
+                  sm:max-w-[340px] sm:w-full xl:max-w-[290px] xl:mb-8">
+        <Image width={24} class='mr-[5px]' src={UserPicIcon} alt="User Pic Icon" />
+        <input name="name" placeholder="Your name" type="text" class="pl-[5px] input font-medium placeholder:text-gray-500 text-black outline-none w-full">
+      </div>
+
+      <div class="input-wrap flex items-center py-[14px] px-4 rounded-xl border border-gray-100  mb-6
+                  sm:max-w-[340px] sm:w-full xl:max-w-[290px]  xl:mb-8">
+        <Image width={24} class='mr-[5px]' src={MailIcon} alt="Mail Pic Icon" />
+        <input name="email" placeholder="Enter your email" type="email" class="pl-[5px] input font-medium placeholder:text-gray-500 text-black outline-none w-full">
+      </div>
+
+      <div class="input-wrap flex items-center py-[14px] px-4 rounded-xl border border-gray-100  mb-6
+                  sm:max-w-[340px] sm:w-full xl:max-w-[290px]  xl:mb-8">
+        <Image width={24} class='mr-[5px]' src={GlobeIcon} alt="Globe Pic Icon" />
+        <input name="website" placeholder="Your website" type="text" class="pl-[5px] input font-medium placeholder:text-gray-500 text-black outline-none w-full">
+      </div>
+
+      <div class="input-wrap flex items-center py-[14px] px-4 rounded-xl border border-gray-100  mb-6
+      sm:max-w-[340px] sm:w-full xl:max-w-[290px] xl:mb-8">
+        <Image width={24} class='mr-[5px]' src={PhoneIcon} alt="Phone Icon Icon" />
+        <input name="phone" placeholder="Your Phone Number" type="number" class="pl-[5px] input font-medium placeholder:text-gray-500 text-black outline-none w-full">
+      </div>
+
+    </div>
+
+    <button data-step="3" class="next-step btn w-full">Continue</button>
+
+  </div>
+
+  <!-- Step 4, Finis -->
+  <div data-step="4" class="step-4 step h-full hidden w-full">
+
+    <div class="flex flex-col-center h-[483px]">
+      <div class="mb-2 xl:mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <path opacity="0.4" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 24L21 30L33 18" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+  
+      <div class="text-black -tracking-[0.32px] text-2xl font-bold mb-2 | lg:text-[32px]">Thank you!</div>
+      <div class="font-medium text-sm text-gray-700 | xl:text-base">We will contact you soon</div>
+    </div>
+
+
+
+  </div>
+
+
+</form>
+
+<style>
+
+</style>
+
+<script>
+  const steps = document.querySelectorAll('.step');
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const radio = document.querySelectorAll('input[type="radio"]')
+  const inputs = document.querySelectorAll('input[type="text"]');
+
+  const buttons = document.querySelectorAll('.next-step');
+
+  console.log(radio)
+
+  let currentStep = 1;
+  const maxStep = 4;
+  let isValid = true;
+
+  // Object for storing selected checkbox values and data from inputs
+  const selectedValues = {
+    tags: [],
+    budget: [],
+    user: {
+      name: "",
+      email: "",
+      website: "",
+      phone: "",
+    }
+  };
+
+  checkboxes.forEach((item) => {
+    item.addEventListener('change', () => {
+
+      const label = item.parentNode;
+      const checkboxValue = label.dataset.value;
+
+        if (item.checked) {
+          label.classList.add('checked');
+          selectedValues.tags.push(checkboxValue);
+
+        } else {
+          label.classList.remove('checked');
+          selectedValues.tags = selectedValues.tags.filter(value => value !== checkboxValue);
+        }
+      console.log(selectedValues);
+    })
+  })
+
+  radio.forEach((item) => {
+    item.addEventListener('change', () => {
+      const label = item.parentNode;
+      const checkboxValue = label.dataset.value;
+
+      if (item.checked) {
+        // Uncheck other radio buttons in the same group
+        radio.forEach((otherItem) => {
+          if (otherItem !== item) {
+            const otherLabel = otherItem.parentNode;
+            otherLabel.classList.remove('checked');
+          }
+        });
+
+        // Update selected value
+        selectedValues.budget = [checkboxValue];
+        label.classList.add('checked');
+      } else {
+        // Clear selected value
+        selectedValues.budget = [];
+        label.classList.remove('checked');
+      }
+
+      console.log(selectedValues);
+    });
+  });
+
+  inputs.forEach((item) => {
+    item.addEventListener('input', () => {
+      selectedValues.user[item.name] = item.value.trim();
+    })
+  })
+
+
+
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+
+
+      if(currentStep == 3) {
+          inputs.forEach((input) => {
+            const parent = input.parentElement;
+            const inputType = input.getAttribute("name");
+            let value = input.value;
+
+            if (inputType === "name") {
+                if (value.length < 3) {
+                    parent.classList.add('!border-error-400');
+                    isValid = false;
+                } else {
+                    isValid = true;
+                    parent.classList.remove('!border-error-400');
+                }
+            } else if (inputType === "email") {
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                    parent.classList.add('!border-error-400');
+                    isValid = false;
+                } else {
+                    isValid = true;
+                    parent.classList.remove('!border-error-400');
+                }
+            } else if (inputType === "website") {
+                try {
+                    new URL(value);
+                    isValid = true;
+                } catch (err) {
+                    parent.classList.add('!border-error-400');
+                    isValid = false;
+                    return;
+                }
+                parent.classList.remove('!border-error-400');
+            }
+          });
+      } else {
+        console.log('ne tri')
+      }
+
+        if(currentStep < 3) {
+          // hid current step
+          steps[currentStep - 1].classList.add('hidden');
+
+          // increase counter
+          currentStep++;
+
+          // show next step
+          steps[currentStep - 1].classList.remove('hidden');
+        } else if(currentStep == 3 && isValid) {
+
+          // hid current step
+          steps[currentStep - 1].classList.add('hidden');
+
+          // increase counter
+          currentStep++;
+
+          // show next step
+          steps[currentStep - 1].classList.remove('hidden');
+           // Send data to server
+            if(+button.getAttribute('data-step') == 3) {
+              console.log('Ready!');
+              console.log('Values:', selectedValues);
+            }
+        } else {
+          console.log("error")
+          console.log(isValid)
+          console.log(currentStep == 3)
+        }
+
+  
+    });
+  });
+
+</script>
+
+

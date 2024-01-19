@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+
+
+//? The component accepts the text and the part of the text to be selected
+const {subtitle, title, descr, descrStyle, icon, iconStyle, chooseText, titleStyle, textLeft = false} = Astro.props
+
+
+function wrapTextWithBg(text, chooseText) {
+  if (!chooseText || !title) {
+    return text;
+  }
+
+  const wrappedText = text.replace(
+    new RegExp(`(${chooseText})`, 'gi'),
+    '<span class="text-bg">$1</span>'
+  );
+
+  return wrappedText;
+}
+
+const wrappedTitle = wrapTextWithBg(title, chooseText);
+
+---
+
+
+
+  <div class={`scroll-animation delay-[200ms] scroll-animation-scale text-center flex-col-center main z-10 ${textLeft && 'text-left items-start md:items-center md:text-center'}`}>
+    {subtitle && <div class="font-bold text-primary-500 mb-1 -tracking-wide !leading-117 text-sm sm:text-base">{subtitle}</div>}
+   
+    {icon && 
+      <div class="relative">
+      
+        <div class={`absolute ${iconStyle}`}>
+          {<Image src={icon} alt="decorative line" />}
+        </div> 
+
+      <div class=`text-black font-bold text-[28px] -tracking-[0.84px] !leading-117 | sm:text-4xl lg:text-[52px] | md:-tracking-[1.56px] ${titleStyle}`>
+          <Fragment set:html={wrappedTitle} />
+      </div>
+      
+    </div>
+    }
+    {!icon && (
+       <div class=`text-black font-bold text-[28px] -tracking-[0.84px] !leading-117 | sm:text-4xl lg:text-[52px] | md:-tracking-[1.56px] ${titleStyle}`>
+          <Fragment set:html={wrappedTitle} />
+      </div>
+    )}
+     
+
+
+  {descr && <div class={`mt-3 lg:mt-6 text-gray-800 font-medium  sm:max-w-xs lg:max-w-[38rem] leading-135 -tracking-[0.42px] text-sm 410:max-w-[280px] sm:text-base lg:text-xl ${descrStyle}`}>
+                          {descr}
+              </div> }
+  </div>
+
+
+
+<style>
+
+</style>
+
+<script>
+
+</script>

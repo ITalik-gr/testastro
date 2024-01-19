@@ -1,0 +1,25 @@
+---
+
+import { Image } from 'astro:assets';
+import user_1 from '../images/Users/user-1.png'
+import MainButton from './Buttons/MainButton.astro';
+
+const {link = "/contact", scrollAnimation = true} = Astro.props
+
+---
+<div class={`${scrollAnimation && 'scroll-animation-opacity scroll-animation'} bg-white rounded-xl py-6 px-4 w-full max-w-[876px] sm:flex sm:justify-between sm:items-center md:py-8 md:pl-9`}>
+  <!-- Image / Text -->
+  <div class="mb-4 flex items-center sm:mb-0">
+    <Image src={user_1} class='mr-3 max-w-[44px] sm:max-w-[62px] md:mr-6 md:max-w-[91px]' alt='User pic' />
+    <div class="">
+      <div class="leading-117 mb-2 font-extrabold -tracking-[0.16px] md:text-2xl md:font-bold">Want to know more?</div>
+      <p class="font-medium text-sm text-gray-700 leading-135 -tracking-[0.14px] md:text-base">Contact us and we will answer all your questions</p>
+    </div>
+  </div>
+  <!-- Btn -->
+  <MainButton style="w-full max-sm:btn-shadow--small sm:max-w-[213px] md:max-w-[233px]" title="Contact Us" link={link} />
+</div>
+
+<style>
+
+</style>

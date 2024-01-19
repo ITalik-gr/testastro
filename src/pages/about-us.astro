@@ -1,0 +1,83 @@
+---
+import '../styles/main.css';
+
+import MainLayout from "../layouts/MainLayout.astro";
+
+import OurTeam from '../sections/OurTeam.astro';
+import Procces from '../sections/Procces/Procces.astro';
+import FounderMessage from '../sections/FounderMessage.astro';
+import WereTrusted from '../sections/WereTrusted.astro';
+
+
+
+import SecondHeader from "../components/Headers/SecondHeader.astro";
+
+import QuoteBlock from '../components/QuoteBlock.astro';
+import QuoteStewart from '../images/Quote-Stewart.png'
+
+
+import Footer from '../sections/Base/Footer.astro';
+import FreeAudit from '../sections/Base/FreeAudit.astro';
+import AboutArticles from '../sections/Blog/AboutArticles.astro';
+
+
+const {} = Astro.props
+
+---
+<MainLayout title="About Us">
+
+  <SecondHeader title="Dedicated PPC experts, just for you" 
+                selectedText="for you" 
+                titleStyle="sm:max-w-[683px]"        
+                headerStyle="jusctify-center" >
+
+    <svg slot="decorativeText" class="hidden absolute -top-[1.45rem] right-14 | md:flex lg:-right-[0.5rem]" xmlns="http://www.w3.org/2000/svg" width="44" height="41" viewBox="0 0 44 41" fill="none">
+      <g opacity="0.5">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.3325 12.468C6.69067 9.10119 7.58367 5.51789 8.42341 2.03893C8.60169 1.28933 8.15239 0.525573 7.41573 0.389383C6.68451 0.198847 5.94493 0.667077 5.77264 1.36239C4.96171 4.73463 4.10843 8.21178 2.8046 11.4198C2.5232 12.103 2.85843 12.9096 3.55542 13.2063C4.25186 13.5029 5.05055 13.1513 5.3325 12.468Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9941 24.5238C24.3168 19.5615 29.9829 13.8125 36.4468 8.9757C37.0479 8.54747 37.173 7.68211 36.722 7.0829C36.2705 6.48363 35.4166 6.33472 34.8095 6.81725C28.3288 11.6522 22.6464 17.3994 16.3068 22.3598C15.7128 22.8438 15.6094 23.7113 16.075 24.3121C16.5461 24.8586 17.4 25.0077 17.9941 24.5238Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.7855 37.4224C35.5017 37.225 32.2178 37.0274 28.9334 36.83C28.1854 36.7475 27.5359 37.3356 27.4884 38.0996C27.4415 38.8637 28.0185 39.4765 28.7671 39.559C32.0564 39.757 35.3451 39.9551 38.6339 40.153C39.3879 40.1812 40.0336 39.5929 40.0767 38.8284C40.1138 38.1182 39.5391 37.4505 38.7855 37.4224Z" fill="white"/>
+      </g>
+    </svg>
+
+  </SecondHeader>
+
+  <section class="scroll-animation delay-400 quoteSection bg-gray-50 pb-9 ">
+    <div class="container">
+      <div class="wrap flex justify-center">
+        <QuoteBlock 
+        text="I founded PPC.io after seeing a gap in the market for honest, but highly creative PPC services." 
+        image={QuoteStewart}  
+        name="Stewart Dunlop – Founder"
+        style="mb-[5px] -mt-[94px] lg:-mt-[85px]" />
+      </div>
+
+        <!-- Decorate line  -->
+      <div class="flex justify-center md:-mb-[130px] lg:-mb-[165px] lg:mt-[34px]">
+          <svg class="hidden | md:flex md:max-h-[130px] | lg:max-h-full lg:max-w-[167px]" xmlns="http://www.w3.org/2000/svg" width="174" height="177" viewBox="0 0 174 177" fill="none">
+            <g opacity="0.5">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M87.0731 71.5062C85.2872 70.1697 83.3266 69.0286 81.1754 68.1097C73.6271 64.8836 64.0044 69.0151 57.1151 75.9944C50.2282 82.9706 46.218 92.6526 49.3169 99.9608C51.0881 104.14 53.5998 106.463 56.4318 107.493C59.2493 108.518 62.44 108.257 65.6856 107.068C74.7311 103.749 84.2704 93.0826 86.5397 86.6128C87.5878 83.6194 88.4322 80.5568 89.0925 77.4493C95.2133 84.2307 98.235 94.2608 99.3437 105.395C101.754 129.593 95.0208 159.078 89.5799 173.769C89.2876 174.558 89.6917 175.432 90.481 175.725C91.2703 176.017 92.1477 175.615 92.4401 174.826C97.9884 159.844 104.835 129.771 102.376 105.094C101.107 92.3467 97.3283 81.0494 89.7851 73.8083C93.724 50.2335 88.0969 24.0483 83.5031 1.82835C83.3359 1.00552 82.5265 0.474413 81.7014 0.644648C80.8792 0.817229 80.3474 1.62123 80.5176 2.44642C84.9223 23.7587 90.4127 48.7852 87.0731 71.5062ZM86.498 74.9316C84.5819 73.3104 82.4147 71.9522 79.9735 70.9119C73.4412 68.1188 65.2458 72.0924 59.2822 78.1343C55.6283 81.8389 52.8024 86.3656 51.7359 90.8009C51.0642 93.589 51.0915 96.3331 52.1264 98.7707C53.4824 101.97 55.3077 103.842 57.4744 104.627C59.6533 105.422 62.1215 105.128 64.6339 104.204C72.8788 101.181 81.5963 91.4941 83.6612 85.6047C84.8801 82.1313 85.8101 78.5664 86.498 74.9316Z" fill="#8057FF"/>
+            </g>
+          </svg>
+      </div>
+    </div>
+  </section>
+
+  <OurTeam />
+
+  <Procces />
+
+  <FounderMessage />
+
+  <WereTrusted />
+  
+  <AboutArticles />
+
+  <FreeAudit />
+
+  <Footer />
+
+</MainLayout>
+
+<style>
+
+</style>

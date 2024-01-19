@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+import user_6 from '../../images/Users/user-6.png';
+
+const {} = Astro.props
+
+---
+<div class="flex items-center justify-between py-6 border-[#E5E5F9] border-y mb-6 | xl:py-[30px] xl:mb-[30px]">
+
+  <div class="flex items-center">
+    <Image src={user_6} class="max-w-[32px] mr-2 | lg:max-w-[46px] lg:mr-3" alt="User Image" />
+    <div class="">
+      <div class="font-bold text-black leading-117 -tracking-[0.21px] text-sm mb-1 | lg:text-base">Stewart</div>
+      <div class="text-xs text-black text-opacity-80 font-semibold leading-117 -tracking-[0.18px] | lg:text-sm">CEO of PPC
+      </div>
+    </div>
+  </div>
+  <div class="public-time text-xs text-gray-700 font-semibold leading-117 -tracking-[0.18px] | lg:text-sm">
+    Feb 19, 2022
+  </div>
+
+</div>
+
+<style>
+
+</style>

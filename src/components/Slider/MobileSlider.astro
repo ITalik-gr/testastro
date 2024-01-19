@@ -1,0 +1,24 @@
+---
+
+const {sliderImages} = Astro.props
+
+---
+<!--     <Image src={image} alt="Slider Image" /> -->
+<div class="slider flex w-full pl-0 lg:hidden">
+
+  {sliderImages.map((image) => {
+    return (
+    <div class="slider-item px-1 w-full flex justify-center">
+      <img loading="lazy" class="w-full max-w-sm" src={image} alt="Slider Image">
+    </div>
+    )
+  })}
+
+
+  <div class="slider-pagination"></div>
+</div>
+
+<style>
+
+</style>
+

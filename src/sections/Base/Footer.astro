@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+
+import WhiteLogo from '../../images/Logo-white.svg';
+
+import InstagramIcon from '../../images/Icons/Instagram.svg';
+import TwitterIcon from '../../images/Icons/Twitter.svg';
+import LinkedinIcon from '../../images/Icons/LinkedIn.svg';
+
+---
+
+<footer class="bg-black pt-[76px] pb-6 lg:pt-[120px]">
+  <div class="container">
+    <div class="wrap sm:flex sm:flex-wrap">
+
+      <a href="/" class="logo mb-9 block sm:mr-[75px] md:mr-[135px]">
+        <Image class='max-w-[90px]' src={WhiteLogo} alt="logo"/>
+      </a>
+
+      <div class="mb-[52px] sm:mr-[75px] md:mr-[135px]">
+        <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">About</div>
+
+        <div class="list columns-2 max-w-[250px] sm:columns-auto">
+          <a href="/cases" class="font-bold text-white leading-135 mb-6 block">Case studies</a>
+          <a href="/pricing" class="font-bold text-white leading-135 mb-6 block">Pricing</a>
+          <a href="/about-us" class="font-bold text-white leading-135 mb-6 block">About Us</a>
+          <a href="/blog" class="font-bold text-white leading-135 block">Blog</a>
+        </div>
+      </div>
+
+      <div class="mb-[52px] lg:mr-[105px] xl:mb-[85px]">
+        <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Services</div>
+        <div class="list">
+          <a href="/services/GoogleAds" class="font-bold text-white leading-135 mb-6 block">Google Adwords Management</a>
+          <a href="/services/Facebook" class="font-bold text-white leading-135 mb-6 block">Facebook PPC Management</a>
+          <a href="/services/Amazon" class="font-bold text-white leading-135 mb-6 block">Amazon PPC Management</a>
+          <a href="/services/WhiteLabel" class="font-bold text-white leading-135 mb-6 block">White Label PPC Services</a>
+          <a href="/services/LandingPage" class="font-bold text-white leading-135 block">Design that Converts</a>
+        </div>
+      </div>
+
+      <div class="mb-[52px] sm:mr-[56px] md:mr-[117px] lg:mr-[157px]">
+        <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase">Contact</div>
+        <div class="list columns-2 max-w-[250px] sm:columns-auto">
+          <a href="/contact" class="font-bold text-white leading-135 block sm:mb-6">Contact Us</a>
+          <a href="/free-audit" class="font-bold text-white leading-135 block">Get Free Audit</a>
+        </div>
+      </div>
+
+      <div class="mb-[24px]">
+        <div class="text-sm text-gray-400 mb-[22px] font-bold uppercase hidden sm:flex">Social</div>
+        <div class="list flex max-w-[250px] sm:flex-col">
+
+          <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+            <Image src={InstagramIcon} class='w-6 sm:w-4' alt="Instagram" />
+            <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">Instagram</span>
+          </a>
+
+          <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+            <Image src={TwitterIcon} class='w-6 sm:w-4' alt="Twitter" />
+            <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">X (Twitter)</span>
+          </a>
+
+          <a href="/" class="font-bold text-white leading-135 mb-6 block mr-8 sm:flex sm:items-center sm:mr-0">
+            <Image src={LinkedinIcon} class='w-6 sm:w-4' alt="LinkedIn" />
+            <span class="hidden ml-3 text-white font-bold leading-135 -tracking-[0.16px] sm:flex">Linkedin</span>
+          </a>
+
+      
+        </div>
+      </div>
+
+      
+
+
+    </div>
+
+    <div class="pt-6 border-t border-[#26262F] flex flex-col-reverse sm:flex-row sm:justify-between">
+      <div class="text-xs sm:text-sm text-[rgba(255,255,255,0.7)] font-semibold leading-135">Copyright © 2023 PPC.io</div>
+      <div class="mb-9 sm:mb-0">
+        <a href="/PrivacyPolicy" class="text-sm text-[rgba(255,255,255,0.7)] font-semibold leading-135 mr-[51px]">Privacy Policy</a>
+        <a href="/TermsOfService" class="text-sm text-[rgba(255,255,255,0.7)] font-semibold leading-135">Terms of service</a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,49 @@
+---
+export const prerender = true;
+import '../../styles/main.css'
+
+import cases from '../../data/cases.json'
+import CaseLayout from '../../layouts/CaseLayout.astro';
+import CaseArticle from '../../components/Cases/CaseArticle.astro'
+import CaseInfo from '../../components/Cases/CaseInfo.astro'
+
+export function getStaticPaths() {
+  return [
+    {params: {path: 'ARCRelocation'}},
+    {params: {path: 'OnlineCoursesSite'}},
+    {params: {path: "JobSage"}},
+    {params: {path: 'SnackNation'}},
+    {params: {path: 'FollowUpBoss'}},
+    {params: {path: "PDFSimpli"}},
+    {params: {path: 'MachineryeCommerce'}}
+  ]
+}
+
+const { path } = Astro.params;
+
+const dataPaths = Object.keys(cases).map((path) => ({
+     path
+}));
+
+const page = dataPaths.find((page) => page.path === path);
+
+if (!page) return Astro.redirect("/404");
+
+const data = cases[path]
+
+---
+<CaseLayout data={data}>
+  <CaseInfo data={data} slot='CaseInfo' />
+  <CaseArticle slot='CaseArticle' />
+
+</CaseLayout>
+
+<style>
+  body {
+    background-color: #F3F3FF;
+  }
+</style>
+
+<script>
+
+</script>

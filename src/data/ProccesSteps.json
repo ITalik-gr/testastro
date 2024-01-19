@@ -1,0 +1,136 @@
+{
+	"1": {
+		"step": 1,
+		"title": "Set up",
+		"descr": "We painstakingly plan for guaranteed success. Anyone who promises to have your ads up and running in a matter of days is going to lose you a ton of money, guaranteed.",
+		"quote": "An idea can turn into dust or magic, depending on the talent that rubs against it.",
+		"cards": [
+			{
+				"icon": "/image/Procces/Procces-Search.svg",
+				"title": "Research",
+				"descr": "In-depth understanding of your ideal customer"
+			},
+			{
+				"icon": "/image/Procces/Procces-Analitics.svg",
+				"title": "Competitor analysis",
+				"descr": "We find businesses in your industry that are killing it with paid ads"
+			},
+			{
+				"icon": "/image/Procces/Procces-Iron_Giant.svg",
+				"title": "AI Research",
+				"descr": "We leverage AI to rapidly gain insights into your competitors winning ads, giving us an unfair advantage from the start"
+			},
+			{
+				"icon": "/image/Procces/Procces-Magnet.svg",
+				"title": "Lead Magnets",
+				"descr": "We build our offer & positioning to drive customers"
+			},
+			{
+				"icon": "/image/Procces/Procces-Bookmark-Site.svg",
+				"title": "Landing Pages",
+				"descr": "We design World-class landing pages that convert everyone who sees them"
+			},
+			{
+				"icon": "/image/Procces/Procces-Globe.svg",
+				"title": "Platform Selection",
+				"descr": "We determine the best platforms to advertise on e.g.  Google, X, Instagram, TikTok etc"
+			}
+		]
+	},
+	"2": {
+		"step": 2,
+		"title": "Building the profit machine ",
+		"descr": "There’s a huge amount of work that goes into doing this right. Most agencies are happy to watch you bleed money inefficiently to the ad platforms. Not us.",
+		"quote": "“Most agencies don’t care about turning your business into a profit-generating machine. We do.”",
+		"cards": [
+			{
+				"icon": "/image/Procces/Procces-Target.svg",
+				"title": "Targeting",
+				"descr": "We target your ideal customer to perfection depending on interest, search intent, location and lookalike audiences"
+			},
+			{
+				"icon": "/image/Procces/Procces-Addvertise.svg",
+				"title": "Ad Creation",
+				"descr": "We build ads and copy that people cannot scroll past without clicking"
+			},
+			{
+				"icon": "/image/Procces/Procces-User-Budget.svg",
+				"title": "Establish Budget",
+				"descr": "We determine how many new customers you can handle and establish budget accordingly"
+			},
+			{
+				"icon": "/image/Procces/Procces-Eva.svg",
+				"title": "AI Bid Optimization",
+				"descr": "We leverage AI tools to reliably optimize our bidding strategy based on 100s of factors, giving us the highest return on PPC spend"
+			},
+			{
+				"icon": "/image/Procces/Procces-Bar_Chart.svg",
+				"title": "Tracking",
+				"descr": "NASA Science-level tracking - We need to track everything perfectly so that we know exactly what impact ads are having"
+			},
+			{
+				"icon": "/image/Procces/Procces-Crain.svg",
+				"title": "Structure",
+				"descr": "We’ll group all the ad campaigns based on goals, keywords, target audience and more"
+			},
+			{
+				"icon": "/image/Procces/Procces-Puzzl.svg",
+				"title": "Matching",
+				"descr": "We’ll then match all of the ads to the right landing page that meets the intent of that advert, to make sure our profit machine converts to perfection"
+			},
+			{
+				"icon": "/image/Procces/Procces-Rocket-Launch.svg",
+				"title": "Launch",
+				"descr": "We launch our initial ad campaigns"
+			}
+		]
+	},
+	"3": {
+		"step": 3,
+		"title": "Test, grow, scale ",
+		"descr": "This isn’t just about running advertising, it’s about growing your business long-term in a highly profitable way.",
+		"quote": "“The top 0.1% of advertisers test 10X more than anyone else.”",
+		"cards": [
+			{
+				"icon": "/image/Procces/Procces-Brain.svg",
+				"title": "Learning",
+				"descr": "The Ad platform needs to learn to optimize"
+			},
+			{
+				"icon": "/image/Procces/Procces-Test-Flusk.svg",
+				"title": "Testing",
+				"descr": "We rapidly test to evaluate performance"
+			},
+			{
+				"icon": "/image/Procces/Procces-Dislike.svg",
+				"title": "Lose Money",
+				"descr": "It may sound counterintuitive, but we need to be conscious that we’re losers at the start, and rapidly become winners"
+			},
+			{
+				"icon": "/image/Procces/Procces-aniversary.svg",
+				"title": "Find Winners",
+				"descr": "It’s our job to find what the winning ads are and then massively scale those up"
+			},
+			{
+				"icon": "/image/Procces/Procces-Money-Bag.svg",
+				"title": "Build the Profit Machine",
+				"descr": "We’re now starting to fully develop the lead generation machine"
+			},
+			{
+				"icon": "/image/Procces/Procces-Gear.svg",
+				"title": "Optimize & scale",
+				"descr": "We head back to the lab to run experiments and optimize for maximum profitability"
+			},
+      {
+				"icon": "/image/Procces/Procces-Increasing-Chart.svg",
+				"title": "Ambitious Growth",
+				"descr": "We want your business to become the dominant force in your industry"
+			},
+      {
+				"icon": "/image/Procces/Procces-TimeMoney.svg",
+				"title": "Long-Term Vision",
+				"descr": "Just how big can we grow this thing? We map out how to continue growth for months and years to come, in line with your business resources "
+			}
+		]
+	}
+}

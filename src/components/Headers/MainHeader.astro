@@ -1,0 +1,105 @@
+---
+import { Image } from "astro:assets";
+import MainButton from "../Buttons/MainButton.astro";
+import HeaderGrid from '../../images/header-grid.svg'
+import Nav from "../Nav.astro";
+
+import MainImage from '../../images/main-header-image.webp'
+
+import MainImageMob from '../../images/Main-Header-Image-mob.webp'
+
+const {} = Astro.props
+
+---
+
+<header class="header bg-[#0F0F11] relative overflow-x-clip">
+  <Nav />
+
+  <div class="header-wrapper pt-[104px] -mt-[1px] md:pt-[185px] lg:pt-[190px]">
+    <!-- Content -->
+  
+    <div class="container lg:pr-0 xl:max-w-[1296px]">
+      <div class="z-20 relative flex justify-center flex-col items-center sm:items-center lg:flex-row lg:justify-between lg:w-[107%]">
+
+
+        <!-- Header text + btn -->
+        <div class="w-full flex flex-col mb-6 410:items-center 410:text-center lg:mb-0 lg:text-left lg:items-start lg:max-w-[578px]">
+
+          <!-- Mobile top info link -->
+            <a href="/free-audit" class="scroll-animation delay-200 text-xs font-semibold -tracking-[0.12px] text-white text-opacity-80 flex items-center w-max mb-4 | sm:text-sm | md:text-base">
+              <span class="bg-[#8057FF] rounded-full w-[6px] h-[6px] mr-2"></span>
+              Hurry up and get a free audit. Time is limited
+              <svg class="ml-1 max-w-[14px] md:ml-[10px] md:max-w-none" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <g opacity="0.8">
+                  <path d="M3.33325 8.49998H12.6666M12.6666 8.49998L7.99992 3.83331M12.6666 8.49998L7.99992 13.1666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </a>
+  
+    
+          <!-- Title -->
+          <h1 class="text-animation text-4xl font-bold leading-[109.5%] tracking-[-1.26px] text-white mb-4 
+                     z-10 max-w-sm | sm:text-[48px] sm:max-w-lg
+                     lg:tracking-[-2.87px] lg:text-6xl lg:max-w-[800px] xl:text-[82px] ">The Last PPC Agency You’ll Ever Use</h1>
+ 
+          
+          <p class="scroll-animation delay-300 font-semibold text-white text-opacity-80 mb-6 z-10 max-w-[240px] 
+                    410:max-w-none sm:max-w-none sm:mb-[26px]">
+              Paid ad strategy that drives massive growth
+          </p>
+    
+          <MainButton link="/free-audit" title="Get Free Audit" style="scroll-animation delay-300 w-full text-lg max-w-sm h-[60px] sm:max-w-[203px] btn-shadow"/>
+        </div>
+
+
+        <!-- Main IMage -->
+        <div class="scroll-animation delay-[400ms] w-full max-w-3xl xs:max-w-[770px] md:max-w-5xl">
+
+          <picture>
+            <source srcset={MainImage.src} media="(min-width: 768px)" />
+            <img class="w-full h-full object-cover" src={MainImageMob.src} alt="Main Image" />
+          </picture>
+        </div>
+
+      </div>
+        <!-- 76% of Google Ad spend is wasted -->
+        <div class="w-full scroll-animation delay-[300ms] scroll-animation-scale flex justify-center md:-mt-[70px]">
+
+          <div class="bg-[#1B1B1F] flex-center rounded-[32px] w-full pt-10 pb-10 z-30 translate-y-12
+                        sm:max-w-md
+                        md:pt-[40px] md:pb-16 md:max-w-[818px] md:translate-y-32
+                        ">
+
+            <div class="text-white text-center font-bold text-2xl |
+                          sm:text-4xl md:text-[40px] lg:text-[52px] 
+                          max-w-[210px] sm:max-w-sm lg:max-w-[630px] 
+                          !leading-117">
+              <span class="text-4xl mb-2 leading-117 | md:mb-3 lg:text-[62px]">😡</span> <br>
+              76% of Google Ad spend is <span class="text-bg">wasted</span>
+            </div>
+            
+          </div>
+
+        </div>
+  
+      
+    </div>
+
+      <!-- Decorate -->
+      <Image src={HeaderGrid} width={1464} height={525} alt="Header Background" 
+      class="absolute z-0 -top-5 left-1/2 -translate-x-1/2 w-[1464px] h-[525px] opacity-70 object-cover 2xl:w-[1700px] md:top-36" />
+  
+      <div class="absolute bg-[rgba(129,87,255,0.4)] -top-4 -right-72 md:-right-20 w-[408px] h-[149px] rounded-full blur-[184px]"></div>
+      <div class="absolute bg-[rgba(129,87,255,0.4)] top-44 left-1/2 -translate-x-1/2 hidden sm:flex w-[320px] h-[120px] rounded-full blur-[184px]"></div>
+      </div>
+
+</header>
+
+<style>
+</style>
+
+
+
+<script src="../../scripts/text-anim.js"></script>
+
+

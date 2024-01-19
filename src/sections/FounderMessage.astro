@@ -1,0 +1,103 @@
+---
+import { Image } from 'astro:assets';
+import FounderImage from '../images/Quote-Stewart.png'
+
+const {} = Astro.props
+
+---
+<section class="py-9 | md:pt-14 | lg:pt-[190px] lg:pb-[170px]">
+  <div class="container max-w-[1084px]">
+    <div class="wrap lg:flex lg:justify-between">
+      <!-- Title, image -->
+      <div class="scroll-animation flex flex-col items-start mb-6">
+        <!-- Title -->
+
+        <div class="mb-1 font-bold text-sm leading-117 -tracking-[0.42px] text-primary-500 | sm:text-base">Message</div>
+        <div class="mb-6 leading-117 text-[28px] text-black font-bold -tracking-[0.84px] | 
+                    sm:text-4xl | lg:text-[52px] lg:mb-12">
+          From the founder
+        </div>
+
+        <!-- Image -->
+        <div class="relative">
+          <Image class="max-w-[140px] | sm:max-w-[230px] | lg:max-w-[355px]" src={FounderImage} alt="Founder Image" />
+
+          <div class="w-[34px] h-[34px] bg-white rounded-full flex justify-center items-center absolute -top-2 right-1 | sm:w-[56px] sm:h-[56px] | lg:w-[133px] lg:h-[133px] lg:-right-11 lg:top-0">
+            <!-- " -->
+            <svg class="w-full max-w-[20px] | sm:max-w-[34px] | lg:max-w-[82px]" xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82" fill="none">
+              <path d="M66.3407 22.82C69.8598 26.5578 71.7492 30.7501 71.7492 37.5458C71.7492 49.5042 63.3579 60.2222 51.1467 65.5215L48.0957 60.8133C59.4902 54.6497 61.7179 46.6512 62.6097 41.6082C60.7749 42.5581 58.373 42.8895 56.0155 42.6708C49.8518 42.1002 44.9933 37.0402 44.9933 30.7501C44.9933 27.5785 46.2532 24.5369 48.4958 22.2943C50.7385 20.0516 53.7801 18.7917 56.9517 18.7917C60.6178 18.7917 64.1267 20.4659 66.3407 22.82ZM32.174 22.82C35.6932 26.5578 37.5826 30.7501 37.5826 37.5458C37.5826 49.5042 29.1912 60.2222 16.9801 65.5215L13.929 60.8133C25.3236 54.6497 27.5512 46.6512 28.4396 41.6082C26.6048 42.5581 24.2029 42.8895 21.8488 42.6708C15.6852 42.1002 10.8301 37.0402 10.8301 30.7501C10.8301 27.5785 12.09 24.5369 14.3326 22.2943C16.5752 20.0516 19.6169 18.7917 22.7884 18.7917C26.4545 18.7917 29.9634 20.4659 32.1774 22.82H32.174Z" fill="#8057FF"/>
+            </svg>
+          </div>
+
+          <!-- Decorative images -->
+            <!-- Arrow -->
+          <svg class="hidden absolute -right-28 -top-11 lg:flex" xmlns="http://www.w3.org/2000/svg" width="113" height="113" viewBox="0 0 113 113" fill="none">
+            <g clip-path="url(#clip0_431_1469)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M59.4462 10.2149C64.991 18.1734 66.826 27.9135 66.2904 37.9154C65.4813 53.0201 59.2681 68.7253 52.1191 79.8987C47.6268 86.9215 42.2399 90.1709 36.3664 96.0303C36.1287 96.2677 36.1281 96.6528 36.3655 96.8906C36.6015 97.128 36.9881 97.1289 37.2243 96.8911C43.1666 90.9632 48.5985 87.6584 53.1439 80.5538C60.3924 69.2247 66.6834 53.2968 67.5047 37.9803C68.0552 27.7026 66.1423 17.6988 60.4443 9.51984C60.2524 9.24421 59.8743 9.17588 59.5987 9.36777C59.3231 9.55965 59.2544 9.93927 59.4462 10.2149Z" fill="#8057FF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M36.1878 98.4014C36.21 98.3815 36.355 98.2463 36.4883 98.1461C37.0386 97.7273 38.0686 97.0827 39.4162 96.3463C43.9396 93.8816 52.0258 90.4016 57.7846 91.2564C58.1169 91.3056 58.4254 91.0759 58.4746 90.7437C58.5239 90.4115 58.296 90.1018 57.9638 90.0526C51.9718 89.1631 43.54 92.7138 38.8342 95.2794C38.2041 95.6235 37.6388 95.9486 37.1565 96.2434C37.8905 94.6804 38.6633 93.1394 39.4554 91.6032C41.7375 87.1816 42.7958 82.8838 42.9867 77.8744C43.0002 77.5398 42.7376 77.2565 42.4026 77.2444C42.068 77.2309 41.7846 77.4936 41.7726 77.8285C41.588 82.6499 40.5715 86.7889 38.3755 91.0452C37.3407 93.0529 36.3379 95.0716 35.4091 97.1303C35.3167 97.3352 35.0823 97.8703 35.0612 97.9504C34.9405 98.4074 35.2857 98.6114 35.3641 98.6525C35.4018 98.6728 35.8843 98.896 36.1878 98.4014ZM35.1751 97.7287C35.167 97.7425 35.1574 97.7559 35.149 97.7713C35.1552 97.7586 35.1648 97.7451 35.1751 97.7287Z" fill="#8057FF"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_431_1469">
+                <rect width="92.9035" height="92.9035" fill="white" transform="translate(21.9629) rotate(13.6743)"/>
+              </clipPath>
+            </defs>
+          </svg>
+            <!-- Lines -->
+          <svg class="hidden absolute left-0 -top-1 lg:flex" xmlns="http://www.w3.org/2000/svg" width="40" height="43" viewBox="0 0 40 43" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3834 40.1274C9.56403 39.0757 5.56522 38.5452 1.68612 38.0592C0.850621 37.9573 0.0749171 38.5259 0.0152387 39.3269C-0.104118 40.1286 0.493016 40.8617 1.26884 40.9636C5.02858 41.4314 8.90733 41.9321 12.5477 42.9445C13.3235 43.1641 14.1594 42.7121 14.3981 41.9344C14.6368 41.1574 14.1593 40.3476 13.3834 40.1274Z" fill="#8057FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.9611 25.2172C18.8143 19.0624 11.8916 13.6998 5.86404 7.37979C5.32693 6.78954 4.37208 6.75792 3.77529 7.30894C3.17851 7.86054 3.11906 8.78807 3.71585 9.37832C9.74337 15.7165 16.6661 21.0966 22.813 27.2696C23.4097 27.8458 24.3644 27.854 24.9611 27.2872C25.4983 26.721 25.5579 25.7934 24.9611 25.2172Z" fill="#8057FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.4784 1.54341C36.6574 5.06616 36.8361 8.58891 37.0151 12.1123C37.0151 12.9192 37.7316 13.5422 38.5671 13.503C39.4026 13.4631 39.9991 12.7763 39.9991 11.9688C39.82 8.44018 39.6413 4.91216 39.4623 1.38413C39.4026 0.577224 38.6864 -0.0417174 37.8509 0.00219986C37.0751 0.0461172 36.4187 0.737085 36.4784 1.54341Z" fill="#8057FF"/>
+          </svg>
+        </div>
+        
+      </div>
+      <!-- Message -->
+      <div class="scroll-animation lg:max-w-lg">
+        <!-- Main text  -->
+        <div class="message-text text-gray-700 font-medium -tracking-[0.16px] transition-all duration-1000 mb-4 !leading-[145%] overflow-hidden max-h-[115px] | child:font-medium child:mb-12 last:mb-0 | lg:text-xl lg:-tracking-[0.2px] lg:max-h-full lg:last:mb-12">
+          <p>
+            “I founded PPC.io after seeing a gap in the market for honest, but highly creative PPC services.
+            After trying to source highly skilled PPC experts at a fair price, I became certain that many freelancers were using outdated techniques, and being quite careless with our budget in an attempt to increase their own earnings.
+          </p>
+
+          <p>
+            I went through a very intensive period of learning from the best and brightest minds out there in Google Adwords marketing and Facebook advertising, and built a system that could be used to <span class="text-primary-500 font-bold">replicate incredible results for any PPC campaign.</span>
+          </p>
+
+          <p>
+            We now serve a number of clients in a variety of challenging fields, but primarily all ambitious brands who want to grow and scale their leads and customer count. We prefer to work with clients <span class="text-primary-500 font-bold">who are ready to scale and have the systems in place to do so.</span>
+          </p>
+
+          <p>
+            Some of the major agencies out there are charging clients a very high cost per month for mediocre work, and don’t realize that most small businesses are working on stringent budgets, looking to absolutely maximise their conversion rates and ad-spend efficiency. That’s something we’re very in-tune with at PPC Genius.”
+          </p>
+        </div>
+
+        <div class="show-more text-primary-500 font-extrabold cursor-pointer mb-6 -tracking-[0.16px] text-hover | lg:hidden">Show more</div>
+        <div class="text-sm -tracking-[0.14px] text-black font-semibold leading-[135%] | sm:text-base">Stewart Dunlop – Founder</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+<script>
+
+  const message = document.querySelector('.message-text'),
+        more = document.querySelector('.show-more');
+
+  more.addEventListener('click', () => {
+    message.classList.toggle('!max-h-[1000px]')
+
+    if(message.classList.contains('!max-h-[1000px]')) {
+      more.innerHTML = 'Hide'
+    } else {
+      more.innerHTML = 'Show more'
+    }
+    
+  })
+
+</script>

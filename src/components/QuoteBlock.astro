@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+const {text, name, image, style = "|", titleStyle = "|"} = Astro.props
+
+---
+<div class={`scroll-animation delay-100 rounded-2xl py-4 px-4 z-10 relative max-w-[1044px] bg-white ${style} | sm:flex sm:flex-col-center
+              md:px-11 md:py-[52px] | lg:px-[140px] lg:rounded-[32px] xl:px-[180px]`}>
+
+  <!-- " -->
+  <div class="mb-4 w-full items-center | sm:flex sm:justify-center ">
+    <div class="max-w-[24px]  | md:max-w-[42px] | lg:max-w-[62px]">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62" fill="none">
+        <path d="M50.1609 17.2541C52.8217 20.0802 54.2503 23.25 54.2503 28.3882C54.2503 37.4299 47.9056 45.5338 38.6728 49.5406L36.3659 45.9807C44.9813 41.3204 46.6656 35.2728 47.3399 31.4598C45.9526 32.178 44.1365 32.4286 42.354 32.2632C37.6937 31.8318 34.0202 28.0059 34.0202 23.25C34.0202 20.852 34.9728 18.5522 36.6684 16.8566C38.3641 15.1609 40.6639 14.2083 43.0619 14.2083C45.8338 14.2083 48.4869 15.4741 50.1609 17.2541ZM24.3275 17.2541C26.9884 20.0802 28.417 23.25 28.417 28.3882C28.417 37.4299 22.0723 45.5338 12.8395 49.5406L10.5325 45.9807C19.148 41.3204 20.8323 35.2728 21.504 31.4598C20.1167 32.178 18.3006 32.4286 16.5207 32.2632C11.8604 31.8318 8.18945 28.0059 8.18945 23.25C8.18945 20.852 9.14205 18.5522 10.8377 16.8566C12.5333 15.1609 14.8331 14.2083 17.2311 14.2083C20.003 14.2083 22.6561 15.4741 24.3301 17.2541H24.3275Z" fill="#8057FF"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Text -->
+  <div class={`-tracking-[0.54px] !leading-126 text-lg font-semibold text-black mb-6 max-w-sm | 
+              sm:max-w-[590px] sm:mb-6 sm:text-center sm:text-2xl | 
+              md:max-w-[679px] md:text-3xl md:mb-10 | lg:text-[32px] lg:-tracking-[0.96px] ${titleStyle}`}>
+    {text}
+  </div>
+
+  <!-- User image, name -->
+  <div class="flex justify-start items-center | sm:flex-col-center">
+    <Image class="max-w-[38px] rounded-full mr-2 | sm:mb-4 sm:max-w-[48px] md:max-w-[64px]" src={image} alt={name} />
+
+    <div class="-tracking-[0.21px] text-sm font-bold leading-126 text-black | md:text-base">
+      {name}
+    </div>
+  </div>
+
+</div>
+
+<style>
+
+</style>

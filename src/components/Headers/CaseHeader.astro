@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import Nav from "../Nav.astro";
+import HeaderGrid from '../../images/header-grid.svg'
+import InfoCard from "../Cards/InfoCard.astro";
+
+const {caseName, title, roas, IncreasedSales, ConversionRateIncrease, wrappedText} = Astro.props
+
+function wrapTextWithBg(text, selectedText) {
+  if (!selectedText || !title) {
+    return text;
+  }
+
+  const wrappedText = text.replace(
+    new RegExp(`(${selectedText})`, 'gi'),
+    '<span class="text-bg leading-[27px] py-1 lg:leading-[54px]">$1</span>'
+  );
+
+  return wrappedText;
+}
+
+const wrappedTitle = wrapTextWithBg(title, wrappedText);
+---
+
+<header class="header bg-[#0F0F11] relative overflow-x-clip">
+
+  <Nav scrollAnimation={false} />
+
+  <div class="header-wrapper pb-[75px] pt-[110px] -mt-[1px] | md:pt-[135px] md:pb-[80px] lg:pt-[168px] lg:pb-[90px]">
+
+    <!-- Decorate -->
+    <Image src={HeaderGrid} width={1464} height={525} alt="Header Background" 
+    class="absolute z-0 -top-5 left-1/2 -translate-x-1/2 w-[1464px] h-[525px] opacity-70 object-cover 2xl:w-[1700px] lg:-top-9" />
+
+    <!-- Content -->
+  
+    <div class="container">
+      <div class="wrap z-20 relative flex justify-center sm:items-center flex-col items-center">
+
+        <div class="w-full flex flex-col items-start 520:items-center sm:text-center">
+    
+          <!-- Read time -->
+          <div class="scroll-animation font-semibold text-sm text-[rgba(255,255,255,0.8)] -tracking-[0.24px] leading-117 mb-4 |
+                      sm:mb-3 sm:text-base">
+            {caseName}
+          </div>
+
+          <!-- Title -->
+          <h1 class="scroll-animation delay-150 text-[28px] font-semibold leading-[109.5%] -tracking-[0.98px] text-white mb-10 z-10 max-w-sm
+                    520:text-center 520:text-3xl sm:text-[34px] sm:max-w-lg
+                    lg:tracking-[-1.47px] lg:text-[42px] lg:max-w-[800px] lg:mb-12">
+
+                    <Fragment set:html={wrappedTitle} />
+          </h1>
+
+        </div>
+
+        <div class="child:mb-4 last:m-0 w-full flex flex-col-center | 
+                      md:flex-row md:child:max-w-[32%] md:items-stretch md:child:mb-0 md:child:mr-5 lg:child:max-w-xs">
+
+            <InfoCard name="Roas" value={roas} />
+
+            <InfoCard name="Increased Sales Leads" style="delay-200" value={IncreasedSales} />
+
+            <InfoCard name="Conversion Rate Increase" style="delay-[400ms]" value={ConversionRateIncrease} />
+          </div>
+
+  
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+
+</style>
+

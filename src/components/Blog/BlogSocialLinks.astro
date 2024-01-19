@@ -1,0 +1,26 @@
+---
+import BlogSocialLink from "./BlogSocialLink.astro";
+
+import Twitter from '../../images/Blog/BlogIcons/Twitter.svg';
+import Linkedin from '../../images/Blog/BlogIcons/Linedin.svg';
+import Telegram from '../../images/Blog/BlogIcons/Telegram.svg';
+import Facebook from '../../images/Blog/BlogIcons/Facebook.svg';
+import LinkIcon from '../../images/Blog/BlogIcons/link-icon.svg';
+
+
+const {} = Astro.props
+
+---
+<div class="socials flex flex-wrap">
+  <BlogSocialLink link="/" image={Twitter} />
+  <BlogSocialLink link="/" image={Linkedin} />
+  <BlogSocialLink link="/" image={Telegram} />
+  <BlogSocialLink link="/" image={Facebook} />
+  <BlogSocialLink link="/" image={LinkIcon} text="Share Link" />
+</div>
+
+<style>
+
+</style>
+
+<script></script>

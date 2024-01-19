@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+
+
+const {title, text, icon, i, open = false} = Astro.props
+
+
+---
+<div class="accordion px-3 py-4 bg-white rounded-xl mb-3 max-w-[576px]
+            sm:p-6 sm:mb-4 lg:max-w-[618px]">
+
+  <div class="nav flex justify-between items-center cursor-pointer">
+    <div class="font-bold leading-135 text-black -tracking-[0.48px] max-w-[212px] 410:max-w-xs
+                sm:text-xl sm:-tracking-[0.6px] sm:max-w-none sm:flex sm:items-center lg:leading-[27px]">
+      {icon && <Image class="mb-[6px] max-w-[20px] sm:max-w-[24px] sm:mr-2 sm:mb-0" src={icon} alt={title} />}
+      {title}
+    </div>
+    
+    <svg class="transition-all duration-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class={`body h-full max-h-0 overflow-hidden text-gray-700 leading-135 font-medium transition-all duration-300 max-w-[790px] ${i == open ? "body-active" : ""}`}>
+    <Fragment set:html={text} />
+  </div>
+</div>
+
+<style>
+  .body-active {
+    max-height: 300px;
+    padding-top: 24px;
+  }
+</style>
+
+<script>
+  const accordions = document.querySelectorAll('.accordion');
+  const accordionsNav = document.querySelectorAll('.accordion .nav');
+
+  accordions.forEach((item, i) => {
+    const body = item.querySelector('.body')
+    const svg = accordionsNav[i].querySelector('svg');
+
+    if(body.classList.contains('body-active')) {
+      svg.classList.add('rotate-180')
+    } else {
+      svg.classList.remove('rotate-180')
+    }
+
+    accordionsNav[i].addEventListener('click', () => {
+      body.classList.toggle('body-active')
+      svg.classList.toggle('rotate-180')
+    })
+  })
+
+</script>

@@ -1,0 +1,24 @@
+---
+
+
+const {opacity = 1, mobile = true, wrapStyle = "", svgStyle = ""} = Astro.props
+
+let styles = `w-full flex justify-center ${!mobile ? 'hidden md:flex' : ""} ${wrapStyle}`
+---
+<div class={`${styles}`}>
+
+  <svg 
+    class={`decorate-line -mb-2 w-full min-h-full z-40 max-w-[25px] max-h-[147px] sm:mb-16 md:max-h-none md:max-w-none 
+            ${svgStyle}
+            `} 
+    xmlns="http://www.w3.org/2000/svg" width="56" height="175" viewBox="0 0 56 175" opacity={opacity} fill="none">
+
+
+    <path d="M34.1413 1C38.808 24.6667 44.7208 74.3185 37.1413 87.5C25.6411 107.5 -0.131944 119.414 2.14112 91C4.14111 66 26.7822 65.3206 34.1411 69C41.5 72.6794 67.6412 88.5 43.6412 174" stroke="#8057FF" stroke-width="3"/>
+  </svg>
+
+</div>
+
+<style>
+
+</style>

@@ -1,0 +1,148 @@
+---
+import BlockText from "../../components/BlockText.astro";
+import CaseCard from "../../components/Cards/CaseCard.astro";
+import DecorateLine from "../../components/DecorateLine.astro";
+
+import JobSage from '../../images/Case/JobSage.svg';
+import ARC from '../../images/Case/ARC.svg';
+import Udemy from '../../images/Case/Udemy.svg';
+import Decorate from '../../images/Decorate/decorate-1.svg';
+
+const {line = true, sectionStyle = ""} = Astro.props
+
+
+---
+<section class={`pb-8 md:pb-14 ${sectionStyle}`}>
+  <div class="container">
+    <BlockText 
+      title="Our case studies" 
+      subtitle="We Get Results" 
+      icon={Decorate}
+      iconStyle="-left-9 hidden sm:flex -top-[15px]" />
+  </div>
+  
+     <!-- Mobile slider -->
+     <div class="slider scroll-animation mt-6 !pl-5 flex w-full child:mr-5 md:!hidden lg:pl-12 xl:!pl-24 ">
+        <!-- Slides -->
+        <div class=" slider-item">
+          <CaseCard 
+            image={JobSage} 
+            name="Job Sage" 
+            increase="14,582%" 
+            step_1="241" 
+            step_2="36,036"
+            leads="32%" 
+            conversion="3,3%"
+            cardStyle="!w-[257px]" />
+        </div>
+
+        <div class=" slider-item">
+          <CaseCard 
+            image={ARC} 
+            name="ARC Relocation" 
+            increase="6,098%" 
+            step_1="357" 
+            step_2="22,127"
+            leads="74%" 
+            conversion="12,1%"
+            cardStyle="!w-[257px]" />
+        </div>
+
+        <div class=" slider-item">
+          <CaseCard 
+            image={Udemy} 
+            name="Online Courses Site" 
+            increase="84%" 
+            step_1="5M" 
+            step_2="9.3M"
+            leads="632%" 
+            conversion="5,2%"
+            cardStyle="!w-[257px]" />
+        </div>
+
+    </div>
+
+     <!-- Desktop version -->
+    <div class="container">
+     <div class="mt-8 flex-col-center lg:mt-[73px]">
+      <!-- Nav -->
+        <div class="scroll-animation hidden max-w-[937px] px-8 w-full mb-5 md:grid grid-cols-4 gap-0">
+          <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex">
+            CLIENT
+          </div>
+          <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-center pr-[90px]">
+            ROAS
+          </div>
+          <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-center md:text-right max-lg:pr-1">
+            Increase in Sales Leads 
+          </div>
+          <div class="text-gray-300 font-bold text-sm uppercase col-span-1 flex justify-end">
+            Conv. Rate Increase
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="flex-col-center w-full mb-8 md:mb-10 hidden md:flex">
+          <CaseCard 
+              image={JobSage} 
+              name="Job Sage" 
+              increase="14,582%" 
+              leads="32%" 
+              conversion="3,3%" />
+
+          <CaseCard 
+              image={ARC} 
+              name="ARC Relocation" 
+              increase="6,098%" 
+              leads="74%" 
+              conversion="12,1%" />
+
+          <CaseCard 
+            image={Udemy} 
+            name="Online Courses Site" 
+            increase="84%" 
+            leads="632%" 
+            conversion="5,2%" />
+        </div>
+
+        <!-- More cases link -->
+        <a href="/cases" class="text-black font-bold text-lg flex justify-center pt-[14px] 
+                            px-7 border border-gray-200 rounded-xl h-[60px] w-full 
+                            sm:text-2xl sm:w-auto sm:border-none sm:h-auto sm:p-0
+                            group hover:text-primary-500 transition-all
+                            ">
+            Show all case studies
+          <svg class="ml-3 hidden sm:flex group-hover:ml-5 transition-all" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M6.25 15H23.75M23.75 15L15 6.25M23.75 15L15 23.75" stroke="#8057FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Decorate line -->
+        {line && 
+          <DecorateLine wrapStyle="mt-6 md:mt-12" mobile={false} opacity="0.5" />  
+        }
+
+
+        
+      </div> 
+
+    </div>
+
+  
+
+</section>
+
+
+
+<style>
+  /* . slider-item {
+    display: flex;
+    justify-content: center;
+    max-width: none;
+  } */
+</style>
+
+<script >
+  
+
+</script>

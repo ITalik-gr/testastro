@@ -1,0 +1,104 @@
+---
+import '../styles/main.css';
+
+import SecondHeader from "../components/Headers/SecondHeader.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import HeaderMessageForm from '../components/Forms/HeaderMessageForm.astro';
+import BlockText from '../components/BlockText.astro';
+import Accordion from '../components/Accordion.astro';
+import Footer from '../sections/Base/Footer.astro';
+
+const {} = Astro.props
+
+const accordions = [
+  {
+    title: "Which ad platforms do you work on?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores perferendis omnis harum veritatis assumenda facilis exercitationem adipisci tempora rerum voluptatem!",
+  },
+  {
+    title: "What do I get for my money?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores perferendis omnis harum veritatis assumenda facilis exercitationem adipisci tempora rerum voluptatem!",
+  },
+  {
+    title: "What separates you from competitors?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores perferendis omnis harum veritatis assumenda facilis exercitationem adipisci tempora rerum voluptatem! Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+  },
+  {
+    title: "What services do you provide?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores perferendis omnis harum veritatis assumenda facilis exercitationem adipisci tempora rerum voluptatem!",
+  },
+  {
+    title: "Why do I need a PPC agency?",
+    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores perferendis omnis harum veritatis assumenda facilis exercitationem adipisci tempora rerum voluptatem!",
+  },
+]
+
+---
+
+<MainLayout title="Contact">
+
+  <SecondHeader 
+    title="Let’s Skyrocket your marketing performance" 
+    selectedText="Skyrocket" 
+    descr="We’d love to learn more about your project. Please fill out the form, and we’ll send over some ideas and schedule a call."
+    form={true}
+    titleStyle="md:balance lg:text-left lg:max-w-[775px] lg:pt-[68px]"
+    wrapperStyle="pb-[90px] lg:flex lg:justify-between lg:items-start">
+
+    <!-- Slots -->
+
+    <svg slot="decorativeText" class="hidden absolute -left-10 top-8 lg:flex" xmlns="http://www.w3.org/2000/svg" width="44" height="41" viewBox="0 0 44 41" fill="none">
+      <g opacity="0.5">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5445 12.468C37.1863 9.10119 36.2933 5.51789 35.4535 2.03893C35.2753 1.28933 35.7246 0.525573 36.4612 0.389383C37.1924 0.198847 37.932 0.667077 38.1043 1.36239C38.9152 4.73463 39.7685 8.21178 41.0723 11.4198C41.3538 12.103 41.0185 12.9096 40.3215 13.2063C39.6251 13.5029 38.8264 13.1513 38.5445 12.468Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8829 24.5237C19.5601 19.5614 13.894 13.8124 7.43014 8.97564C6.82905 8.54741 6.70394 7.68205 7.15491 7.08284C7.60642 6.48357 8.46036 6.33466 9.06744 6.81718C15.5482 11.6521 21.2305 17.3993 27.5701 22.3597C28.1642 22.8437 28.2676 23.7112 27.8019 24.3121C27.3309 24.8585 26.477 25.0077 25.8829 24.5237Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.09141 37.4224C8.37528 37.225 11.6591 37.0274 14.9435 36.83C15.6916 36.7475 16.3411 37.3356 16.3885 38.0996C16.4354 38.8637 15.8585 39.4765 15.1099 39.559C11.8206 39.757 8.53185 39.9551 5.2431 40.153C4.48904 40.1812 3.84337 39.5929 3.80026 38.8284C3.76315 38.1182 4.33789 37.4505 5.09141 37.4224Z" fill="white"/>
+      </g>
+    </svg>
+
+    <svg slot="decorativeStar" class="hidden absolute left-1/2 bottom-[50px] lg:flex" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <g opacity="0.5" clip-path="url(#clip0_525_681)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9322 11.4305C11.6933 11.0667 11.4728 10.7002 11.2699 10.326C10.9653 9.76463 10.7373 9.16432 10.4641 8.58922C10.348 8.34533 10.0352 7.71388 10.0064 7.61595C9.75963 6.76065 10.3573 6.35056 10.5383 6.2447C10.6247 6.19093 11.5254 5.6688 12.1914 6.62956C13.0066 7.80389 13.6552 9.0619 14.1231 10.3677C14.8034 11.3538 15.6287 12.2709 16.5229 13.0366C20.0801 16.0815 23.7895 14.8993 27.6142 13.1765C28.201 12.9082 28.895 13.1562 29.1839 13.7297C29.4747 14.3076 29.26 15.0128 28.6954 15.3241C26.6399 16.4748 23.5879 19.8698 23.0586 22.2405C22.948 22.7367 23.1854 23.712 23.3634 24.6924C23.6088 26.0538 23.7923 27.4267 23.6231 28.1119C23.5989 28.2174 23.2367 29.3456 23.0746 29.559C22.6831 30.068 22.1986 30.086 21.8983 30.0389C21.598 29.9919 21.2027 29.8127 20.8815 29.3693C20.5457 28.9059 20.1777 27.8142 20.0615 27.5967C19.64 26.8076 18.7727 25.2771 17.8343 24.0463C17.3288 23.3837 16.8365 22.7837 16.3703 22.583C14.6442 21.8406 12.8497 22.8503 11.3611 23.7519C11.1893 23.8537 11.0196 23.9599 10.8483 24.0615C10.2885 24.5339 9.66773 24.9752 8.98287 25.3762C7.94928 25.9831 7.3298 25.0598 7.29099 24.9979C7.20668 24.8611 6.80147 24.1439 7.49105 23.4828C7.56708 23.4125 8.1643 22.9763 8.39378 22.807C8.71376 22.5716 9.04548 22.3522 9.38045 22.1365C12.5929 19.3451 13.1862 15.2084 11.9322 11.4305ZM14.9723 14.8818C17.6531 17.1691 20.4014 17.6362 23.2073 17.1616L23.2069 17.1618C21.992 18.6804 21.0108 20.3439 20.7061 21.7154C20.59 22.2351 20.6723 23.1416 20.8234 24.1337C20.3314 23.3651 19.7706 22.5635 19.21 21.9145C18.5711 21.1736 17.9053 20.6184 17.3244 20.368C16.2037 19.8862 15.0479 19.8516 13.9209 20.0782C14.6725 18.4472 15.0083 16.6776 14.9723 14.8818Z" fill="white"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_525_681">
+          <rect width="27" height="27" fill="white" transform="translate(0 10.8616) rotate(-23.7209)"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <HeaderMessageForm slot='form' />
+
+  </SecondHeader>
+
+  <!-- Decorate Line -->
+
+  <div class="flex justify-center w-full mb-[47px] pt-[442px] | md:mb-[63px] | lg:pt-[140px] | xl:pt-[211px]">
+    <svg class="max-w-[71px] md:max-w-[157px]" xmlns="http://www.w3.org/2000/svg" width="157" height="21" viewBox="0 0 157 21" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M41.8458 12.3668C35.1007 14.2646 27.3131 16.1532 19.8215 16.6248C13.4182 17.0273 7.2332 16.4021 2.1707 13.7422C1.45707 13.3677 0.563411 13.6251 0.177473 14.3182C-0.209054 15.0107 0.0568643 15.878 0.770497 16.2531C6.29306 19.1539 13.0269 19.9127 20.0115 19.4731C27.6379 18.9935 35.5661 17.0923 42.4465 15.1672C43.2449 16.7366 44.8981 18.1999 47.8102 19.2795C52.2832 20.938 58.3906 20.9175 64.8245 19.9829C74.1558 18.6281 84.1937 15.3973 90.6476 13.1016C90.9123 13.008 91.3065 12.859 91.7889 12.6626C91.936 12.9777 92.1007 13.2883 92.2831 13.5932C93.8657 16.2502 96.6661 18.3986 99.5195 19.1659C117.616 24.0313 138.737 18.2016 155.934 13.4573C156.71 13.242 157.163 12.4519 156.945 11.6943C156.722 10.9367 155.91 10.4965 155.128 10.7117C138.413 15.3236 117.893 21.1424 100.302 16.4146C98.1369 15.8323 96.0307 14.1812 94.8306 12.1647C94.6952 11.9398 94.5776 11.7097 94.4658 11.4762C96.8367 10.3361 99.6254 8.74664 101.126 7.04529C102.667 5.30113 103.049 3.43936 101.708 1.68093C100.555 0.177698 98.8076 0.0498093 96.9897 0.829115C95.0306 1.6638 93.0126 3.61518 92.3596 4.53093C91.1359 6.24141 90.7476 8.09692 90.9712 9.90617C90.3946 10.1425 89.9263 10.3184 89.6375 10.4211C83.3248 12.666 73.5134 15.8346 64.3891 17.1597C58.5182 18.0127 52.9416 18.1263 48.8598 16.6133C47.119 15.9676 45.9688 15.214 45.3446 14.3394C46.5765 13.982 47.7644 13.6303 48.8992 13.2946C51.1437 12.6306 55.8167 11.5316 59.1554 9.57276C61.8105 8.01529 63.6108 5.8966 63.506 3.24068C63.4525 1.87618 62.6388 0.965548 61.3439 0.455146C59.409 -0.307033 56.0626 0.0617741 54.8165 0.318688C51.0372 1.09628 45.9929 4.31514 43.4973 7.9422C42.5012 9.38948 41.9088 10.9036 41.8458 12.3668ZM44.9504 11.475C46.0182 11.1633 47.0501 10.8573 48.0415 10.5639C50.1365 9.94383 54.5159 8.95899 57.6334 7.12976C59.2842 6.16148 60.6321 5.00139 60.5668 3.34971C60.5615 3.22126 60.4303 3.18473 60.3144 3.13221C60.1349 3.05171 59.9296 2.99631 59.7108 2.95292C58.23 2.65947 56.2409 2.9432 55.4266 3.11105C52.2556 3.76361 48.0373 6.48406 45.9435 9.52763C45.5011 10.1705 45.1487 10.8253 44.9504 11.475ZM93.8775 8.59191C95.26 7.90166 96.7073 7.06697 97.8486 6.15863C98.4546 5.6762 98.9665 5.18009 99.29 4.66512C99.5607 4.23922 99.6665 3.80301 99.343 3.38167C99.2135 3.21096 99.0194 3.20756 98.8194 3.23953C98.6076 3.27379 98.3899 3.34684 98.1722 3.44105C96.7367 4.05421 95.2542 5.48666 94.7776 6.15863C94.2187 6.93794 93.9422 7.76236 93.8775 8.59191Z" fill="#8057FF"/>
+    </svg>
+  </div>
+
+  <!-- FAQ -->
+
+  <section class="pb-6 | lg:pb-[104px]">
+    <div class="container">
+      <BlockText title="Might be helpfull" subtitle="FAQ" textLeft={true} />
+
+      <div class="scroll-animation wrap mt-6 flex flex-col-center | md:mt-9">
+        {accordions.map((item) => {
+          return <Accordion title={item.title} text={item.text} />
+        })}
+        
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+
+</MainLayout>
+
+<style>
+  body {
+    background-color: #F3F3FF;
+  }
+</style>

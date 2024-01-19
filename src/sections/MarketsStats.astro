@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets';
+import Grid from '../images/Decorate/MarketStats-grid.svg'
+
+import MarketStatsItem from '../components/Cards/MarketStatsItem.astro';
+
+const data = [
+  {
+    name: "Dentist near me",
+    volume: "118K",
+    trafficPotential: "46.4K",
+    estimated: "3.3",
+  },
+  {
+    name: "Emergency dentist near me",
+    volume: "164K",
+    trafficPotential: "41.8K",
+    estimated: "4.1",
+  },
+  {
+    name: "Best children dentist",
+    volume: "184K",
+    trafficPotential: "38.2K",
+    estimated: "3.1",
+  },
+  {
+    name: "Best dentist near me",
+    volume: "132K",
+    trafficPotential: "32K",
+    estimated: "5.2",
+  },
+  {
+    name: "Cosmetic dentist",
+    volume: "98K",
+    trafficPotential: "28K",
+    estimated: "6.3",
+  },
+  {
+    name: "Dentist that accept medical",
+    volume: "75K",
+    trafficPotential: "27K",
+    estimated: "4.2",
+  },
+  {
+    name: "Children dentist",
+    volume: "72K",
+    trafficPotential: "24K",
+    estimated: "7.6",
+  },
+
+]
+
+const {} = Astro.props
+
+---
+<section class="bg-[#0F0F11] relative pb-16 z-30 md:pb-24 lg:pb-[293px] pt-[14px] overflow-hidden">
+  <!-- decorate -->
+  <div class="hidden z-0 lg:flex bg-primary-500 blur-[184px] opacity-40 rounded-full rotate-[27deg] w-[428px] h-[170px] absolute -left-[230px] bottom-[100px]"></div>
+  <Image class='absolute z-0 -bottom-20 left-1/2 -translate-x-1/2 md:bottom-0 lg:bottom-[100px]' src={Grid} alt='Decorate grid' />
+
+  <div class="container">
+    <!-- Wrap -->
+    <div class="flex flex-col-center">
+
+      <div class="scroll-animation mb-6 relative flex flex-col-center md:mb-9 lg:mb-[52px]">
+        <div class="text-white text-[28px] -tracking-[0.84px] mb-3 font-bold leading-117 md:text-4xl lg:text-5xl lg:mb-4 xl:text-[62px]">Market Stats in US</div>
+  
+        <p class="text-sm text-white text-opacity-80 font-semibold text-center -tracking-[0.14px] md:text-base">Explore potential outcome without narrowing down </p>
+      </div>
+  
+      <!-- Card -->
+      <div class="scroll-animation delay-200 rounded-2xl px-4 py-6 w-full bg-gray-900 overflow-hidden relative max-w-[831px] md:p-0">
+        <!-- Nav -->
+        <div class="bg-primary-500 px-8 py-5 child:col-span-1 hidden md:grid grid-cols-5 items-center lg:py-6 ">
+          <div class="font-bold text-xs text-white -tracking-[0.07px] !col-span-2 uppercase lg:text-sm">Parent Topic</div>
+          <div class="font-bold text-xs text-white -tracking-[0.07px] uppercase text-end pr-[34px] w-max lg:text-sm">Search volume</div>
+          <div class="font-bold text-xs text-white -tracking-[0.07px] uppercase text-end lg:text-sm">Traffic potential</div>
+          <div class="font-bold text-xs text-white -tracking-[0.07px] uppercase text-end lg:text-sm">Estimated CPC</div>
+        </div>
+        <!-- Body Descktop Render all cards. on mobile only 3 -->
+        <div class="bg-gray-900 hidden md:block">
+          {data.map((item, i) => {
+            let last = i + 1 == data.length
+            return (
+              <MarketStatsItem {last} name={item.name} volume={item.volume} trafficPotential={item.trafficPotential} estimated={item.estimated} />
+            )
+          })}
+          <a href="/" class="font-extrabold mt-6 text-white w-full bg-gray-800 rounded-[10px] h-[52px] flex flex-col-center md:hidden">Show More</a>
+        </div>
+        <!-- Mobile Body -->
+        <div class="bg-gray-900 md:hidden">
+          {data.slice(0, 3).map((item, i) => {
+            let last = i + 1 == 3
+            return (
+              <MarketStatsItem {last} name={item.name} volume={item.volume} trafficPotential={item.trafficPotential} estimated={item.estimated} />
+            )
+          })}
+          <a href="/" class="font-extrabold text-white w-full bg-gray-800 rounded-[10px] h-[52px] flex flex-col-center md:hidden">Show More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>

@@ -1,0 +1,24 @@
+---
+
+
+const {value, i} = Astro.props
+
+---
+<label for=`radio_${i}` data-value={value} 
+      class="check-item cursor-pointer py-[10px] px-4 bg-white rounded-xl border border-gray-100 mb-4 flex items-center text-black font-medium leading-135 -tracking-[0.16px] | checked:border-primary-500 | 
+      xl:p-4 xl:max-w-[290px] xl:w-full xl:mb-5">
+
+  <input type="radio" name="radio_group" class="hidden" name="" id=`radio_${i}`>
+
+    <div class="checkbox flex justify-center items-center h-6 w-full max-w-[24px] rounded-full border border-gray-100 mr-3 cursor-pointer">
+      <svg class="checkbox-image hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M13.3327 4L5.99935 11.3333L2.66602 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    {value}
+
+</label>
+
+<style>
+
+</style>

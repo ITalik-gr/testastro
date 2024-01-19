@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import Nav from "../Nav.astro";
+import user_6 from '../../images/Users/user-6.png';
+
+const {ArticleTitle, ArticleTime, ArticleAuthor} = Astro.props
+
+---
+
+<header class="header bg-[#0F0F11] relative overflow-x-clip">
+  <Nav scrollAnimation={false} />
+
+  <div class="header-wrapper pb-[75px] pt-[110px] -mt-[1px] | md:pt-[135px] md:pb-[80px] lg:pt-[168px] lg:pb-[90px]">
+
+    <!-- Content -->
+  
+    <div class="container">
+      <div class="wrap z-20 relative flex justify-center | sm:items-center flex-col items-center">
+
+        <div class="w-full flex flex-col items-start | sm:items-center sm:text-center">
+    
+          <!-- Read time -->
+          <div class="font-semibold text-sm text-white text-opacity-80 -tracking-[0.24px] leading-117 mb-4 |
+                      sm:mb-3 sm:text-base">
+            {ArticleTime} read
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-[28px] font-semibold leading-[109.5%] -tracking-[0.98px] text-white mb-4 z-10 max-w-sm
+                    sm:text-center sm:text-[34px] sm:max-w-lg
+                    lg:tracking-[-1.47px] lg:text-[42px] lg:max-w-[850px] lg:mb-[63px]">
+                    {ArticleTitle}
+          </h1>
+
+          <!-- User info -->
+          <div class="flex items-center">
+            <Image src={user_6} class="max-w-[32px] mr-2 | md:max-w-[46px] md:mr-3" alt="User Image" />
+            <div class="flex flex-col items-start">
+              <div class="font-bold text-white leading-117 -tracking-[0.21px] text-sm mb-1 | md:text-base">{ArticleAuthor}</div>
+              <div class="text-xs text-[rgba(255,255,255,0.8)] font-semibold leading-117 -tracking-[0.18px] | md:text-sm">CEO of PPC</div>
+            </div>
+          </div>
+        </div>
+
+  
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+
+</style>
+

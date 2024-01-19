@@ -1,0 +1,87 @@
+{
+  "US": {
+    "Emergency dentist near me 1": { "id": 1, "traffic": "41.8K", "cpc": "4.1$" },
+    "Dentist near me": { "id": 2, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me 1": { "id": 3, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist 1": { "id": 4, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist 1": { "id": 5, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best dentist near me ": { "id": 6, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me ": { "id": 7, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best Emergency Child Dentist near me": { "id": 8, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 9, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 10, "traffic": "41.6K", "cpc": "8.4$" },
+    "Cosmetic dentist": { "id": 11, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child 1 Dentist": { "id": 12, "traffic": "30.9K", "cpc": "3.1$" }
+  },
+  "California": {
+    "Dentist near me 2": { "id": 13, "traffic": "39.2K", "cpc": "5.2$" },
+    "Emergency dentist near me 2": { "id": 14, "traffic": "41.8K", "cpc": "4.1$" },
+    "Best dentist near me 2": { "id": 15, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me 12": { "id": 16, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best dentist near me 21": { "id": 17, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist 2": { "id": 18, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist 2": { "id": 19, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best Emergency Child Dentist near me": { "id": 20, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 21, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 22, "traffic": "41.6K", "cpc": "8.4$" },
+    "Cosmetic dentist": { "id": 23, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 24, "traffic": "30.9K", "cpc": "3.1$" }
+  },
+  "Los Angeles": {
+    "Emergency dentist near me": { "id": 1, "traffic": "41.8K", "cpc": "4.1$" },
+    "Best dentist near me": { "id": 2, "traffic": "29.4K", "cpc": "1.5$" },
+    "Dentist near me": { "id": 3, "traffic": "31.1K", "cpc": "5.2$" },
+    "Emergency dentist near me": { "id": 4, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best dentist near me": { "id": 5, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist": { "id": 6, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 7, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best Emergency Child Dentist near me": { "id": 7, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 8, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": {
+
+ "id": 9, "traffic": "41.6K", "cpc": "8.4$" },
+    "Cosmetic dentist": { "id": 10, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 11, "traffic": "30.9K", "cpc": "3.1$" }
+  },
+  "New York (State)": {
+    "Emergency dentist near me": { "id": 12, "traffic": "21.3K", "cpc": "4.1$" },
+    "Dentist near me": { "id": 13, "traffic": "39.2K", "cpc": "5.2$" },
+    "Emergency dentist near me": { "id": 14, "traffic": "41.8K", "cpc": "4.1$" },
+    "Best dentist near me": { "id": 15, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 16, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best dentist near me": { "id": 17, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist": { "id": 19, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 18, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best Emergency Child Dentist near me": { "id": 45, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 46, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 47, "traffic": "41.6K", "cpc": "8.4$" },
+    "Cosmetic dentist": { "id": 48, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 49, "traffic": "30.9K", "cpc": "3.1$" }
+  },
+  "Los Angeles (City)": {
+    "Dentist near me": { "id": 1, "traffic": "39.2K", "cpc": "5.2$" },
+    "Emergency dentist near me": { "id": 2, "traffic": "41.8K", "cpc": "4.1$" },
+    "Best dentist near me": { "id": 3, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 16, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best dentist near me": { "id": 17, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist": { "id": 18, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 19, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best Emergency Child Dentist near me": { "id": 20, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 4, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 5, "traffic": "41.6K", "cpc": "8.4$" },
+    "Cosmetic dentist": { "id": 6, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 7, "traffic": "30.9K", "cpc": "3.1$" }
+  },
+  "Yonkers": {
+    "Dentist near Child me": { "id": 1, "traffic": "33.7K", "cpc": "2.2$" },
+    "Emergency dentist near me": { "id": 3, "traffic": "41.8K", "cpc": "4.1$" },
+    "Best dentist near me": { "id": 2, "traffic": "29.4K", "cpc": "1.5$" },
+    "Emergency dentist near me": { "id": 4, "traffic": "41.6K", "cpc": "8.4$" },
+    "Best dentist near me": { "id": 5, "traffic": "35.4K", "cpc": "4.9$" },
+    "Cosmetic dentist": { "id": 6, "traffic": "32.1K", "cpc": "7.2$" },
+    "Child Dentist": { "id": 7, "traffic": "30.9K", "cpc": "3.1$" },
+    "Best Emergency Child Dentist near me": { "id": 8, "traffic": "39.2K", "cpc": "5.2$" },
+    "Best dentist near me": { "id": 9, "traffic": "29.4K", "cpc": "1.5$" },
+    "Best dentist near me": { "id": 10, "traffic": "29.4K", "cpc": "1.5$" }
+  }
+}

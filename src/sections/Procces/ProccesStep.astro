@@ -1,0 +1,215 @@
+---
+import { Image } from "astro:assets";
+import ProccesStepCard from "../../components/Cards/ProccesStepCard.astro";
+import ServiceGrid from '../../images/Decorate/service-grid.svg';
+
+const cardsDefault = [
+  {
+    icon: "/image/Procces/Procces-Search.svg",
+    title: "Research",
+    descr: "In-depth understanding of your ideal customer"
+  },
+  {
+    icon: "/image/Procces/Procces-Analitics.svg",
+    title: "Competitor analysis",
+    descr: "We find businesses in your industry that are killing it with paid ads"
+  },
+  {
+    icon: "/image/Procces/Procces-Iron_Giant.svg",
+    title: "AI Research",
+    descr: "We leverage AI to rapidly gain insights into your competitors winning ads, giving us an unfair advantage from the start"
+  },
+  {
+    icon: "/image/Procces/Procces-Magnet.svg",
+    title: "Lead Magnets",
+    descr: "We build our offer & positioning to drive customers"
+  },
+  {
+    icon: "/image/Procces/Procces-Bookmark-Site.svg",
+    title: "Landing Pages",
+    descr: "We design World-class landing pages that convert everyone who sees them"
+  },
+  {
+    icon: "/image/Procces/Procces-Globe.svg",
+    title: "Platform Selection",
+    descr: "We determine the best platforms to advertise on e.g.  Google, X, Instagram, TikTok etc"
+  }
+
+]
+
+const {sectionStyle, data = cardsDefault} = Astro.props
+
+const {step = 1, title = "", descr = "", quote = "", cards} = data
+
+---
+<section data-index={step} class={`proccesStep overflow-hidden bg-black pb-9 relative horizontal-scroll md:!pt-8 xl:!pt-14 ${sectionStyle}`}>
+    <!-- decorate -->
+
+    <Image src={ServiceGrid} width={1464} height={525} alt="Grid Background" 
+    class="absolute hidden z-0 left-1/2 top-10 -translate-x-1/2 w-[1464px] h-[525px] opacity-70 object-cover 2xl:w-[1700px] lg:flex" />
+
+    <div class="container">
+      <!-- top nav -->
+      <div  class="z-20 relative flex flex-col mb-8 md:flex-row md:items-center md:justify-between lg:mb-12 xl:mb-[80px]">
+        <!-- left text -->
+        <div class="mb-9 lg:mb-0">
+          <div class="text-primary-400 font-bold text-sm -tracking-[0.42px] leading-117 mb-1 md:text-base lg:mb-5">STEP {step}</div>
+
+          <div class="text-white font-bold text-[28px] leading-117 mb-2 -tracking-[0.84px] capitalize sm:text-4xl md:text-5xl lg:mb-5 lg:text-[52px]">
+            {title}
+          </div>
+
+          <p class="font-medium text-sm text-white text-opacity-80 leading-135 -tracking-[0.42px] max-w-[513px] sm:text-base lg:text-lg">
+            {descr}
+          </p>
+        </div>
+        <!-- quot -->
+        <div class="bg-gray-900 px-4 py-5 flex-col-center rounded-3xl md:items-start md:max-w-xs md:ml-5 lg:max-w-lg lg:p-6 lg:ml-0 ">
+          <svg class="mb-4" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M32.3596 11.1315C34.0762 12.9548 34.9979 14.9998 34.9979 18.3148C34.9979 24.1482 30.9046 29.3765 24.9479 31.9615L23.4596 29.6648C29.0179 26.6582 30.1046 22.7565 30.5396 20.2965C29.6446 20.7598 28.4729 20.9215 27.3229 20.8148C24.3162 20.5365 21.9462 18.0682 21.9462 14.9998C21.9462 13.4527 22.5608 11.969 23.6548 10.875C24.7488 9.78109 26.2325 9.1665 27.7796 9.1665C29.5679 9.1665 31.2796 9.98317 32.3596 11.1315ZM15.6929 11.1315C17.4096 12.9548 18.3312 14.9998 18.3312 18.3148C18.3312 24.1482 14.2379 29.3765 8.28125 31.9615L6.79292 29.6648C12.3513 26.6582 13.4379 22.7565 13.8713 20.2965C12.9763 20.7598 11.8046 20.9215 10.6562 20.8148C7.64958 20.5365 5.28125 18.0682 5.28125 14.9998C5.28125 13.4527 5.89583 11.969 6.98979 10.875C8.08376 9.78109 9.56749 9.1665 11.1146 9.1665C12.9029 9.1665 14.6146 9.98317 15.6946 11.1315H15.6929Z" fill="#8057FF"/>
+          </svg>
+
+          <p class="text-white font-semibold -tracking-[0.48px] leading-[126%] text-center sm:text-lg md:text-left lg:text-xl lg:-tracking-[0.6px] lg:max-w-[435px]">
+            {quote}
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile -->
+    <div class="container md:hidden">
+      <div class="child:mb-12 last:mb-0 pl-[53px] relative">
+        {cards.map((card) => {
+          return (
+            <ProccesStepCard icon={card.icon} title={card.title} descr={card.descr} />
+          )
+        })}
+
+        <div class="mobile-line bg-gray-600 h-full w-[2px] absolute left-[10px] top-0">
+          {cards.map((card) => {
+            return (
+              <div class="step-dot-mobile"></div>
+            )
+          })}
+        </div>  
+      </div>
+    </div>
+
+
+    <!-- descktop -->
+    <!-- md:translate-x-[40%] lg:translate-x-[60%] -->
+    <div class="hidden z-20 relative md:block">
+      <div class="pin-wrap ">
+        <div class="min-w-[20vw] lg:min-w-[40vw] xl:min-w-[60vw] max-w-[60vw] h-32 block"></div>
+        <!-- cards -->
+        <div class="relative flex justify-between items-stretch">
+          {cards.map((card) => {
+            return (
+              <ProccesStepCard icon={card.icon} title={card.title} descr={card.descr} />
+            )
+          })}
+
+
+          <div class="timeline-line bg-gray-600 transition-all duration-500 h-[3px] w-[100%] flex items-center absolute -bottom-10 left-0 xl:-bottom-20 ">
+            {cards.map((card) => {
+              return (
+                <div class="step-dot"></div>
+              )
+            })}
+            
+          </div>
+          <!-- <div class="timeline-line-2 transition-all bg-gray-600 h-[3px] w-[0px] flex items-center absolute -bottom-10 left-[100%] xl:-bottom-20"></div> -->
+        </div>
+
+
+    </div>
+    </div>
+</section>
+
+
+<style>
+
+.step-dot {
+  @apply w-2 h-2 rounded-full absolute bg-gray-600 md:w-4 md:h-4;
+  left: calc(var(--index) * 370px);
+  top: calc(50% - 8px);
+}
+
+.step-dot-mobile {
+  @apply w-2 h-2 rounded-full absolute bg-gray-600;
+  left: -3px;
+}
+
+.step-dot.step-dot-active, .step-dot-mobile.step-dot-active{
+  background-color: #8057FF;
+  transition: .4s all;
+}
+
+.step-dot.step-dot-active::before, .step-dot-mobile.step-dot-active::before {
+  @apply w-4 h-4 absolute rounded-full md:w-8 md:h-8;
+  content: '';
+  background-color: rgba(128, 87, 255, 0.20);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.horizontal-scroll {
+  @apply md:h-[100vh] md:overflow-hidden md:left-0;
+}
+
+.horizontal-scroll .pin-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* .timeline-line::before {
+    content: '';
+    position: absolute;
+    right: -100%;
+    top: 0;
+    @apply bg-gray-600 h-[3px];
+    width: 100%;
+    linear-gradient(90deg, #8057FF ${self.progress * 100}%, #40404F ${self.progress * 100}%) */
+  /* } */
+
+
+  .last .mobile-line{
+    @apply h-[118%];
+  }
+</style>
+
+<script>
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+  const wrap = document.querySelectorAll('.horizontal-scroll');
+
+  wrap.forEach((wrap) => {
+    const stepDots = wrap.querySelectorAll('.step-dot'),
+          stepDotsMobile = wrap.querySelectorAll('.step-dot-mobile'),
+          cards = wrap.querySelectorAll('.step-card');
+
+    let prev = 0;
+
+    stepDots.forEach((dot, index) => {
+      dot.style.setProperty('--index', index);
+    })
+
+    stepDotsMobile.forEach((dot, i) => {
+      let cardHeight = cards[i].clientHeight;
+        dot.style.top = `calc(${prev}px)`;
+        dot.setAttribute('data-dot-top', `${prev}`)
+        prev += cardHeight + 48
+    })
+
+  });
+// });
+
+
+
+</script>

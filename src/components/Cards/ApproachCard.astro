@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+
+import Atom from '../../images/ApproachCard/atom.svg'
+import Chart from '../../images/ApproachCard/bar-chart-square-up.svg'
+import ChartCircle from '../../images/ApproachCard/chart-breakout-circle.svg'
+import Coins from '../../images/ApproachCard/coins-stacked.svg'
+import Telescope from '../../images/ApproachCard/telescope.svg'
+import Fast from '../../images/ApproachCard/zap-fast.svg'
+import Coins2 from '../../images/Icons/coins-stacked-02.svg'
+import Search from '../../images/Icons/search-sm.svg';
+
+
+const {title, image, descr, wrapText, cardStyle = ""} = Astro.props
+
+const images = {
+  Atom,
+  Chart,
+  ChartCircle,
+  Coins,
+  Telescope,
+  Fast,
+  Coins2,
+  Search,
+};
+
+function changeTextColor(text, chooseText) {
+  if (!chooseText || !title) {
+    return text;
+  }
+
+  const colorText = text.replace(
+    new RegExp(`(${chooseText})`, 'gi'),
+    '<span class="text-primary-500">$1</span>'
+  );
+
+  return colorText;
+}
+
+const wrappedTitle = changeTextColor(title, wrapText);
+
+const selectedImage = images[image]; 
+
+---
+
+<div class={`scroll-animation scroll-animation-scale rounded-3xl bg-white w-full h-[206px] py-4 px-6 flex flex-col justify-between mb-[14px] sm:mb-5 md:max-w-[340px] lg:max-w-[405px] md:h-[280px] lg:py-8 | ${cardStyle}`}>
+  <Image src={selectedImage} alt={title} width={48} class="w-[38px] md:w-[48px]" format="svg"/>
+
+  <div class="">
+    <div class="text-black font-bold text-2xl balance leading-117! md:text-[32px] mb-2 md:mb-4 md:max-w-[355px] md:-tracking-[0.96px]">
+      <Fragment set:html={wrappedTitle} />
+    </div>
+    <div class="font-medium text-gray-700 balance text-sm leading-135 tracking-[-0.16px] md:text-base ">{descr}</div>
+  </div>
+</div>
+
+<style>
+
+</style>

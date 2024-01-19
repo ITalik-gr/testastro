@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import MainButton from '../../components/Buttons/MainButton.astro';
+import AuditImage from '../../images/Audit-image.png';
+
+
+const {sectionStyle = "", cardStyle = "", decorate_2 = true} = Astro.props
+
+---
+<section class={`bg-gray-50 py-[30px] lg:pb-[68px] lg:pt-[85px] ${sectionStyle}`}>
+
+  <div class="container">
+    <!-- Wrapper -->
+    <div class="wrap w-full flex justify-center">
+      <!-- Card -->
+      <div class={`bg-white z-40 rounded-xl relative pt-6 px-4 flex flex-col w-full justify-center items-center max-w-[400px]
+                    md:pt-0 md:flex-row-reverse md:max-w-[903px] md:w-full md:justify-end md:px-8 lg:px-12 ${cardStyle} scroll-animation`}>
+          <!-- Text block -->
+        <div class="md:pl-6">
+          <div class="mb-3 text-2xl leading-tight font-bold text-black -tracking-[0.24px] max-w-[230px]
+                      md:text-[32px] md:max-w-[430px]">
+            Get your Free marketing audit from our experts
+          </div>
+          <div class="leading-135 text-base font-medium text-gray-700  md:mb-6 md:max-w-[324px]">
+            Leave your contact info and our experts will get in touch with you
+          </div>
+          <MainButton link="/free-audit" title="Request Audit" style="w-full max-w-[91%] left-1/2 -translate-x-1/2 !absolute bottom-8 md:!relative md:left-auto md:max-w-[218px] md:translate-x-0 md:bottom-auto" />
+        </div>
+
+        <!-- Image -->
+        <div class="">
+          <Image src={AuditImage} class='max-w-[249px] md:max-w-[235px] md:mr-6 lg:mr-11 xl:mr-[75px]' alt="Image" />
+        </div>
+
+
+        <!-- Decorative images -->
+        <svg class="hidden lg:flex absolute -top-12 -right-12" xmlns="http://www.w3.org/2000/svg" width="54" height="51" viewBox="0 0 54 51" fill="none">
+          <g opacity="0.5">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.77747 15.2396C8.47324 11.1434 9.60341 6.77774 10.6674 2.53888C10.8934 1.62552 10.3532 0.687909 9.45518 0.513442C8.5644 0.272672 7.65611 0.836232 7.43802 1.68337C6.41041 5.79224 5.32993 10.0287 3.70226 13.9316C3.35106 14.7628 3.75148 15.7514 4.59928 16.1214C5.44642 16.4913 6.4256 16.0708 6.77747 15.2396Z" fill="#8057FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1053 30.1012C29.8811 24.1118 36.8637 17.1545 44.8104 11.3199C45.5491 10.8037 45.7115 9.74836 45.1674 9.01167C44.6227 8.27489 43.5816 8.08359 42.835 8.66607C34.8678 14.4982 27.8653 21.4531 20.069 27.44C19.3382 28.0244 19.2024 29.0826 19.7643 29.8215C20.3335 30.494 21.3745 30.6855 22.1053 30.1012Z" fill="#8057FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M47.3517 46.0823C43.3439 45.8049 39.3362 45.5272 35.3278 45.2498C34.4152 45.1407 33.6156 45.8516 33.5492 46.784C33.4835 47.7165 34.1812 48.4712 35.0944 48.5803C39.1088 48.8585 43.1225 49.1369 47.1362 49.415C48.0566 49.4578 48.8516 48.7466 48.9127 47.8135C48.9659 46.9467 48.2715 46.125 47.3517 46.0823Z" fill="#8057FF"/>
+          </g>
+        </svg>
+
+        {decorate_2 && 
+          <svg class="hidden lg:flex absolute -bottom-8 -left-14" xmlns="http://www.w3.org/2000/svg" width="45" height="44" viewBox="0 0 45 44" fill="none">
+            <g opacity="0.4">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M40.9901 20.9074C39.5925 26.5931 39.684 32.0685 39.5165 37.8357C39.4839 38.962 40.3682 39.8983 41.4905 39.9323C42.6135 39.9662 43.5506 39.0773 43.5839 37.951C43.7426 32.4824 43.6144 27.2784 44.9408 21.8776C45.2093 20.7853 44.5413 19.6793 43.4509 19.4147C42.3612 19.1433 41.2579 19.815 40.9901 20.9074Z" fill="#8057FF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1162 9.88878C19.6347 18.5599 10.7012 29.7142 4.45709 40.9771C3.91256 41.961 4.26724 43.2026 5.24915 43.7454C6.23107 44.2882 7.47065 43.9354 8.01518 42.9516C14.0531 32.0618 22.693 21.2738 31.8612 12.8944C32.6898 12.1345 32.7475 10.8454 31.99 10.0177C31.2326 9.18989 29.9448 9.12887 29.1162 9.88878Z" fill="#8057FF"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M26.7142 0.416979C18.0425 -1.01463 9.1042 1.4279 1.21905 4.88141C0.190347 5.336 -0.278924 6.53689 0.170668 7.56141C0.620937 8.59272 1.8219 9.06091 2.85061 8.6131C10.0319 5.46491 18.1537 3.13088 26.0517 4.43358C27.1598 4.61678 28.2074 3.86367 28.3899 2.75774C28.5729 1.6518 27.8216 0.600171 26.7142 0.416979Z" fill="#8057FF"/>
+            </g>
+          </svg>
+        }
+        
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+</style>

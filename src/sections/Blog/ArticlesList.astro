@@ -1,0 +1,68 @@
+---
+
+
+const {} = Astro.props
+
+
+---
+<section class="mb-[155px]">
+
+  <div class="container max-w-[1296px]">
+    <div class="filter flex justify-between items-center px-6 py-5 bg-white rounded-2xl mb-6">
+      <div class="-tracking-[0.6px] text-xl font-bold">Filter by:</div>
+
+      <div class="child:mr-3 child:cursor-pointer last:mr-0 flex items-center">
+        <div class="leading-135 font-bold -tracking-[0.48px] p-3 border rounded-lg border-gray-100 active-filter">
+          Show All
+        </div>
+        <div class="leading-135 font-bold -tracking-[0.48px] p-3 border rounded-lg border-gray-100">
+          Strategy
+        </div>
+        <div class="leading-135 font-bold -tracking-[0.48px] p-3 border rounded-lg border-gray-100">
+          Marketing
+        </div>
+        <div class="leading-135 font-bold -tracking-[0.48px] p-3 border rounded-lg border-gray-100">
+          Tools
+        </div>
+      </div>
+    </div>
+
+    <div class="content flex flex-wrap justify-between child:mb-6 mb-9">
+    
+        <!-- {data.map((item) => <BlogCard
+                              image={item.image} 
+                              title={item.title}
+                              date={item.date}
+                              readTime={item.readTime}
+                              tags={item.tags}
+                              link="/" /> )} -->
+
+      <div id="blogContent"></div>
+    </div>
+
+    <div class="pagination flex justify-between items-center">
+      <div class="prev font-semibold px-[14px] py-2 rounded-lg bg-white flex items-center">
+        <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M15.8327 9.99996H4.16602M4.16602 9.99996L9.99935 15.8333M4.16602 9.99996L9.99935 4.16663" stroke="#64647B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Previous
+      </div>
+
+      <div class="">
+
+      </div>
+      
+      <div class="next font-semibold px-[14px] py-2 rounded-lg bg-white flex items-center">
+        Next
+        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4.16602 9.99996H15.8327M15.8327 9.99996L9.99935 4.16663M15.8327 9.99996L9.99935 15.8333" stroke="#64647B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+
+</style>

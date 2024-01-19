@@ -1,0 +1,49 @@
+---
+import BlockText from '../components/BlockText.astro';
+import VideoCard from '../components/Cards/VideoCard.astro';
+
+import Decorate from '../images/Decorate/decorate-1.svg';
+import User_2 from '../images/Users/user-2.png';
+import User_3 from '../images/Users/user-3.png';
+import VideoPreview_1 from '../images/VideoPreview_1.png';
+import VideoPreview_2 from '../images/VideoPreview_2.png';
+type Props = {
+
+}
+
+const {} = Astro.props
+
+---
+<section class="mb-16 md:mb-40">
+
+    <div class="wrap">
+      <BlockText
+        title="Real emotions" 
+        subtitle="Video Testimonials" 
+        icon={Decorate}
+        iconStyle="-left-9 -top-4" />
+
+        <!-- Mobile Slider md:hidden -->
+        <div class="slider scroll-animation pl-5 flex mt-6 child:mr-5 sm:!hidden ">
+          <!-- Additional required wrapper -->
+            <!-- Slides -->
+            <div class="slider-item">
+              <VideoCard Preview={VideoPreview_1} userPic={User_2} userName="Brandon Monroe" userPosition="Co-Founder - Grow and Convert" />
+            </div>
+
+            <div class="slider-item">
+              <VideoCard Preview={VideoPreview_2} userPic={User_3} userName="Arlene McCoy" userPosition="Co-Founder - Grow and Convert" cardStyle="delay-[200ms]" />
+            </div>
+  
+        </div>
+
+        <div class="container max-w-[1084px]">
+          <!-- Desktop Items -->
+            <div class="mt-12 justify-center hidden w-full sm:flex [&>*:last-child]:mr-0">
+              <VideoCard Preview={VideoPreview_1} userPic={User_2} userName="Brandon Monroe" userPosition="Co-Founder - Grow and Convert" />
+
+              <VideoCard Preview={VideoPreview_2} userPic={User_3} userName="Arlene McCoy" userPosition="Co-Founder - Grow and Convert" />
+            </div>
+      </div>
+    </div>
+</section>

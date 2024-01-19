@@ -1,0 +1,27 @@
+---
+import BlogArticle from '../../components/Blog/BlogArticle.astro';
+import BlogContents from '../../components/Blog/BlogContents.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
+import MoreArticles from '../../sections/Blog/MoreArticles.astro';
+import '../../styles/main.css'
+
+const {} = Astro.props
+
+---
+<BlogLayout 
+  title="Article 1"
+  ArticleTitle="Facebook Retargeting Strategy for 2022: Maximize Ad Spend"
+  ArticleTime="5 min"
+  ArticleAuthor="Stewart">
+
+  <BlogContents slot='Contents' />
+
+  <BlogArticle slot='Article' />
+
+  <MoreArticles slot='MoreArticles' />
+
+</BlogLayout>
+
+<style>
+
+</style>

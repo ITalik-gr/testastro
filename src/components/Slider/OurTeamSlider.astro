@@ -1,0 +1,73 @@
+---
+import TeamUser1 from '../../images/OurTeam/TeamUser-1.png';
+import TeamUser2 from '../../images/OurTeam/TeamUser-2.png';
+import TeamUser3 from '../../images/OurTeam/TeamUser-3.png';
+import TeamUser4 from '../../images/OurTeam/TeamUser-4.png';
+import TeamUser5 from '../../images/OurTeam/TeamUser-5.png';
+import OurTeamCard from '../Cards/OurTeamCard.astro';
+
+const teamMembers = [
+  {
+    name: "Jacob Jones",
+    position: "Founder",
+    image: TeamUser1,
+    link: '#',
+  },
+  {
+    name: "Arlene McCoy",
+    position: "Founder",
+    image: TeamUser2,
+    link: '#',
+  },
+  {
+    name: "Kathryn Murphy",
+    position: "Founder",
+    image: TeamUser3,
+    link: '#',
+  },
+  {
+    name: "Marvin McKinney",
+    position: "Founder",
+    image: TeamUser4,
+    link: '#',
+  },
+  {
+    name: "Leslie Alexander",
+    position: "Founder",
+    image: TeamUser5,
+    link: '#',
+  },
+  {
+    name: "Arlene McCoy",
+    position: "Founder",
+    image: TeamUser1,
+    link: '#',
+  },
+  {
+    name: "Kathryn Murphy",
+    position: "Founder",
+    image: TeamUser3,
+    link: '#',
+  },
+]
+
+const {style = "|", data = teamMembers} = Astro.props
+
+---
+<div data-aligh-left="true" class={`slider scroll-animation delay-200 flex w-full pl-5 child:mr-5 sm:pl-0 ${style}`}>
+  <!-- Additional required wrapper -->
+    <!-- Slides -->
+    {data.map((item) => {
+      return (
+      <div class="slider-item">
+        <OurTeamCard image={item.image} name={item.name} position={item.position} link={item.link} />
+      </div>
+      )
+    })}
+    
+</div>
+
+<style>
+
+</style>
+

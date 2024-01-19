@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+const {image, title, date, readTime, tags, link = "/blog/article-1" } = Astro.props
+
+---
+<div class="p-4 bg-white rounded-xl w-full h-full min-w-[240px] max-w-[405px] max-h-[409px] | md:max-w-[33%] | xl:max-w-[405px]">
+
+    <Image class="rounded-xl w-full mb-4 max-h-[211px] max-w-[381px] | md:mb-5" src={image} alt={title} />
+
+    <!-- Info block (date, read time) -->
+    <div class="flex justify-between items-center w-full mb-2 | md:mb-4 | lg:mb-6">
+      <div class="text-xs leading-117 text-gray-500 font-semibold -tracking-[0.18px]">{date}</div>
+      <div class="text-xs leading-117 text-gray-500 font-semibold -tracking-[0.18px]">{readTime}</div>
+    </div>
+    <!-- Title -->
+    <div class="blog-card-title leading-135 text-black -tracking-[0.48px] font-bold mb-6 | md:max-w-[277px] md:text-lg md:mb-8 | lg:text-xl">{title}</div>
+    <!-- Link -->
+    <a href={link} class="text-primary-500 font-extrabold leading-135 -tracking-[0.16px] text-hover">Read Now</a>
+</div>
+
+<style>
+
+</style>

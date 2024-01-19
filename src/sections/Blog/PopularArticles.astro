@@ -1,0 +1,26 @@
+---
+import ArticlesScroll from "../../components/Blog/ArticlesScroll.astro";
+import MainButton from "../../components/Buttons/MainButton.astro";
+
+const {} = Astro.props
+
+---
+<section class="bg-gray-50 pt-[48px] md:pt-[64px]">
+  <div class="container xl:max-w-[1296px]">
+
+    <!-- Top card -->
+    <div class="mb-6 | lg:mb-10">
+      <!-- Title -->
+      <div class="text-[28px] text-black leading-117 font-bold -tracking-[0.84px] | 
+                    md:text-4xl lg:text-[52px]">Popular Articles</div>
+    </div>
+    <!-- Blog Cards -->
+      <ArticlesScroll />
+
+  </div>
+</section>
+
+<style>
+
+</style>
+

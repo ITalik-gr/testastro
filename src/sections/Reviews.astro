@@ -1,0 +1,52 @@
+---
+import ReviewSlider from '../components/Slider/ReviewSlider.astro';
+
+
+const {sectionStyle} = Astro.props
+
+---
+<section class={`pb-12 lg:pb-32 ${sectionStyle}`} >
+  <div class="container relative">
+    <div class="slider-line absolute left-0 top-0 w-1 h-7"></div>
+    <!-- Nav -->
+    <div class="scroll-animation nav flex justify-center md:justify-between items-center mb-11">
+
+      <h3 class="flex flex-col items-center -tracking-[0.84px] relative text-black text-[28px] text-center leading-117 font-bold sm:text-[36px] lg:text-[52px] lg:-tracking-[1.56px]">
+        <svg class="hidden md:max-w-[50px] md:absolute md:block md:-top-6 md:-right-16" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M47.3393 15.7347C37.9549 33.1847 19.2088 40.2791 1.79764 30.4552C1.21802 30.128 0.482994 30.3326 0.155871 30.905C-0.171252 31.4877 0.0332222 32.2237 0.612843 32.5508C19.2752 43.0903 39.4024 35.5768 49.4615 16.8797C49.7763 16.297 49.5566 15.5608 48.9708 15.2439C48.385 14.9373 47.6541 15.152 47.3393 15.7347Z" fill="#8057FF"/>
+          <path d="M16.4494 22.9715C18.3879 22.9715 19.9594 21.4001 19.9594 19.4616C19.9594 17.5231 18.3879 15.9517 16.4494 15.9517C14.5109 15.9517 12.9395 17.5231 12.9395 19.4616C12.9395 21.4001 14.5109 22.9715 16.4494 22.9715Z" fill="#8057FF"/>
+          <path d="M30.9804 19.2376C32.881 19.2376 34.4218 17.6969 34.4218 15.7963C34.4218 13.8957 32.881 12.355 30.9804 12.355C29.0798 12.355 27.5391 13.8957 27.5391 15.7963C27.5391 17.6969 29.0798 19.2376 30.9804 19.2376Z" fill="#8057FF"/>
+        </svg>
+        What people are saying
+      </h3>
+
+      <!-- Slider Arrows -->
+      <div class="hidden md:flex items-center">
+
+        <div class="arrow-prev rounded-full border border-gray-100 flex justify-center items-center w-14 h-14 cursor-pointer mr-6 arrow-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="arrow-next rounded-full border border-gray-100 flex justify-center items-center w-14 h-14 cursor-pointer arrow-hover">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <ReviewSlider />
+
+
+    
+  
+
+</section>
+
+<style>
+
+</style>

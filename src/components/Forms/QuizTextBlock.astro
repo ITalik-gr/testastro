@@ -1,0 +1,14 @@
+---
+
+const {title, descr, subtitle} = Astro.props
+
+---
+<div class="mb-6 lg:flex lg:flex-col-center">
+  <div class="text-sm text-primary-500 mb-2 font-bold leading-117 -tracking-[0.42px] | lg:text-center lg:text-base">{subtitle}</div>
+  <div class="mb-2 font-bold text-black -tracking-[0.72px] text-2xl balance | text-[32px]">{title}</div>
+  <div class="text-sm text-gray-700 leading-135 font-medium | lg:text-base">{descr}</div>
+</div>
+
+<style>
+
+</style>

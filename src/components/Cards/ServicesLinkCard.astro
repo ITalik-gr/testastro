@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import MainButton from '../Buttons/MainButton.astro';
+import User_1 from '../../images/Users/user-1.svg';
+
+
+const {link = "/services/GoogleAds", style = "", title = "Contact Us"} = Astro.props
+
+---
+<div class={`flex flex-col items-center z-10 justify-center max-w-fit w-full | sm:flex-row ${style}`}>
+  <div class="flex items-center mb-4 sm:mb-0">
+    <Image class='mr-3' src={User_1} width={44} alt='User Photo' />
+    <div class=" text-white w-[197px] font-semibold | sm:mr-6">Want to know more?</div>
+  </div>
+  <MainButton title={title} link={link} style="w-full max-w-full h-[44px] sm:max-w-[140px] md:btn-anim-2" />
+</div>
+
+<style>
+
+</style>

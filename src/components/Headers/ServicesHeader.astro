@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+import Nav from "../Nav.astro";
+import MainButton from "../Buttons/MainButton.astro";
+
+import Airsoft from '../../images/Partners/airsoft.png'
+import LinkBuilder from '../../images/Partners/linkbuilder.png'
+import GymShock from '../../images/Partners/gymshock.png'
+import TotalCrypto from '../../images/Partners/totalcrypto.png'
+import ServiceGrid from '../../images/Decorate/service-grid.svg';
+
+const {title, descr = "Paid ad strategy that drives massive growth", mobileImage, desktopImage} = Astro.props
+
+---
+
+<header class="header bg-[#0F0F11] relative overflow-x-clip">
+  <Nav />
+
+  <div class="header-wrapper pb-[55px] pt-[124px] -mt-[1px] lg:pb-[177px] lg:pt-[190px]">
+
+    <Image src={ServiceGrid} width={1464} height={525} alt="Header Background" 
+           class="absolute z-0 -top-5 left-1/2 -translate-x-1/2 w-[1464px] h-[525px] opacity-70 object-cover 2xl:w-[1700px] md:top-36" />
+
+
+    <div class="absolute bg-[rgba(129,87,255,0.4)] -top-4 -right-72 md:-right-20 w-[408px] h-[149px] rounded-full blur-[184px]"></div>
+    <div class="absolute bg-[rgba(129,87,255,0.4)] top-44 left-1/2 -translate-x-1/2 hidden sm:flex w-[320px] h-[120px] rounded-full blur-[184px]"></div>
+
+    <!-- Stars -->
+    <!-- Content -->
+  
+    <div class="container">
+      <div class="wrap z-20 relative flex justify-center sm:items-center flex-col items-center">
+
+        <!-- Header text + btn -->
+        <div class="w-full flex flex-col sm:items-center sm:text-center">
+
+          <!-- Mobile top info link -->
+          <div class="w-full flex justify-center sm:hidden z-10 max-w-[241px]">
+            <a href="#" class="text-sm p-[10px] -tracking-[0.14px] bg-gray-900 rounded-3xl text-white flex items-center w-max mb-4 sm:hidden">
+              Get a free audit. Time is limited
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-[10px] flex" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path d="M3.3335 8.49998H12.6668M12.6668 8.49998L8.00016 3.83331M12.6668 8.49998L8.00016 13.1666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+    
+          <!-- Descktop top info link-->
+          <a href="#" class="scroll-animation hidden sm:flex px-[14px] py-[12px] z-10 bg-gray-800 rounded-3xl text-white items-center w-max mb-6">
+            😎 Hurry up and get a free audit. Time is limited
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-[10px] flex" width="16" height="17" viewBox="0 0 16 17" fill="none">
+              <path d="M3.3335 8.49998H12.6668M12.6668 8.49998L8.00016 3.83331M12.6668 8.49998L8.00016 13.1666" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+    
+          <!-- Title -->
+          <h1 class="scroll-animation delay-100 text-4xl relative font-bold leading-[109.5%] tracking-[-1.26px] text-white mb-4 z-10 max-w-sm
+                    sm:text-center sm:text-[48px] sm:max-w-lg
+                    lg:tracking-[-2.87px] lg:text-[62px] lg:max-w-[814px] ">
+                    <slot name="decorativeText" />
+
+                    <Fragment set:html={title} />
+          </h1>
+          
+          <p class="scroll-animation delay-200 font-semibold text-white text-opacity-80 mb-6 z-10 
+                    sm:text-center sm:max-w-none sm:mb-[26px]">
+              {descr}
+          </p>
+    
+          <MainButton title="Get Free Audit" link="/free-audit" style="scroll-animation delay-200 w-full max-w-sm h-[60px] mb-[64px] md:mb-[80px] sm:max-w-[203px] sm:btn-shadow" />
+        </div>
+
+        <!-- Header Image -->
+        <div class="scroll-animation delay-300 relative mb-[52px] flex justify-center items-center lg:mb-20 xl:mb-[220px] ">
+
+          <div class="w-full max-w-3xl z-20 xs:max-w-[770px] md:max-w-5xl">
+            <picture>
+              <source srcset={desktopImage.src} media="(min-width: 768px)" />
+              <img class="w-full h-full object-cover" src={mobileImage.src} alt="Service Image" />
+            </picture>
+          </div>
+
+          <!-- Bg shadow -->
+          <div class="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-500 blur-[184px] w-[240px] h-[105px] rounded-full lg:w-[688px] lg:h-[207px] lg:top-[58%]"></div>
+        </div>
+
+        <!-- partners -->
+        <div class="scroll-animation delay-200 max-w-xs flex flex-col-center md:max-w-none">
+          
+          <div class="text-white font-bold -tracking-[0.48px] mb-7 sm:text-lg md:text-2xl">Leading Brands Trust PPC.io</div>
+
+          <div class="wrap flex flex-wrap justify-between items-center child:brightness-50 | md:justify-start md:flex-nowrap">
+            <Image src={Airsoft} width={139} class='mb-8 md:mr-[52px] w-full max-w-[117px] md:mb-0 lg:max-w-[139px]' alt='Our parthner - Airsoft Pal' />
+            <Image src={LinkBuilder} width={202} class='mb-8 md:mr-[52px] w-full max-w-[127px] md:mb-0 lg:max-w-[165px]' alt='Our parthner - LinkBuilder' />
+            <Image src={GymShock} width={165} class='md:mr-[52px] w-full max-w-[126px] lg:max-w-[202px]' alt='Our parthner - GymShock' />
+            <Image src={TotalCrypto} width={189} class='w-full max-w-[121px] lg:max-w-[189px]' alt='Our parthner - TotalCrypto' />
+          </div>
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+
+</style>

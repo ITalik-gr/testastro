@@ -1,0 +1,64 @@
+---
+import '../../styles/main.css'
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import ServicesHeader from '../../components/Headers/ServicesHeader.astro';
+import AdditionalServices from '../../sections/AdditionalServices.astro'
+import Approach from '../../sections/Approach.astro'
+import Reviews from '../../sections/Reviews.astro'
+import InsaneGrowth from '../../sections/InsaneGrowth/InsaneGrowth.astro';
+import OurCase from '../../sections/Base/OurCase.astro';
+import Procces from '../../sections/Procces/Procces.astro';
+import Price from '../../sections/Price.astro';
+
+import FreeAudit from '../../sections/Base/FreeAudit.astro'
+import Footer from '../../sections/Base/Footer.astro'
+import Faq from '../../sections/Faq.astro';
+import ListOfServices from '../../sections/ListOfServices.astro';
+import Strategy from '../../sections/Strategy.astro';
+
+import AmazonMobile from '../../images/Services/Amazon-Mobile.svg'
+import AmazonDesktop from '../../images/Services/Amazon-Desktop.svg'
+import FreeMarketingAudit from '../../sections/FreeAudit/FreeMarketingAudit.astro';
+
+
+
+
+const {} = Astro.props
+
+---
+<MainLayout>
+
+  <ServicesHeader title="The Amazon Ads Agency To Skyrocket Your Revenue" descr="Paid ad strategy that drives massive growth" mobileImage={AmazonMobile} desktopImage={AmazonDesktop}>
+
+  </ServicesHeader>
+
+  <Approach title="Our Approach" line={false} />
+
+  <Reviews />
+
+  <InsaneGrowth />
+
+  <OurCase line={false} />
+
+  <FreeMarketingAudit sectionStyle="lg:-mb-[100px]" decorate_2={false} />
+  <Procces />
+
+  <ListOfServices />
+
+  <Price sectionStyle="!mb-0" />
+
+  <Strategy />
+
+  <AdditionalServices />
+
+  <Faq />
+
+  <FreeAudit />
+
+  <Footer />
+</MainLayout>
+
+<style>
+
+</style>

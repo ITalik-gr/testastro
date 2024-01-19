@@ -1,0 +1,44 @@
+---
+import '../../styles/main.css';
+
+import SecondHeader from "../../components/Headers/SecondHeader.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import FreeAudit from '../../sections/Base/FreeAudit.astro';
+import Footer from '../../sections/Base/Footer.astro';
+import AllCases from '../../sections/AllCases.astro';
+
+
+
+const {} = Astro.props
+
+---
+<MainLayout title="Cases">
+
+  <SecondHeader 
+    title="Detailed Case Studies" 
+    descr="Our detailed case studies show exactly how we generated quality leads and sales"
+    descrStyle="pretty">
+
+    <svg slot="decorativeText" class="hidden absolute -top-[1.45rem] -left-12 | lg:flex" xmlns="http://www.w3.org/2000/svg" width="44" height="41" viewBox="0 0 44 41" fill="none">
+      <g opacity="0.5">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5445 12.468C37.1863 9.10119 36.2933 5.51789 35.4535 2.03893C35.2753 1.28933 35.7246 0.525573 36.4612 0.389383C37.1924 0.198847 37.932 0.667077 38.1043 1.36239C38.9152 4.73463 39.7685 8.21178 41.0723 11.4198C41.3538 12.103 41.0185 12.9096 40.3215 13.2063C39.6251 13.5029 38.8264 13.1513 38.5445 12.468Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8829 24.5238C19.5601 19.5615 13.894 13.8125 7.43014 8.9757C6.82905 8.54747 6.70394 7.68211 7.15491 7.0829C7.60642 6.48363 8.46036 6.33472 9.06744 6.81725C15.5482 11.6522 21.2305 17.3994 27.5701 22.3598C28.1642 22.8438 28.2676 23.7113 27.8019 24.3121C27.3309 24.8586 26.477 25.0077 25.8829 24.5238Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.09141 37.4224C8.37528 37.225 11.6591 37.0274 14.9435 36.83C15.6916 36.7475 16.3411 37.3356 16.3885 38.0996C16.4354 38.8637 15.8585 39.4765 15.1099 39.559C11.8206 39.757 8.53185 39.9551 5.2431 40.153C4.48904 40.1812 3.84337 39.5929 3.80026 38.8284C3.76315 38.1182 4.33789 37.4505 5.09141 37.4224Z" fill="white"/>
+      </g>
+    </svg>
+  </SecondHeader>
+
+
+
+  <AllCases />
+
+
+  <FreeAudit doubt={true} />
+
+  <Footer />
+
+</MainLayout>
+
+<style>
+
+</style>

@@ -1,0 +1,92 @@
+---
+export const prerender = true;
+import '../../styles/main.css'
+
+import MainLayout from '../../layouts/MainLayout.astro';
+import IndustriesHeader from '../../components/Headers/IndustriesHeader.astro'
+import data from '../../data/industries.json';
+import Approach from '../../sections/Approach.astro';
+import Reviews from '../../sections/Reviews.astro';
+import InsaneGrowth from '../../sections/InsaneGrowth/InsaneGrowth.astro';
+import OurCase from '../../sections/Base/OurCase.astro';
+import FreeMarketingAudit from '../../sections/FreeAudit/FreeMarketingAudit.astro';
+import Procces from '../../sections/Procces/Procces.astro';
+import Price from '../../sections/Price.astro';
+import ListOfServices from '../../sections/ListOfServices.astro';
+import Strategy from '../../sections/Strategy.astro';
+import AdditionalServices from '../../sections/AdditionalServices.astro';
+import Faq from '../../sections/Faq.astro';
+import FreeAudit from '../../sections/Base/FreeAudit.astro';
+import Footer from '../../sections/Base/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {path: 'B2B-PPC-Agency'}},
+    {params: {path: 'SaaS-PPC-Agency'}},
+    {params: {path: 'eCommerce-PPC-Agency'}},
+    {params: {path: 'Lawyers-PPC-Agency'}},
+    {params: {path: 'Real-Estate-PPC-Agency'}},
+    {params: {path: 'Doctors-PPC-Agency'}},
+    {params: {path: 'Accountants-PPC-Agency'}},
+    {params: {path: 'Dentist-PPC-Agency'}},
+    {params: {path: 'Car-Dealerships-PPC-Agency'}},
+    {params: {path: 'Hotels-PPC-Agency'}},
+    {params: {path: 'Plumbers-PPC-Agency'}},
+    {params: {path: 'HVAC-PPC-Agency'}},
+    {params: {path: 'Plastic-Surgery-PPC-Agency'}},
+    {params: {path: 'Gyms-PPC-Agency'}}
+  ];
+}
+
+const { path } = Astro.params;
+
+const dataPaths = Object.keys(data).map((path) => ({
+     path
+}));
+
+const page = dataPaths.find((page) => page.path === path);
+
+if (!page) return Astro.redirect("/404");
+
+---
+<MainLayout title="Title">
+
+  <IndustriesHeader title={data[path].title} descr={data[path].descr} mobileImage={data[path].mobileImage} desktopImage={data[path].image}>
+
+  </IndustriesHeader>
+
+
+  <Approach title="Our Approach" line={false} />
+
+  <Reviews />
+
+  <InsaneGrowth />
+
+  <OurCase line={false} />
+
+  <FreeMarketingAudit sectionStyle="lg:-mb-[100px]" decorate_2={false} />
+
+  <Procces />
+
+  <ListOfServices />
+
+  <Price sectionStyle="!mb-0" />
+
+  <!--  -->
+  <Strategy />
+
+  <AdditionalServices />
+
+  <Faq />
+
+  <FreeAudit />
+
+  <Footer />
+
+
+</MainLayout>
+
+
+<script>
+
+</script>

@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import Line from '../../images/Blog/article-quote-line.svg';
+import BlogSubtitle from './BlogSubtitle.astro';
+
+const {} = Astro.props
+
+---
+<div class="relative py-6 my-9 | xl:py-8 xl:mt-[66px] xl:mb-[70px]">
+  <Image src={Line} class='absolute left-0 top-0 object-none' alt='Decorative line' />
+
+  <BlogSubtitle 
+    style="!text-xl !mb-0 !leading-[150%] lg:!text-2xl xl:!max-w-[490px]" 
+    title="🧠 Facebook retargeting is one of the key strategies that we use as part of our Facebook PPC management services." />
+
+  <Image src={Line} class='absolute left-0 bottom-0 object-none' alt='Decorative line' />
+</div>
+
+<style>
+
+</style>
+
+<script></script>

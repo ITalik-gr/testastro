@@ -1,0 +1,27 @@
+---
+
+import AdditionalServicesCard from '../Cards/AdditionalServicesCard.astro';
+
+
+const {style = "|", data} = Astro.props
+
+---
+<div class={`slider scroll-animation flex w-full  child:mr-5 mt-6 lg:hidden lg:pl-12 xl:!pl-24 ${style}`}>
+    <!-- Slides -->
+    {data.map((item) => {
+      return (
+      <div class="slider-item">
+        <AdditionalServicesCard image={item.image} title={item.title} descr={item.descr} link={item.link} />
+      </div>
+      )
+    })}
+    
+</div>
+
+
+
+
+
+<script>
+
+</script>

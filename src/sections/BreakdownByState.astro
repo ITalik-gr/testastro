@@ -1,0 +1,114 @@
+---
+import MainButton from "../components/Buttons/MainButton.astro";
+
+
+
+
+const {} = Astro.props
+
+---
+<section class="mb-[105px] pt-11 pb-9 bg-gray-50 lg:pt-[120px] lg:mb-[134px] lg:pb-[100px]">
+  <div class="container">
+    <div class="flex flex-col-center | lg:flex-row lg:justify-between xl:justify-center">
+
+      <div class="scroll-animation mb-6 lg:max-w-[460px] xl:mr-[72px]">
+        <div class="mb-3 text-[28px] text-black -tracking-[0.84px] font-bold !leading-117 | md:-tracking-[1.56px] md:text-4xl lg:text-[52px] lg:mb-5">Dentist Niche breakdown by state</div>
+        <p class="font-medium text-gray-800 leading-135 -tracking-[0.48px] | sm:text-center md:text-xl lg:mb-5 lg:text-left">Explore niche diving deeper with filter by state</p>
+        <MainButton title="Request Free Audit" style="max-w-[246px] hidden lg:flex" />
+      </div>
+
+      <!-- Search Card -->
+
+      <div class="scroll-animation bg-white rounded-xl relative max-w-md w-full mb-6 | lg:max-w-[405px]">
+
+        <!-- decorate -->
+        <svg class="hidden lg:flex absolute -left-10 -top-11" xmlns="http://www.w3.org/2000/svg" width="48" height="59" viewBox="0 0 48 59" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M45.1423 17.4198C45.048 15.2157 44.974 13.0345 44.8158 10.8346C44.7835 10.3612 44.3772 10.0088 43.9089 10.0444C43.4373 10.0787 43.0834 10.4912 43.117 10.9614C43.2726 13.1492 43.3466 15.312 43.4396 17.5007C43.4612 17.9736 43.8592 18.3376 44.3257 18.316C44.7966 18.2925 45.1639 17.8926 45.1423 17.4198Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M29.8029 27.2627C25.0246 22.2235 19.9948 17.4309 15.1123 12.4977C14.7795 12.1632 14.2408 12.1636 13.9077 12.496C13.5733 12.8315 13.5684 13.3712 13.8999 13.7088C18.7755 18.6318 23.7983 23.4142 28.5651 28.4452C28.891 28.788 29.4291 28.7986 29.7704 28.4732C30.113 28.1446 30.1256 27.6042 29.8029 27.2627Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0377 49.9989C13.3096 48.7362 7.53687 47.6328 1.82328 46.3058C1.36609 46.2021 0.908265 46.4887 0.800038 46.947C0.690551 47.4085 0.977298 47.8684 1.43322 47.9752C7.15441 49.3015 12.9335 50.4075 18.6692 51.6694C19.1276 51.7699 19.5836 51.4789 19.6855 51.0181C19.7887 50.5542 19.4993 50.1006 19.0377 49.9989Z" fill="#8057FF"/>
+        </svg>
+        <svg class="hidden lg:flex absolute -right-10 -bottom-11" xmlns="http://www.w3.org/2000/svg" width="48" height="59" viewBox="0 0 48 59" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.4116 41.5399C2.52336 43.7431 2.61464 45.9237 2.79029 48.1223C2.82637 48.5954 3.23537 48.9446 3.70346 48.9053C4.17472 48.8673 4.52537 48.452 4.48806 47.9821C4.31506 45.7956 4.22394 43.6335 4.1136 41.4455C4.08829 40.9728 3.68738 40.6119 3.22106 40.6372C2.75033 40.6645 2.38629 41.0673 2.4116 41.5399Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6718 31.5759C22.4898 36.5771 27.5574 41.3297 32.4789 46.224C32.8143 46.5558 33.353 46.5512 33.6835 46.2162C34.0152 45.878 34.0158 45.3383 33.6816 45.0033C28.7672 40.1191 23.7067 35.3767 18.9001 30.3836C18.5716 30.0434 18.0334 30.0371 17.6947 30.3652C17.3547 30.6965 17.3464 31.2369 17.6718 31.5759Z" fill="#8057FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M28.258 8.75504C33.9959 9.97224 39.7773 11.0299 45.5012 12.3116C45.9592 12.4116 46.4147 12.1214 46.5193 11.6623C46.6251 11.2 46.3348 10.7424 45.878 10.6391C40.1465 9.35825 34.3588 8.29809 28.6133 7.08162C28.1541 6.98475 27.7004 7.27937 27.6022 7.74094C27.5027 8.20571 27.7956 8.65694 28.258 8.75504Z" fill="#8057FF"/>
+        </svg>
+
+        <!-- Nav -->
+        <div class="p-[15px] border-b border-gray-100 | lg:px-6">
+          <label class="relative" for="card-search">
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17.5 17.5L12.5001 12.5M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke="#64647B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input 
+              class="p-4 pl-[44px] placeholder:text-gray-500 font-medium -tracking-[0.16px] text-black rounded-lg border border-gray-100 w-full max-w-md outline-none" 
+              type="search" placeholder="Search city or state" name="card-search" id="card-search">
+          </label>
+        </div>
+
+        <!-- List -->
+
+        <div class="breakdown-list pt-4 px-4 h-72 overflow-y-scroll transition-all | lg:px-6 lg:h-[470px]">
+        </div>
+      </div>
+
+      <MainButton title="Request Free Audit" style="h-[60px] w-full max-w-md lg:hidden" />
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+  <script>
+    const list = document.querySelector('.breakdown-list');
+    const searchInput = document.getElementById('card-search');
+    const data = [
+      { name: "Wisconsin", link: "wisconsin-link" },
+      { name: "Louisiana", link: "louisiana-link" },
+      { name: "Colorado", link: "colorado-link" },
+      { name: "Minnesota", link: "minnesota-link" },
+      { name: "Ohio", link: "ohio-link" },
+      { name: "Oklahoma", link: "oklahoma-link" },
+      { name: "Georgia", link: "georgia-link" },
+      { name: "Wisconsin", link: "wisconsin-link" },
+      { name: "Louisiana", link: "louisiana-link" },
+      { name: "Colorado", link: "colorado-link" },
+      { name: "Minnesota", link: "minnesota-link" },
+      { name: "Ohio", link: "ohio-link" },
+      { name: "Oklahoma", link: "oklahoma-link" },
+      { name: "Georgia", link: "georgia-link" }
+    ];
+
+    function renderList(items) {
+      list.innerHTML = '';
+      items.forEach((item) => {
+        const listItem = document.createElement('a');
+        listItem.href = `/${item.link}`;
+        listItem.target = '_blank'; 
+        listItem.classList.add('p-4', 'flex', 'items-center', 'rounded-lg', 'bg-white', 'border', 'border-gray-100', 'mb-3');
+        listItem.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path opacity="0.4" d="M10.0026 18.3334C13.3359 15.0001 16.6693 12.0153 16.6693 8.33341C16.6693 4.65152 13.6845 1.66675 10.0026 1.66675C6.32071 1.66675 3.33594 4.65152 3.33594 8.33341C3.33594 12.0153 6.66927 15.0001 10.0026 18.3334Z" stroke="#64647B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 10.8333C11.3807 10.8333 12.5 9.71396 12.5 8.33325C12.5 6.95254 11.3807 5.83325 10 5.83325C8.61929 5.83325 7.5 6.95254 7.5 8.33325C7.5 9.71396 8.61929 10.8333 10 10.8333Z" stroke="#64647B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="leading-135 text-black font-semibold -tracking-[0.16px] ml-2">${item.name}</div>
+        `;
+        list.appendChild(listItem);
+      });
+    }
+
+    function filterList(searchTerm) {
+      const filteredItems = data.filter((item) => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      renderList(filteredItems);
+    }
+
+    searchInput.addEventListener('input', (event) => {
+      const searchTerm = event.target.value.trim();
+      filterList(searchTerm);
+    });
+
+    // Initial list output
+    renderList(data);
+  </script>

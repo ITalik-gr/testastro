@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+
+const {image, link, text} = Astro.props
+
+---
+<a href={link} class={`${text ? "p-[10px]" : "p-4"} rounded-lg border-gray-100 border mb-3 mr-3 flex justify-center items-center `}>
+  <Image src={image} alt="Social Link" />
+  {text && (<span class="ml-[6px] font-bold -tracking-[0.14px] text-sm leading-135">{text}</span> )}
+</a>
+
+
+<style>
+
+</style>

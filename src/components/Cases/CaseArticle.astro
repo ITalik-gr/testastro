@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+
+import BlogQuoteAndCta from '../Blog/BlogQuoteAndCta.astro';
+import BlogDecorateLine from '../Blog/BlogDecorateLine.astro';
+import BlogQuote from '../Blog/BlogQuote.astro';
+
+import BlogSubtitle from '../Blog/BlogSubtitle.astro';
+import BlogList from '../Blog/BlogList.astro';
+
+import MainImage from '../../images/Blog/blog-image-9.png'
+import ArticleImage from '../../images/Blog/article-image-1.png'
+
+
+const {} = Astro.props
+
+---
+<article class="article max-w-[462px] mt-4 bg-white px-4 py-6 rounded-xl z-20 text-gray-800 leading-[150%] font-medium -tracking-[0.24px] | md:max-w-[560px] lg:px-6 lg:-mt-16 lg:max-w-[470px] xl:max-w-[618px] xl:pb-[30px] xl:pt-4">
+
+  <div id="intro" class="main-image">
+    <Image alt="Main Image" class="mb-9" src={MainImage} />
+  </div>
+  
+  <p>
+    You might have made a Google search for a product that you want, but you hesitated on clicking that purchase button. After a few hours or days, upon checking your Facebook feed, you will notice that a related ad shows up.
+  </p>
+
+  <p>
+    After viewing the ad, it convinced you to continue that purchase. What makes this phenomenon possible? The answer is Facebook retargeting.
+  </p>
+  <p>
+    Facebook retargeting is a marketing strategy that follows up leads. It works by loading a Facebook pixel on websites that follows customers and tracks their actions. <br>
+    Businesses use a Facebook retargeting strategy to show ads on the news feed of their potential customers. We can say that it is sneaky, but several digital marketers proved it to be effective.
+  </p>
+
+  <BlogQuote />
+
+  <h6 id="facebook" class="text-black text-2xl font-bold -tracking-[0.84px] leading-[120%] mb-5 | lg:text-3xl xl:text-[32px] xl:mb-[30px]">Facebook Retargeting Considerations</h6>
+
+  <p>
+    There are three considerations you must be aware of upon doing a Facebook retargeting.
+  </p>
+
+  <Image src={ArticleImage} class="min-h-[150px] object-cover rounded-2xl mb-6 | xl:mb-[30px]" alt="Article image" />
+
+  <p>
+    First, you must retarget the right audience. An excellent way to do it is segmenting your audience to know where they are in the marketing funnel. You can group your traffic into impressions, first-time clicks, recent visitors, repeat customers, and cart abandoners.
+  </p>
+
+  <p>
+    The second consideration for Facebook retargeting is doing it at the right time. You can show your ad immediately or sporadically. You can also run ad campaigns before items expire or during special occasions such as the days before Black Friday.
+  </p>
+
+  <p id="improve">
+    We are now aware of the factors that affect Facebook retargeting. Now we will head on to different strategies to choose from when doing Facebook retargeting.
+  </p>
+
+  <BlogQuoteAndCta />
+
+  <p>
+    But we can all agree that these shoppers are high intent potential customers. That is why you need to have a view cart option on your site. That way, it can improve your customer shopping experience on your website.
+  </p>
+  <BlogDecorateLine />
+
+  <p class="italic">
+    Also, having a view cart page will help you set up Facebook custom audiences. You only need to filter people who arrived on the view cart page. Now you are aware of how much leads require a little push to convert.
+  </p>
+
+  <BlogSubtitle title="Typically, these customers are hesitant because of the price." />
+
+  <p>
+    Facebook retargeting helps you maximize your online visibility. Most leads don’t convert the first time after seeing an ad. But you can maximize your traffic using Facebook retargeting.
+  </p>
+
+  <BlogSubtitle title="Typically, these customers are hesitant because of the price." />
+
+    <BlogList 
+      items={
+        [
+          "We built up a solid foundation of homepage links using HARO and PR link building, to help give the site that initial authority in the eyes of Google.",
+          "<b> We moved on to then targeting a large number of career </b> ",
+          "We built links to a broad range of different blog posts, and never into any direct commercial pages. This allowed us to keep the links incredibly natural and still had a huge positive impact on some of the more commercial-focused keywords."
+        ]
+      } />
+
+</article>
+
+<style>
+
+</style>

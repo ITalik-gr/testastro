@@ -1,0 +1,65 @@
+---
+import Diamond from '../images/Icons/diamond.svg';
+import Compass from '../images/Icons/compass.svg'
+import Magic from '../images/Icons/magic-wand.svg'
+import Database from '../images/Icons/database.svg';
+
+import MainImage from '../images/strategy-image.svg'
+import Accordion from '../components/Accordion.astro';
+import { Image } from 'astro:assets';
+import BlockText from '../components/BlockText.astro';
+
+const StrategyData = [
+  {
+    image: Diamond,
+    title: "We do things that no one else does",
+    descr: "Our team of expert link builders are constantly pushing the boundaries of link building. <br/><br/> We never settle for mediocrity, which means we're on the cutting edge of developing new outreach strategies & methods to acquire backlinks that will help our clients achieve massive success.",
+  },
+  {
+    image: Compass,
+    title: "Vigorous testing & experiments",
+    descr: "Our team of expert link builders are constantly pushing the boundaries of link building. <br/><br/> We never settle for mediocrity, which means we're on the cutting edge of developing new outreach strategies & methods to acquire backlinks that will help our clients achieve massive success.",
+  },
+  {
+    image: Magic,
+    title: "Painstaking Strategy",
+    descr: "Our team of expert link builders are constantly pushing the boundaries of link building. <br/><br/> We never settle for mediocrity, which means we're on the cutting edge of developing new outreach strategies & methods to acquire backlinks that will help our clients achieve massive success.",
+  },
+  {
+    image: Database,
+    title: "We use big data",
+    descr: "Our team of expert link builders are constantly pushing the boundaries of link building. <br/><br/> We never settle for mediocrity, which means we're on the cutting edge of developing new outreach strategies & methods to acquire backlinks that will help our clients achieve massive success.",
+  },
+]
+
+const {} = Astro.props
+
+---
+<section class="bg-gray-50 py-16 md:pt-[120px] md:pb-[143px]">
+  <div class="container xl:max-w-[1296px]">
+    <BlockText title="Cutting Edge Strategy" subtitle="We Get Results" />
+    <div class="scroll-animation wrap mt-8 lg:mt-16 xl:flex xl:justify-between xl:items-start">
+      <!-- Accordion -->
+      <div class="flex flex-col-center">
+        {StrategyData.map((item, i) => {
+          return (
+            <Accordion 
+              i={i}
+              open="0"
+              icon={item.image}
+              title={item.title}
+              text={item.descr}/>
+          )
+        })}
+       
+      </div>
+
+      <!-- Image -->
+      <Image class="hidden max-w-[610px] xl:flex" src={MainImage} alt='Strategy Image' />
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>

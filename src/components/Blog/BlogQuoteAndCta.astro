@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import Line from '../../images/Blog/article-quote-line.svg';
+import MainButton from "../Buttons/MainButton.astro";
+import BlogSubtitle from "./BlogSubtitle.astro";
+
+const {} = Astro.props
+
+---
+<div class="py-9 my-9 relative | xl:py-8">
+  <Image src={Line} class='absolute left-0 top-0 object-none' alt='Decorative line' />
+
+    <BlogSubtitle title="Making Your Facebook Retargeting Strategy" />
+
+  <p class="xl:mb-[30px]">Facebook retargeting helps you maximize your online visibility. Most leads don’t convert the first time after seeing an ad. But you can maximize your traffic using Facebook retargeting.</p>
+  <MainButton link="/cta" title="CTA Example" style="w-full h-[60px] xl:max-w-[251px]" />
+
+  <Image src={Line} class='absolute left-0 bottom-0 object-none' alt='Decorative line' />
+</div>
+
+<style>
+
+</style>

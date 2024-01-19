@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import ServicesLink from "../../components/ServicesLink.astro";
+import GrowthGrid from '../../images/Decorate/Growth-grid.svg';
+import BlockText from "../../components/BlockText.astro";
+
+import MainImage from '../../images/insaneGrowth-image.webp'
+import MainImageMob from '../../images/insaneGrowth-image-mob.webp'
+import ServicesLinkCard from "../../components/Cards/ServicesLinkCard.astro";
+
+const {style} = Astro.props
+
+---
+
+
+<section class=`bg-black pt-[54px] pb-[48px] relative overflow-hidden mb-16 ${style}
+                  md:pt-32 md:mb-24 md:pb-12`>
+
+  <div class="container">
+    <div class="wrap w-full flex-col-center">
+
+      <div class="w-full justify-between items-center lg:flex xl:max-w-[1298px]">
+          <BlockText
+            title="The PPC Agency That Drives Insane Growth"
+            titleStyle="text-white md:text-left lg:max-w-[622px]" />
+
+            <!-- descktop dervices link -->
+            <ServicesLinkCard style="hidden lg:flex" />
+      </div>
+
+
+      <!-- Cards wrapper -->
+      <div class="flex flex-col justify-between items-start max-w-[1158px] mt-12 w-full z-10
+      sm:flex-row sm:justify-around sm:flex-wrap md:max-w-[655px] md:mt-[87px] lg:max-w-[1298px] lg:flex-nowrap">
+
+      <!-- Card -->
+      <div class="flex items-center mb-10 lg:pr-[30px] xl:pr-[60px] lg:border-[#FFFFFF26] lg:border-r lg:mb-0 
+        lg:flex-col lg:items-start">
+      <div class="mr-6 text-[32px] leading-117
+          md:mb-9 lg:mr-0">💰</div>
+      <div class="">
+      <div class="text-white text-xl mb-1 leading-117 tracking-[-0.6px]
+                md:text-[22px] md:mb-3">Conversion Focused</div>
+      <div class="font-semibold text-[rgba(255,255,255,0.8)] text-base leading-117">Scale your revenue</div>
+      </div>
+
+      </div>
+      <!-- Card -->
+      <div class="flex items-center mb-10 lg:px-[30px] xl:px-[60px] lg:border-[#FFFFFF26] lg:border-r lg:mb-0 
+      lg:flex-col lg:items-start">
+      <div class="mr-6 text-[32px] leading-117
+          md:mb-9 lg:mr-0">🧠 </div>
+      <div class="">
+      <div class="text-white text-xl mb-1 leading-117 tracking-[-0.6px]
+                md:text-[22px] md:mb-3">80/20 Principle</div>
+      <div class="font-semibold text-[rgba(255,255,255,0.8)] text-base leading-117">Focus on what's effective </div>
+      </div>
+
+      </div>
+      <!-- Card -->
+      <div class="flex items-center mb-10 lg:px-[30px] xl:px-[55px] xl:pr-[80px] lg:border-[#FFFFFF26] lg:border-r lg:mb-0 
+      lg:flex-col lg:items-start">
+      <div class="mr-6 text-[32px] leading-117
+          md:mb-9 lg:mr-0">📈</div>
+      <div class="">
+      <div class="text-white text-xl mb-1 leading-117 tracking-[-0.6px]
+                md:text-[22px] md:mb-3">Maximum ROI</div>
+      <div class="font-semibold text-[rgba(255,255,255,0.8)] text-base leading-117">Bang for your buck </div>
+      </div>
+
+      </div>
+      <!-- Card -->
+      <div class="flex items-center mb-10 lg:pl-[30px] xl:pl-[60px] lg:mb-0 
+        lg:flex-col lg:items-start">
+      <div class="mr-6 text-[32px] leading-117
+          md:mb-9 lg:mr-0">👨‍💻</div>
+      <div class="">
+      <div class="text-white text-xl mb-1 leading-117 tracking-[-0.6px]
+                md:text-[22px] md:mb-3">Data driven</div>
+      <div class="font-semibold text-[rgba(255,255,255,0.8)] text-base leading-117">Outclass the competition </div>
+      </div>
+
+      </div>
+      </div>
+
+
+      <Image class="scroll-animation hidden delay-[200ms] w-full mb-7 md:block lg:mb-0 max-w-[1330px]" src={MainImage} alt="Insane Growth" />
+      <Image class="scroll-animation delay-[200ms] w-full mb-7 md:hidden lg:mb-0 max-w-[1330px]" src={MainImageMob} alt="Insane Growth" />
+
+
+      <!-- mob services link -->
+      <ServicesLink style="flex lg:hidden" />
+
+    </div>
+  </div>
+
+  <!-- Decorate line, grid -->
+
+  <Image src={GrowthGrid} class='top-0 absolute left-1/2 -translate-x-1/2 hidden z-0 lg:flex' alt="Decorative grid" />
+  <div class="blur-[100px] absolute top-0 -right-16 w-[217px] rounded-full h-[140px] rotate-[57deg] bg-[rgba(129,87,255,0.4)] z-0"></div>
+  <div class="blur-[100px] hidden absolute bottom-0 -left-32 w-[313px] rounded-full h-[140px] rotate-[57deg] bg-[rgba(129,87,255,0.4)] z-0 md:flex"></div>
+</section>
+
+<style>
+
+</style>

@@ -1,0 +1,67 @@
+---
+import BlockText from "../components/BlockText.astro";
+
+const {} = Astro.props
+
+---
+<section class="py-16 bg-gray-50 lg:pb-0 lg:pt-[100px]">
+  <div class="container xl:max-w-[1296px]">
+    <BlockText
+      title="Key services included" subtitle="Everything you will get from the design services" />
+
+    <div class="scroll-animation mt-8 relative z-30 overflow-hidden child:mb-4 last:mb-0 md:mt-12 lg:flex lg:items-center lg:child:m-0 lg:bg-white lg:rounded-2xl lg:mt-16 lg:-mb-16">
+
+      <div class="p-4 w-full bg-white rounded-lg lg:pt-[78px] lg:pb-[82px] xl:border-r xl:border-[#F2EDFF] xl:pl-[42px] xl:pr-[50px]">
+        <svg class="mb-5 md:mb-9" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path opacity="0.4" d="M33 18H27M9 18H3M18 9V3M18 33V27" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 30C24.6274 30 30 24.6274 30 18C30 11.3726 24.6274 6 18 6C11.3726 6 6 11.3726 6 18C6 24.6274 11.3726 30 18 30Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <div class="">
+          <div class="text-black mb-3 leading-117 font-bold -tracking-[0.48px] sm:text-lg md:text-[22px] lg:mb-4">Industry analysis</div>
+
+          <p class="text-gray-700 tex-sm font-medium -tracking-[0.14px] leading-135 | md:text-base md:leading-[155%] lg:-tracking-[0.17px] lg:max-w-[326px]">
+            We look at the top performers in your industry across the World, and figure out exactly why they’re converting so many customers.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 w-full bg-white rounded-lg lg:pt-[78px] lg:pb-[82px] xl:border-r xl:border-[#F2EDFF] xl:pl-[42px] xl:pr-[50px]">
+        <svg class="mb-5 md:mb-9" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path opacity="0.4" d="M22.5168 5.25V3M28.4258 7.59099L30.0168 6M28.4258 19.5L30.0168 21.091M16.5168 7.59099L14.9258 6M30.7668 13.5H33.0168" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.4998 21L14.9998 16.5M9.19683 31.303L23.0527 17.4471C23.6467 16.853 23.9438 16.556 24.055 16.2135C24.1529 15.9123 24.1529 15.5878 24.055 15.2865C23.9438 14.944 23.6467 14.647 23.0527 14.053L21.9468 12.9471C21.3528 12.353 21.0558 12.056 20.7133 11.9448C20.412 11.8469 20.0875 11.8469 19.7862 11.9448C19.4438 12.056 19.1467 12.353 18.5527 12.9471L4.69683 26.803C4.1028 27.397 3.80579 27.694 3.69451 28.0365C3.59662 28.3378 3.59662 28.6623 3.69451 28.9635C3.80579 29.306 4.1028 29.603 4.69683 30.1971L5.80272 31.303C6.39674 31.897 6.69376 32.194 7.03625 32.3053C7.33751 32.4032 7.66203 32.4032 7.9633 32.3053C8.30579 32.194 8.6028 31.897 9.19683 31.303Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <div class="">
+          <div class="text-black mb-3 leading-117 font-bold -tracking-[0.48px] sm:text-lg md:text-[22px] lg:mb-4">Unique design</div>
+
+          <p class="text-gray-700 tex-sm font-medium -tracking-[0.14px] leading-135 | md:text-base md:leading-[155%] lg:-tracking-[0.17px] lg:max-w-[326px]">
+            We handcraft the most beautiful highly converting landing pages that will drive you conversions and earn you more money.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 w-full bg-white rounded-lg lg:pt-[78px] lg:pb-[82px] xl:pl-[42px] xl:pr-[50px]">
+
+        <svg class="mb-5 md:mb-9" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path opacity="0.4" d="M25.8 21C26.2155 21 26.4233 21 26.5916 21.0923C26.7305 21.1684 26.8598 21.3113 26.9217 21.4571C26.9967 21.6338 26.9778 21.8219 26.9401 22.198C26.7444 24.1481 26.0732 26.0272 24.9776 27.6668C23.6591 29.6402 21.7849 31.1783 19.5922 32.0865C17.3995 32.9948 14.9867 33.2324 12.6589 32.7694C10.3311 32.3064 8.19295 31.1635 6.51472 29.4853C4.83649 27.807 3.6936 25.6689 3.23058 23.3411C2.76756 21.0133 3.0052 18.6005 3.91345 16.4078C4.8217 14.2151 6.35977 12.3409 8.33316 11.0224C9.97285 9.92676 11.8519 9.2556 13.802 9.05994C14.1781 9.0222 14.3662 9.00333 14.5429 9.07832C14.6887 9.14018 14.8316 9.26947 14.9077 9.40837C15 9.57675 15 9.7845 15 10.2V19.8C15 20.22 15 20.4301 15.0818 20.5905C15.1537 20.7316 15.2684 20.8463 15.4095 20.9182C15.5699 21 15.78 21 16.2 21H25.8Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 4.20001C21 3.78451 21 3.57675 21.0923 3.40837C21.1684 3.26947 21.3113 3.14018 21.4571 3.07832C21.6338 3.00333 21.8219 3.0222 22.198 3.05993C24.9406 3.33503 27.519 4.54846 29.4853 6.51473C31.4515 8.48099 32.665 11.0594 32.9401 13.802C32.9778 14.1781 32.9967 14.3662 32.9217 14.5429C32.8598 14.6887 32.7305 14.8316 32.5916 14.9078C32.4233 15 32.2155 15 31.8 15L22.2 15C21.78 15 21.5699 15 21.4095 14.9183C21.2684 14.8464 21.1537 14.7316 21.0817 14.5905C21 14.4301 21 14.2201 21 13.8L21 4.20001Z" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+
+        <div class="">
+          <div class="text-black mb-3 leading-117 font-bold -tracking-[0.48px] sm:text-lg md:text-[22px] lg:mb-4">A/B testing </div>
+
+          <p class="text-gray-700 tex-sm font-medium -tracking-[0.14px] leading-135 | md:text-base md:leading-[155%] lg:-tracking-[0.17px] lg:max-w-[326px]">
+            We never leave anything to chance. We test all of our copy, buttons, colors and designs to ensure that we’re maximizing conversions. 
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+</style>

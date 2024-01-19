@@ -1,0 +1,85 @@
+---
+import '../styles/main.css'
+
+import MainLayout from "../layouts/MainLayout.astro";
+
+import FreeAuditS from '../sections/Base/FreeAudit.astro';
+import SecondHeader from "../components/Headers/SecondHeader.astro";
+import HeaderQuizForm from '../components/Forms/HeaderQuizForm.astro'
+import IncludedFreeAudit from '../sections/FreeAudit/IncludedFreeAudit.astro';
+
+import Numbers from '../sections/Numbers.astro';
+import Footer from '../sections/Base/Footer.astro';
+import OurTeamSlider from '../components/Slider/OurTeamSlider.astro';
+
+const {} = Astro.props
+
+---
+<MainLayout title="Free Audit" transition={false}>
+
+  <SecondHeader 
+    title="Get your Free Marketing Audit"
+    selectedText="Free"
+    descr="Paid ad strategy that drives massive growth"
+    form={true}
+    titleStyle="md:balance lg:text-left lg:max-w-[600px] lg:pt-[64px]"
+    wrapperStyle="pb-[109px] lg:flex lg:justify-between lg:items-start"
+    textWrapper="!items-start 520:!items-center lg:!items-start">
+
+    <!-- Decorative Star -->
+    <svg slot="decorativeStar"  class="hidden absolute left-[50px] bottom-[61px] lg:flex" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+      <g opacity="0.3">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6939 5.32081C10.6216 4.8917 10.5671 4.46746 10.5319 4.04318C10.4789 3.40675 10.5117 2.76545 10.4929 2.12902C10.4847 1.85902 10.4524 1.15511 10.4654 1.05386C10.5835 0.171534 11.2956 0.0365177 11.5039 0.0124105C11.6047 -0.00205377 12.6394 -0.117716 12.8626 1.02978C13.1364 2.43282 13.2242 3.84548 13.1273 5.22923C13.3534 6.40566 13.7401 7.57724 14.2507 8.63795C16.2824 12.8567 20.154 13.2665 24.3487 13.228C24.9938 13.2183 25.5295 13.7246 25.5632 14.3658C25.597 15.0119 25.1168 15.5712 24.4745 15.629C22.1299 15.8556 17.9699 17.736 16.5317 19.6935C16.2308 20.1033 16.0558 21.0917 15.8244 22.0609C15.5014 23.406 15.1171 24.7367 14.6865 25.296C14.6219 25.3828 13.8365 26.27 13.6022 26.4001C13.0391 26.7087 12.5883 26.5303 12.3322 26.3664C12.0762 26.2024 11.7865 25.8794 11.6707 25.3442C11.5497 24.7849 11.6519 23.6374 11.6331 23.3915C11.5647 22.4995 11.3863 20.7494 11.0223 19.2451C10.826 18.4351 10.6168 17.6878 10.2706 17.3165C8.98907 15.9424 6.93996 16.1449 5.21437 16.3715C5.01621 16.3956 4.81805 16.4246 4.62037 16.4487C3.91789 16.656 3.172 16.8103 2.38369 16.9019C1.19328 17.0417 0.997545 15.9472 0.986938 15.8749C0.964759 15.7158 0.882304 14.8962 1.77957 14.5683C1.87745 14.5346 2.5997 14.3755 2.8779 14.3128C3.26554 14.226 3.65752 14.1585 4.05095 14.0958C8.11493 12.8326 10.3222 9.28402 10.6939 5.32081ZM12.0888 9.70353C13.6229 12.876 15.9512 14.4092 18.711 15.1035H18.7105C16.9873 16.0051 15.4199 17.1334 14.5891 18.2664C14.2738 18.6955 13.9845 19.5585 13.7237 20.5276C13.5824 19.626 13.3915 18.6665 13.1394 17.8469C12.8525 16.9115 12.4663 16.1353 12.0352 15.6725C11.2031 14.7805 10.1587 14.2839 9.03582 14.038C10.38 12.8471 11.3993 11.3621 12.0888 9.70353Z" fill="white"/>
+      </g>
+    </svg>
+
+    <!-- Quiz form -->
+    <HeaderQuizForm slot='form' />
+
+  </SecondHeader>
+
+  <IncludedFreeAudit />
+
+  <section class="bg-white pb-9 md:pb-[132px]">
+
+    <div class={`w-full flex justify-center relative z-50 mb-4  | md:mb-11 |`}>
+      <svg class="z-20 h-full w-full -mt-5 max-w-[90px] max-h-[100px] sm:max-w-[160px] sm:max-h-[160px] " xmlns="http://www.w3.org/2000/svg" width="134" height="137" viewBox="0 0 174 177" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M87.0731 71.5062C85.2872 70.1697 83.3266 69.0286 81.1754 68.1097C73.6271 64.8836 64.0044 69.0151 57.1151 75.9944C50.2282 82.9706 46.218 92.6526 49.3169 99.9608C51.0881 104.14 53.5998 106.463 56.4318 107.493C59.2493 108.518 62.44 108.257 65.6856 107.068C74.7311 103.749 84.2704 93.0826 86.5397 86.6128C87.5878 83.6194 88.4322 80.5568 89.0925 77.4493C95.2133 84.2307 98.235 94.2608 99.3437 105.395C101.754 129.593 95.0208 159.078 89.5799 173.769C89.2876 174.558 89.6917 175.432 90.481 175.725C91.2703 176.017 92.1477 175.615 92.4401 174.826C97.9884 159.844 104.835 129.771 102.376 105.094C101.107 92.3467 97.3283 81.0494 89.7851 73.8083C93.724 50.2335 88.0969 24.0483 83.5031 1.82835C83.3359 1.00552 82.5265 0.474413 81.7014 0.644648C80.8792 0.817229 80.3474 1.62123 80.5176 2.44642C84.9223 23.7587 90.4127 48.7852 87.0731 71.5062ZM86.498 74.9316C84.5819 73.3104 82.4147 71.9522 79.9735 70.9119C73.4412 68.1188 65.2458 72.0924 59.2822 78.1343C55.6283 81.8389 52.8024 86.3656 51.7359 90.8009C51.0642 93.589 51.0915 96.3331 52.1264 98.7707C53.4824 101.97 55.3077 103.842 57.4744 104.627C59.6533 105.422 62.1215 105.128 64.6339 104.204C72.8788 101.181 81.5963 91.4941 83.6612 85.6047C84.8801 82.1313 85.8101 78.5664 86.498 74.9316Z" fill="#8057FF"/>
+      </svg>
+    </div> 
+    <!-- Nav -->
+    <div class="container">
+      <div class="mb-6 | sm:flex sm:flex-col-center sm:mb-7 | lg:mb-10">
+        <!-- Text block -->
+
+          <div class="mb-1 text-black font-bold !leading-117 -tracking-[0.72px] text-[24px] | sm:max-w-[700px] 
+          sm:text-center sm:text-4xl sm:mb-4 | lg:text-[52px] lg:-tracking-[1.56px]">
+                      Under the wing of an experienced team
+          </div>
+          <div class="text-primary-500 text-sm -tracking-[0.14px] font-extrabold | md:text-lg">About Us</div>
+
+      </div>
+    </div>
+  
+    <!-- Slider -->
+    <!-- Slides are generated in the slider itself, but if you need different data, you can pass it to the slider and generate it there -->
+    <OurTeamSlider style="pl-5 md:pl-[2.85rem] lg:pl-[5.65rem]" />
+  
+  </section>
+
+  <Numbers sectionStyle="!mt-0" /> 
+
+  <!-- its okay -->
+  <FreeAuditS smallCard={true} />
+
+
+  <Footer />
+
+
+</MainLayout>
+
+<style>
+  body {
+    background-color: #F3F3FF;
+  }
+</style>

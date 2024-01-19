@@ -1,0 +1,130 @@
+---
+import { Image } from 'astro:assets';
+import BlockText from '../components/BlockText.astro';
+
+import Decorate_2 from '../images/Decorate/decorate-2.svg';
+
+
+import Adobe from '../images/Icons/brand-adobe.svg';
+import Facebook from '../images/Icons/brand-facebook.svg';
+import Amazon from '../images/Icons/brand-amazon.svg';
+import Analytics from '../images/Icons/brand-google-analytics.svg';
+import Figma from '../images/Icons/brand-figma.svg';
+
+const {} = Astro.props
+
+---
+<section class="pt-10 pb-9 bg-gray-50 md:pt-[90px] z-40 relative">
+
+
+  <div class="container max-w-[1306px]">
+    <BlockText 
+      title="Conversion focused PPC agency" 
+      subtitle="Services" 
+      icon={Decorate_2}
+      iconStyle="-left-[4.5rem] -top-9 hidden sm:flex" />
+
+      <!-- lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:bg-white lg:translate-y-16 lg:gap-0 -->
+    <div class="wrap rounded-3xl flex flex-col items-center overflow-hidden mt-6
+                sm:flex-wrap sm:justify-center sm:flex-row sm:gap-3 
+                lg:columns-3 lg:justify-start lg:grid lg:grid-cols-3 lg:grid-rows-2 lg:bg-white lg:-mt-10 lg:translate-y-28 lg:gap-0">
+
+
+        <!-- Cards -->
+
+        <!-- Card 1 -->
+        <div data-threshold="0.5" class="p-4 bg-white rounded-xl  w-full mb-3 col-span-1 row-span-1 
+                    sm:mb-0
+                    md:h-[248px]
+                    lg:border-double lg:rounded-none lg:max-w-[100%] lg:border-b lg:border-r lg:border-[#F2EDFF] 
+                    lg:pt-[60px] lg:pb-[69px] lg:pl-[42px] lg:h-[349px] scroll-animation
+                     ">
+
+          <Image src={Adobe} alt='Adobe' width={36} class='mb-5 md:mb-9' />
+
+          <div class="text-black mb-3 font-bold -tracking-[0.66px]
+                        lg:mb-4 lg:text-[22px]">Google Adwords Management</div>
+
+          <div class="text-gray-700 text-sm font-medium mb-3 leading-135  lg:max-w-[292px] sm:text-base tracking-[-0.16px]">
+              Maximize your Google Ads budget in the most efficient way possible.
+          </div>
+
+          <a href="/services/GoogleAds" class="font-extrabold text-primary-500 leading-135 text-hover">Learn more</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div data-threshold="0.5" class="p-4 bg-white rounded-xl  w-full mb-3 sm:mb-0 col-span-1 row-span-1 
+                    md:h-[248px]
+                    lg:max-w-[100%] lg:rounded-none lg:border-b lg:border-r lg:border-[#F2EDFF] 
+                    lg:pt-[60px] lg:pb-[69px] lg:pl-[54px] lg:h-[349px] scroll-animation delay-[200ms]
+                    ">
+          <Image src={Facebook} alt='Facebook' width={36} class='mb-5 md:mb-9' />
+
+          <div class="text-black mb-3 font-bold -tracking-[0.66px]
+                        lg:mb-4 lg:text-[22px] ">Facebook PPC Management</div>
+
+          <div class="text-gray-700 text-sm font-medium mb-3 leading-135  lg:max-w-[292px] sm:text-base tracking-[-0.16px]">
+            Aims to scale your sales and traffic to deliver a positive return on investment 
+          </div>
+
+          <a href="/services/Facebook" class="font-extrabold text-primary-500 leading-135 text-hover">Learn more</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div data-threshold="0.5" class="p-4 bg-white rounded-xl  w-full mb-3 sm:mb-0 col-span-1 row-span-1 
+                    md:h-[248px]
+                    lg:max-w-[100%] lg:rounded-none lg:border-b lg:border-[#F2EDFF] 
+                    lg:pt-[60px] lg:pb-[69px] lg:pl-[54px] lg:h-[349px] scroll-animation delay-[400ms]">
+          <Image src={Amazon} alt='Amazon' width={36} class='mb-5 md:mb-9' />
+
+          <div class="text-black mb-3 font-bold -tracking-[0.66px]
+                        lg:mb-4 lg:text-[22px]">Amazon PPC Management</div>
+
+          <div class="text-gray-700 text-sm font-medium mb-3 leading-135  lg:max-w-[285px] sm:text-base tracking-[-0.16px]">
+            Our team will handle the tedious tasks of running your PPC campaigns 
+          </div>
+
+          <a href="/services/Amazon" class="font-extrabold text-primary-500 leading-135 text-hover">Learn more</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div data-threshold="0.5" class="p-4 bg-white rounded-xl  w-full mb-3 sm:mb-0 col-span-1 row-span-1
+                    md:h-[248px]
+                    lg:max-w-[100%] border-[#F2EDFF] lg:border-r lg:lg:rounded-none 
+                    lg:pt-[50px] lg:pl-[42px] lg:pb-[74px] lg:h-[349px] scroll-animation delay-[600ms]">
+          <Image src={Analytics} alt='Analytics' width={36} class='mb-5 md:mb-9' />
+
+          <div class="text-black mb-3 font-bold -tracking-[0.66px]
+                        lg:mb-4 lg:text-[22px]">White Label PPC Services</div>
+
+          <div class="text-gray-700 text-sm font-medium mb-3 leading-135  lg:max-w-[306px] sm:text-base tracking-[-0.16px]">
+            Our white label service helps elevate digital marketing agencies to the next level
+          </div>
+
+          <a href="/services/WhiteLabel" class="font-extrabold text-primary-500 leading-135 text-hover">Learn more</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div data-threshold="0.5" class="p-4 bg-white rounded-xl  w-full mb-3 sm:mb-0 col-span-1 row-span-1
+                    md:h-[248px]
+                    lg:max-w-[100%] border-[#F2EDFF] lg:border-r lg:rounded-none 
+                    lg:pt-[50px] lg:pl-[54px] lg:pb-[74px] lg:h-[349px] scroll-animation delay-[800ms]">
+          <Image src={Figma} alt='Figma' width={36} class='mb-5 md:mb-9' />
+
+          <div class="text-black mb-3 font-bold -tracking-[0.66px]
+                        lg:mb-4 lg:text-[22px]">Beautiful Design that converts</div>
+
+          <div class="text-gray-700 text-sm font-medium mb-3 leading-135  lg:max-w-[268px] sm:text-base tracking-[-0.16px]">
+              We focus on design that increases your conversion rate
+          </div>
+
+          <a href="/services/LandingPage" class="font-extrabold text-primary-500 leading-135 text-hover">Learn more</a>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>

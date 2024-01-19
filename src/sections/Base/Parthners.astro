@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+import Airsoft from '../../images/Partners/airsoft.png'
+import LinkBuilder from '../../images/Partners/linkbuilder.png'
+import GymShock from '../../images/Partners/gymshock.png'
+import TotalCrypto from '../../images/Partners/totalcrypto.png'
+
+const {sectionStyle = ""} = Astro.props
+
+---
+<section class={` mb-16 md:mb-[138px] overflow-x-clip | ${sectionStyle}`}>
+			
+  <div class="container">
+    <div class="partners wrap flex sm:justify-between lg:justify-center items-center |   
+                child:mr-4 last:mr-0 child:brightness-50 max-md:partners-anim lg:child:mr-[77px] ">
+      <Image src={Airsoft} width={139} class='scroll-animation scroll-animation-scale w-full max-w-[103px] lg:max-w-[139px]' alt='Our parthner - Airsoft Pal' />
+      <Image src={LinkBuilder} width={202} class='scroll-animation delay-[200ms]  scroll-animation-scale w-full max-w-[145px] lg:max-w-[202px]' alt='Our parthner - LinkBuilder' />
+      <Image src={GymShock} width={165} class='scroll-animation delay-[400ms] scroll-animation-scale  w-full max-w-[126px] lg:max-w-[165px]' alt='Our parthner - GymShock' />
+      <Image src={TotalCrypto} width={189} class='scroll-animation delay-[600ms] scroll-animation-scale w-full max-w-[153px] !mr-0 lg:max-w-[189px]' alt='Our parthner - TotalCrypto' />
+        <!-- For an infinite scroll effect (mobile) -->
+
+
+      <Image src={Airsoft} width={139} class='ml-4 w-[103px] md:hidden' alt='Our parthner - Airsoft Pal' />
+      <Image src={LinkBuilder} width={202} class='mx-4 w-[126px]  md:hidden' alt='Our parthner - LinkBuilder' />
+    </div>
+  </div>
+
+</section>
+
+<style>
+
+</style>

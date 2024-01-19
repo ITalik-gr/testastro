@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import ServicesLink from "../components/ServicesLink.astro";
+import GrowthGrid from '../images/Decorate/Growth-grid.svg';
+import MainButton from "../components/Buttons/MainButton.astro";
+
+import MainImage from '../images/ConversionFocused-res.svg'
+
+import User_1 from '../images/Users/user-1.png';
+const {} = Astro.props
+
+---
+
+
+<section class="bg-black pt-[64px] pb-[48px] relative overflow-hidden
+                  md:pt-40 md:pb-32">
+
+  <div class="container xl:max-w-[1254px]">
+    <div class="wrap w-full flex-col-center lg:flex-row lg:justify-between">
+
+      <div class="scroll-animation lg:w-full">
+          <div class="text-[28px] mb-4 -tracking-[0.84px] text-white leading-117 font-bold sm:text-center md:text-4xl lg:mb-10 lg:max-w-[471px] lg:text-[42px] lg:text-left">Conversion Focused</div>
+          
+          <p class="-tracking-[0.48px] leading-135 font-medium text-white text-opacity-80 mb-[60px] lg:mb-8 lg:max-w-[280px]">Leverage the rich data we've gathered from our 250+ active clients.</p>
+
+          <div class="hidden items-center z-10 w-full lg:flex">
+            <MainButton title="Contact Us" link="/contact" style="w-full max-w-full h-[44px] sm:max-w-[140px]" />
+
+            <div class="flex items-center ml-6">
+              <Image class='mr-3' src={User_1} width={44} alt='User Photo' />
+              <div class="text-white font-semibold">Want to know more?</div>
+            </div>
+            
+          </div>
+      </div>
+
+      <!-- Image -->
+
+      <div class="scroll-animation delay-200 relative flex justify-center items-center mb-[60px] w-full lg:mb-0">
+        <div class="bg-error-500 text-white rounded-lg w-max px-3 py-2 font-extrabold leading-135 absolute left-1/2 -translate-x-1/2 -top-7 lg:text-lg lg:translate-x-0 lg:top-3 lg:-left-16">x2.4 conversion increase</div>
+        <Image class="max-w-full" src={MainImage} alt="Conversetion image" />
+      </div>
+
+      <div class="w-full lg:hidden"><ServicesLink link="/contact" /></div>
+
+    </div>
+  </div>
+
+  <!-- Decorate line, grid -->
+
+  <Image src={GrowthGrid} class='top-0 absolute left-1/2 -translate-x-1/2 z-0 object-none' alt="Decorative grid" />
+  <div class="blur-[100px] absolute top-0 -right-16 w-[217px] rounded-full h-[140px] rotate-[57deg] bg-[rgba(129,87,255,0.4)] z-0"></div>
+  <div class="blur-[100px] hidden absolute bottom-0 -left-32 w-[313px] rounded-full h-[140px] rotate-[57deg] bg-[rgba(129,87,255,0.4)] z-0 md:flex"></div>
+</section>
+
+<style>
+
+</style>

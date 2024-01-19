@@ -1,0 +1,215 @@
+---
+import '../styles/main.css'
+
+import IndustriesHeader from '../components/Headers/IndustriesHeader.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import ProccesStep from '../sections/Procces/ProccesStep.astro';
+import OurCase from '../sections/Base/OurCase.astro';
+import FreeAudit from '../sections/Base/FreeAudit.astro';
+import Footer from '../sections/Base/Footer.astro';
+
+import ProccesSteps from '../data/ProccesSteps.json'
+
+
+const {} = Astro.props
+
+---
+<MainLayout bodyClass="page-container">
+
+  
+  
+  <IndustriesHeader 
+    title="A Deep Dive into Our Methodological Tapestry"
+    descr="Each and every one of our campaigns succeeds because of our incredible attention to detail."
+    titleStyle="text-[28px] sm:max-w-none" 
+    desktopImage='/image/Procces/ProccesPageMain.svg'
+    partners={false}
+    mobileSlider={true}
+    sliderImages={["/image/Procces/ProccesMain-Slider-1.svg", "/image/Procces/ProccesMain-Slider-2.svg", "/image/Procces/ProccesMain-Slider-3.svg"]} />
+
+    <ProccesStep data={ProccesSteps[1]} sectionStyle="step-1" />
+
+    <ProccesStep data={ProccesSteps[2]} sectionStyle="step-2" />
+  
+    <ProccesStep data={ProccesSteps[3]} sectionStyle="step-3 last pb-[67px]" />
+  
+    <OurCase sectionStyle="bg-white py-16 lg:pb-[102px] lg:pt-[120px]" line={false} />
+  
+    <FreeAudit sectionStyle="md:pt-9" />
+  
+    <Footer />
+  
+
+</MainLayout>
+
+<style>
+  body {
+    background-color: #0C0C0E;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { ScrollToPlugin } from "gsap/ScrollToPlugin"
+
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin)
+    
+
+
+    if(window.innerWidth >= 768) {
+     // Getting the page container
+     console.log('dilo');
+
+     
+     const pageContainer = document.querySelector(".page-container");
+     pageContainer.setAttribute("data-scroll-container", "");
+ 
+     // Creating an instance of ScrollTrigger
+     ScrollTrigger.create({
+       trigger: "[data-scroll-container]",
+       start: "top top",
+       end: "bottom bottom",
+       pin: "[data-scroll-pin]",
+       invalidateOnRefresh: false,
+     });
+ 
+     // Anchoring and horizontal scrolling for each element with the .horizontal-scroll class
+     const horizontalSections = document.querySelectorAll(".horizontal-scroll");
+ 
+     horizontalSections.forEach((horizontalSection) => {
+       const pinWrap = horizontalSection.querySelector(".pin-wrap");
+       const pinWrapWidth = pinWrap.scrollWidth;
+       const timelineLine = horizontalSection.querySelector(".timeline-line");
+       const dots = horizontalSection.querySelectorAll(".step-dot");
+ 
+       let activeDotIndices = []; // Storing active point indices
+
+       let scrollX = window.innerWidth * 0.8;
+       let h = window.innerHeight;
+
+       const totalDots = dots.length;
+
+       const sectionIndex = horizontalSection.getAttribute('data-index')
+
+        console.log(sectionIndex);
+
+
+
+        // Adding a ScrollTrigger for horizontal pinning
+        gsap.to(pinWrap, {
+          scrollTrigger: {
+            trigger: horizontalSection,
+            scroller: "[data-scroll-container]",
+            scrub: true,
+            pin: true,
+            start: "top top",
+            end: () => `+=${pinWrapWidth}`,
+            onUpdate: (self) => {
+              // Change the style of the timeline gradient
+              timelineLine.style.background = `
+                  linear-gradient(90deg, #8057FF ${self.progress * 100}%, #40404F ${self.progress * 100}%)
+              `;
+              // Find the index of an active dot based on self.progress and the number of pillboxes
+            
+              const activeDotIndex = Math.floor(self.progress * totalDots);
+  
+              // Add the index of the active dot if it is not already in the list
+              if (!activeDotIndices.includes(activeDotIndex)) {
+                activeDotIndices.push(activeDotIndex);
+              }
+  
+              // Delete dots indices that are no longer active
+              activeDotIndices = activeDotIndices.filter((index) => index <= activeDotIndex);
+  
+              // Change the style for each dot
+              dots.forEach((dot, index) => {
+                dot.classList.toggle("step-dot-active", activeDotIndices.includes(index));
+              });
+
+              if(totalDots == activeDotIndices.length) {
+                timelineLine.style.width = '150%'
+              } else  {
+                timelineLine.style.width = '100%'
+              }
+
+            },
+            onLeave: () => {
+            window.scrollBy({
+              top: h,
+              behavior: "smooth", 
+            })
+          },
+            onLeaveBack: () => {
+            window.scrollBy({
+              top: -h,
+              behavior: "smooth", 
+            })
+            },
+
+            invalidateOnRefresh: true,
+          },
+          x: (-pinWrapWidth) + scrollX,
+          ease: "none",
+        });
+     });
+
+     ScrollTrigger.refresh();
+
+    //  Mobile
+    } else {
+      const horizontalSections = document.querySelectorAll(".horizontal-scroll");
+ 
+
+
+      horizontalSections.forEach((horizontalSection) => {
+      const timelineLine = horizontalSection.querySelector(".mobile-line");
+      const dots = horizontalSection.querySelectorAll(".step-dot-mobile");
+
+      let dotTopPercent = []
+
+      dots.forEach((dot, index) => {
+        let dotTop = dot.getAttribute('data-dot-top');
+
+        let lineHeight = timelineLine.scrollHeight;
+
+        dotTopPercent.push(+dotTop / lineHeight * 100)
+
+  
+      });
+
+      gsap.to(timelineLine, {
+        scrollTrigger: {
+          trigger: horizontalSection,
+          scrub: true,
+          pin: false,
+          start: "top top",
+          end: '+=100%',
+          onUpdate: (self) => {
+            let progress = Math.round(self.progress * 100)
+            timelineLine.style.background = `
+              linear-gradient(180deg, #8057FF ${progress}%, #40404F ${progress}%)
+            `;
+
+            dotTopPercent.map((top, i) => {
+              let roundTop = Math.round(top)
+
+              dots[i].classList.toggle('step-dot-active', progress >= roundTop)
+            })
+
+          },
+          invalidateOnRefresh: true,
+        },
+        ease: "none",
+      });
+});
+
+    }
+  });
+ </script>

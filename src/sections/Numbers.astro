@@ -1,0 +1,81 @@
+---
+import ServicesLink from '../components/ServicesLink.astro';
+
+
+const {sectionStyle} = Astro.props
+
+---
+<section class=`bg-black pt-10 pb-10 md:pb-20 md:mt-32 lg:pt-[111px] ${sectionStyle}`>
+  <div class="w-full flex justify-center mb-10 md:mb-[70px]">
+    <svg class="w-full max-w-[114px] md:max-w-[181px]" xmlns="http://www.w3.org/2000/svg" width="181" height="25" viewBox="0 0 181 25" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M48.2427 10.2776C40.4665 8.01837 31.4884 5.77003 22.8515 5.20862C15.4694 4.72946 8.33891 5.4737 2.50253 8.64027C1.67981 9.08613 0.649537 8.77962 0.204602 7.9545C-0.241011 7.13007 0.0655569 6.09763 0.88828 5.65109C7.25506 2.1977 15.0183 1.29441 23.0706 1.81776C31.8628 2.38868 41.003 4.652 48.9352 6.94384C49.8555 5.07544 51.7614 3.33345 55.1188 2.0482C60.2756 0.0737667 67.3165 0.098238 74.7339 1.21085C85.4917 2.8237 97.0641 6.66992 104.505 9.40286C104.81 9.51433 105.264 9.69171 105.82 9.92551C105.99 9.55034 106.18 9.18059 106.39 8.81765C108.215 5.65448 111.443 3.09691 114.733 2.18343C135.596 -3.60869 159.945 3.33141 179.771 8.97944C180.666 9.23567 181.188 10.1763 180.937 11.0782C180.679 11.9801 179.743 12.5042 178.841 12.2479C159.572 6.75758 135.915 -0.169552 115.635 5.45877C113.139 6.15203 110.711 8.11761 109.327 10.5182C109.171 10.786 109.035 11.0599 108.906 11.3379C111.64 12.6952 114.855 14.5873 116.584 16.6127C118.361 18.6891 118.802 20.9055 117.256 22.9989C115.926 24.7885 113.912 24.9407 111.816 24.013C109.558 23.0193 107.231 20.6962 106.478 19.606C105.068 17.5698 104.62 15.3608 104.878 13.2069C104.213 12.9256 103.673 12.7162 103.34 12.5939C96.0623 9.92145 84.7511 6.14927 74.232 4.57177C67.4637 3.55634 61.0345 3.42111 56.3288 5.22223C54.3219 5.99093 52.9958 6.88807 52.2762 7.92932C53.6965 8.35479 55.0659 8.77348 56.3743 9.17313C58.9618 9.96358 64.3492 11.2719 68.1983 13.6039C71.2592 15.458 73.3347 17.9802 73.214 21.142C73.1523 22.7665 72.2142 23.8505 70.7214 24.4582C68.4906 25.3655 64.6327 24.9265 63.1961 24.6206C58.839 23.6949 53.0237 19.8629 50.1465 15.545C48.9982 13.822 48.3152 12.0196 48.2427 10.2776ZM51.8218 11.3392C53.0528 11.7103 54.2425 12.0746 55.3854 12.424C57.8006 13.1621 62.8495 14.3345 66.4436 16.5122C68.3468 17.6649 69.9007 19.046 69.8254 21.0122C69.8193 21.1652 69.668 21.2087 69.5344 21.2712C69.3275 21.367 69.0908 21.433 68.8385 21.4846C67.1314 21.834 64.8382 21.4962 63.8995 21.2964C60.2437 20.5195 55.3806 17.2809 52.9667 13.6576C52.4566 12.8923 52.0504 12.1127 51.8218 11.3392ZM108.228 14.7715C109.822 15.5933 111.491 16.5869 112.806 17.6683C113.505 18.2426 114.095 18.8332 114.468 19.4463C114.78 19.9533 114.902 20.4726 114.529 20.9742C114.38 21.1774 114.156 21.1815 113.926 21.1434C113.681 21.1026 113.43 21.0157 113.179 20.9035C111.524 20.1736 109.815 18.4683 109.266 17.6683C108.622 16.7406 108.303 15.7591 108.228 14.7715Z" fill="#9979FF"/>
+    </svg>
+  </div>
+
+
+  <div class="container lg:px-0">
+
+    <div class="scroll-animation wrap flex flex-col items-center justify-center mb-16 md:flex-wrap md:flex-row md:justify-around md:mb-36 xl:justify-center">
+
+      <div class="flex flex-col items-center text-center mb-6
+      xl:pr-24 md:h-[90px] md:text-left md:items-start xl:border-r xl:border-[rgba(255,255,255,0.15)] md:px-8 md:mb-8 lg:pr-8 lg:mb-0 xl:pl-0">
+
+        <div class="font-bold leading-135 text-[32px] mb-2 text-white -tracking-[0.96px]
+                    md:text-[52px] md:-tracking-[1.56px] ">+12,421%</div>
+        <div class="-tracking-[0.48px] text-[rgba(255,255,255,0.8)] font-semibold mb-6 md:mb-0">
+          Traffic increase in avg.
+        </div>
+
+        <!-- mobile line -->
+        <div class="w-20 bg-[rgba(255,255,255,0.15)] h-[1px]"></div>
+
+      </div>
+
+      <div class="flex flex-col items-center text-center mb-6
+      xl:pr-24 md:h-[90px] md:text-left md:items-start xl:border-r xl:border-[rgba(255,255,255,0.15)] md:px-8 md:mb-8 lg:px-8 lg:mb-0 xl:pl-[97px]">
+
+        <div class="font-bold leading-135 text-[32px] mb-2 text-white -tracking-[0.96px]
+                    md:text-[52px] md:-tracking-[1.56px] ">421%</div>
+        <div class="-tracking-[0.48px] text-[rgba(255,255,255,0.8)] font-semibold mb-6 md:mb-0">
+          Ranking increase in avg.
+        </div>
+
+        <!-- mobile line -->
+        <div class="w-20 bg-[rgba(255,255,255,0.15)] h-[1px]"></div>
+
+      </div>
+
+      <div class="flex flex-col items-center text-center mb-6
+      xl:pr-24 md:h-[90px] md:text-left md:items-start xl:border-r xl:border-[rgba(255,255,255,0.15)] md:px-8 md:mb-0 lg:px-8 xl:pl-[97px]">
+
+        <div class="font-bold leading-135 text-[32px] mb-2 text-white -tracking-[0.96px]
+                    md:text-[52px] md:-tracking-[1.56px] ">22x</div>
+        <div class="-tracking-[0.48px] text-[rgba(255,255,255,0.8)] font-semibold mb-6 md:mb-0">
+          Return on internal goals
+        </div>
+
+        <!-- mobile line -->
+        <div class="w-20 bg-[rgba(255,255,255,0.15)] h-[1px]"></div>
+
+      </div>
+
+      <div class="flex flex-col items-center text-center
+      md:h-[90px] md:text-left md:items-start md:px-4 md:mb-0 lg:pl-8 xl:pr-0 xl:pl-[97px]">
+
+        <div class="font-bold leading-135 text-[32px] mb-2 text-white -tracking-[0.96px]
+                    md:text-[52px] md:-tracking-[1.56px] ">70%</div>
+        <div class="-tracking-[0.48px] text-[rgba(255,255,255,0.8)] font-semibold mb-6 md:mb-0">
+          Costs saved in avg.
+        </div>
+      </div>
+
+
+    </div>
+
+    <ServicesLink />
+  </div>
+</section>
+
+<style>
+
+</style>

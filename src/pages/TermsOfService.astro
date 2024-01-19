@@ -1,0 +1,93 @@
+---
+import '../styles/main.css'
+
+import SecondHeader from "../components/Headers/SecondHeader.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Footer from '../sections/Base/Footer.astro';
+
+const {} = Astro.props
+
+---
+
+<MainLayout title="Terms of Service">
+
+  <SecondHeader title="Terms of Service" wrapperStyle="pb-[36px]" descr="Last Update, 20 Mar, 2023">
+
+  </SecondHeader>
+
+  <!-- Content -->
+
+  <div class="container">
+
+    <div class="text-block mt-9 lg:mt-[70px]">
+      <h5>Types of Data collected</h5>
+      <p>
+        Among the types of Personal Data that this Website collects, by itself or through third parties, there are: first name; last name; email address; Cookies; Usage Data; various types of Data. <br>
+        Complete details on each type of Personal Data collected are provided in the dedicated sections of this privacy policy or by specific explanation texts displayed prior to the Data collection.Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically when using this Website
+      </p>
+
+      <p>
+        Unless specified otherwise, all Data requested by this Website is mandatory and failure to provide this Data may make it impossible for this Website to provide its services. In cases where this Website specifically states that some Data is not mandatory, Users are free not to communicate this Data without consequences to the availability or the functioning of the Service.
+      </p>
+
+      <p>
+        Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.Any use of Cookies – or of other tracking tools — by this Website or by the owners of third-party services used by this Website serves the purpose of providing the Service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy.
+        Users are responsible for any third-party Personal Data obtained, published or shared through this Website.
+      </p>
+    </div>
+
+    <div class="text-block">
+      <h5>Types of Data collected</h5>
+      <p>
+        Among the types of Personal Data that this Website collects, by itself or through third parties, there are: first name; last name; email address; Cookies; Usage Data; various types of Data. <br>
+        Complete details on each type of Personal Data collected are provided in the dedicated sections of this privacy policy or by specific explanation texts displayed prior to the Data collection.Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically when using this Website
+      </p>
+
+      <p>
+        Unless specified otherwise, all Data requested by this Website is mandatory and failure to provide this Data may make it impossible for this Website to provide its services. In cases where this Website specifically states that some Data is not mandatory, Users are free not to communicate this Data without consequences to the availability or the functioning of the Service.
+      </p>
+
+      <p>
+        Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.Any use of Cookies – or of other tracking tools — by this Website or by the owners of third-party services used by this Website serves the purpose of providing the Service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy.
+        Users are responsible for any third-party Personal Data obtained, published or shared through this Website.
+      </p>
+    </div>
+
+    <div class="text-block last">
+      <h5>Types of Data collected</h5>
+      <p>
+        Among the types of Personal Data that this Website collects, by itself or through third parties, there are: first name; last name; email address; Cookies; Usage Data; various types of Data. <br>
+        Complete details on each type of Personal Data collected are provided in the dedicated sections of this privacy policy or by specific explanation texts displayed prior to the Data collection.Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically when using this Website
+      </p>
+
+      <p>
+        Unless specified otherwise, all Data requested by this Website is mandatory and failure to provide this Data may make it impossible for this Website to provide its services. In cases where this Website specifically states that some Data is not mandatory, Users are free not to communicate this Data without consequences to the availability or the functioning of the Service.
+      </p>
+
+      <p>
+        Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.Any use of Cookies – or of other tracking tools — by this Website or by the owners of third-party services used by this Website serves the purpose of providing the Service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy.
+        Users are responsible for any third-party Personal Data obtained, published or shared through this Website.
+      </p>
+    </div>
+
+  </div>
+
+
+  <Footer />
+
+</MainLayout>
+
+<style>
+  h5 {
+    @apply text-2xl -tracking-[0.84px] font-bold mb-4 md:text-3xl md:mb-9 lg:text-[32px] lg:-tracking-[1.12px];
+  }
+  p {
+    @apply text-gray-800 -tracking-[0.24px] font-medium !leading-[150%] mb-4 md:text-lg lg:text-xl lg:-tracking-[0.3px] lg:mb-[35px];
+  }
+  .text-block {
+    @apply pb-9 border-b border-[#E5E5F9] mb-9 lg:pb-12 lg:mb-12;
+  }
+  .last {
+    @apply pb-0 border-none;
+  }
+</style>

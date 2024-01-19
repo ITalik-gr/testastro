@@ -1,0 +1,53 @@
+---
+import FreeAuditSlider from "../../components/Slider/FreeAuditSlider.astro";
+
+const {} = Astro.props
+
+---
+<section class="mt-[558px] pb-[57px] pl-5 | sm:pl-0 md:pb-[102px] md:mt-[505px] lg:mt-[244px]">
+  <div class="container">
+    <div class="mb-6 flex justify-between items-center | sm:mb-7 md:mb-9 | lg:mb-14">
+      <!-- Text block -->
+      <div class="relative scroll-animation">
+        <div class="text-black font-bold !leading-117 -tracking-[0.84px] text-[28px] | sm:text-4xl | md:text-5xl
+                    lg:text-[52px] lg:-tracking-[1.56px]">
+                    What Included in <br>  our free audit
+        </div>
+        <!-- Decorative line -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="hidden absolute -right-32 -top-2 lg:flex" width="113" height="113" viewBox="0 0 113 113" fill="none">
+          <g clip-path="url(#clip0_745_820)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.56325 36.2052C43.0899 24.8407 75.5515 49.1466 95.1229 81.1199C95.4601 81.6684 96.1796 81.8429 96.7281 81.5057C97.2767 81.1685 97.4511 80.4491 97.1139 79.9006C76.9962 47.0306 43.5072 22.2835 3.90137 33.9671C3.28398 34.1478 2.9312 34.7971 3.11321 35.4171C3.29398 36.0345 3.94319 36.3872 4.56325 36.2052Z" fill="#8057FF"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M95.7508 79.9098C93.9581 78.913 91.722 77.6372 91.4641 77.4999C84.4732 73.7768 77.2794 71.3378 69.4802 69.8656C68.8473 69.7454 68.2356 70.1636 68.1153 70.7965C67.9951 71.4294 68.4133 72.041 69.0462 72.1613C76.6096 73.5865 83.5869 75.95 90.3678 79.5622C90.7632 79.7725 95.788 82.6436 96.8476 83.1479C97.2813 83.3567 97.5915 83.3401 97.6644 83.3293C98.0533 83.2863 98.2873 83.0973 98.4381 82.9175C98.6067 82.7133 98.8028 82.3083 98.7315 81.7313C98.6544 81.1277 98.1892 79.9213 98.0963 79.6072C96.7085 74.8651 94.7464 69.6934 93.9065 64.5495C93.1052 59.6441 93.3249 54.758 96.2438 50.3437C96.5996 49.8066 96.45 49.0809 95.9129 48.725C95.3758 48.3692 94.65 48.5188 94.2942 49.0558C91.0318 53.9918 90.7059 59.4428 91.6009 64.9246C92.4365 70.0381 94.3455 75.179 95.7508 79.9098Z" fill="#8057FF"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_745_820">
+              <rect width="84.5308" height="84.5308" fill="white" transform="translate(35.3848 112.154) rotate(-114.747)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <!-- Arrows for sliders. They are defined (set classes) in the slider itself -->
+      <div class="hidden scroll-animation md:flex items-center">
+
+        <div class="arrow-prev rounded-full border bg-white border-gray-100 flex justify-center items-center w-14 h-14 cursor-pointer mr-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="arrow-next rounded-full border bg-white border-gray-100 flex justify-center items-center w-14 h-14 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <FreeAuditSlider />
+</section>
+
+<style>
+
+</style>

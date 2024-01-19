@@ -1,0 +1,94 @@
+---
+import ServicesLink from "../../components/ServicesLink.astro";
+import MainButton from "../../components/Buttons/MainButton.astro";
+
+// default cards
+const {
+  card1 = {icon: "😭", name: "Full-time employee", descr: "$50k/year, at least."},
+  card2 = {icon: "👨‍💻", name: "Development cost ", descr: "$2k/month, for anything decent."}, 
+  card3 = {icon: "👨‍💻", name: "Development cost ", descr: "$2k/month, for anything decent."}, 
+  card4 = {icon: "😕", name: "Lack of cohesion", descr: "Wasted time, no guaranteed results"}} = Astro.props
+
+---
+
+
+<section class="bg-black pb-16 relative overflow-hidden mb-16
+                  md:mb-32 md:pb-20 lg:pb-36">
+
+  <!-- Decorative -->
+  <div class="absolute blur-[70px] bg-error-500 w-[233px] h-[176px] rotate-[57deg] rounded-full opacity-20 -left-36 -bottom-14 md:w-[316px] md:h-[238px] md:blur-[100px]"></div>
+  <div class="absolute blur-[70px] bg-error-500 w-[233px] h-[176px] rotate-[57deg] rounded-full opacity-20 -right-36 -bottom-14 md:w-[316px] md:h-[238px] md:blur-[100px]"></div>
+
+
+  <div class="container xl:max-w-[1254px]">
+    <div class="wrap w-full flex-col-center lg:flex-row lg:justify-between">
+
+      <div class="lg:w-full">
+          <div class="text-[28px] -tracking-[0.84px] text-white !leading-117 font-bold sm:text-center md:text-4xl lg:mb-6 lg:max-w-[488px] lg:-tracking-[1.26px] lg:text-[42px] lg:text-left">Consider avoiding <span class="inline-block">in-house</span> designer hires</div>
+
+          <p class="-tracking-[0.16px] hidden leading-135 font-medium text-white text-opacity-80 mb-8 lg:flex">Request free audit and our experts will find best solution for you</p>
+          <div class="hidden z-10 lg:flex">
+            <MainButton title="Request Audit" link="/free-audit" style="w-full max-w-full h-[59px] sm:max-w-[219px]" />
+          </div>
+      </div>
+
+      <!-- Cards wrapper -->
+      <div class="flex flex-col justify-between items-start max-w-[1158px] mt-12 w-full mb-16 z-10
+      sm:flex-row sm:justify-around sm:flex-wrap lg:m-0 lg:justify-between lg:max-w-[500px] xl:max-w-[600px] lg:flex-row">
+
+        <div class="flex items-center mb-10 md:flex-col md:items-start xl:pr-5  md:w-[216px] xl:w-[276px]">
+          <div class="mr-6 text-[32px] md:mb-6">
+          {card1.icon}
+          </div>
+
+          <div class="">
+            <div class="text-white mb-1 font-bold text-xl leading-117 -tracking-[0.6px] 
+                      md:text-2xl md:mb-3">{card1.name}</div>
+            <div class="font-semibold text-[rgba(255,255,255,0.8)] tracking-[-0.16px]">{card1.descr}</div>
+          </div>
+        </div>
+
+        <div class="flex items-center mb-10 md:flex-col md:items-start xl:pr-5  md:w-[216px] xl:w-[276px]">
+          <div class="mr-6 text-[32px] md:mb-6">
+            {card2.icon} 
+          </div>
+          <div class="">
+            <div class="text-white mb-1 font-bold text-xl leading-117 -tracking-[0.6px] 
+                      md:text-2xl md:mb-3">{card2.name}</div>
+            <div class="font-semibold text-[rgba(255,255,255,0.8)] tracking-[-0.16px]">{card2.descr}</div>
+          </div>
+        </div>
+
+        <div class="flex items-center mb-10 md:flex-col md:items-start xl:pr-5  md:w-[216px] xl:w-[276px]">
+          <div class="mr-6 text-[32px] md:mb-6">
+          {card3.icon}
+          </div>
+
+          <div class="">
+            <div class="text-white mb-1 font-bold text-xl leading-117 -tracking-[0.6px] 
+                      md:text-2xl md:mb-3">{card3.name}</div>
+            <div class="font-semibold text-[rgba(255,255,255,0.8)] tracking-[-0.16px]">{card3.descr}</div>
+          </div>
+        </div>
+
+        <div class="flex items-center mb-10 md:flex-col md:items-start md:w-[216px] xl:w-[276px]">
+          <div class="mr-6 text-[32px] md:mb-6">
+          {card4.icon}
+          </div>
+          <div class="">
+            <div class="text-white mb-1 font-bold text-xl leading-117 -tracking-[0.6px] 
+                      md:text-2xl md:mb-3">{card4.name}</div>
+            <div class="font-semibold text-[rgba(255,255,255,0.8)] tracking-[-0.16px]">{card4.descr}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:hidden"><ServicesLink /></div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>

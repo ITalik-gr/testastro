@@ -1,0 +1,25 @@
+---
+
+import { Image } from 'astro:assets';
+import user_1 from '../../images/Users/user-1.png'
+import MainButton from '../Buttons/MainButton.astro';
+
+const {} = Astro.props
+
+---
+<div class=" bg-white rounded-xl p-4 pb-6 w-full max-w-[240px] hidden flex-col-center | lg:flex xl:sticky xl:top-8 xl:right-0 | xl:pt-5 xl:px-6 xl:max-w-[300px]">
+  <!-- Image / Text -->
+  <div class="mb-6 flex flex-col">
+    <Image src={user_1} class='mb-5 max-w-[75px]' alt='User pic' />
+    <div class="">
+      <div class="leading-117 mb-2 -tracking-[0.16px] text-[20px] | md:font-bold xl:text-2xl">Want to know more?</div>
+      <p class="font-medium text-gray-700 leading-135 -tracking-[0.14px]">Contact us and we will answer all your questions</p>
+    </div>
+  </div>
+  <!-- Btn -->
+  <MainButton style="w-full max-w-[251px]" title="Contact Us" link="/contact" />
+</div>
+
+<style>
+
+</style>

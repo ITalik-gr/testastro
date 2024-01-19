@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+
+import FileCheck from '../../images/Icons/file-check.svg';
+import UserPicIcon from '../../images/Icons/user.svg';
+import MailIcon from '../../images/Icons/mail.svg';
+import GlobeIcon from '../../images/Icons/globe.svg';
+import MainButton from "../../components/Buttons/MainButton.astro";
+
+const {sectionStyle = "", cardStyle = "", doubt = false, line = true, smallCard = false} = Astro.props
+
+---
+<section class={`bg-gray-50 ${doubt ? 'pt-6' : ''} ${sectionStyle}`}>
+
+  
+  <!-- Decorative Line -->
+  {line && 
+    <div class={`w-full flex justify-center mb-7 relative z-50 | lg:mb-0 | ${doubt && '!mb-11'}`}>
+      <svg class={`decorate-line z-20 h-full w-full max-w-[90px] max-h-[100px] | 
+      ${smallCard && "lg:!-mt-3"} | sm:max-w-[160px] sm:max-h-[160px] md:-mb-1`} xmlns="http://www.w3.org/2000/svg" width="134" height="137" viewBox="0 0 174 177" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M87.0731 71.5062C85.2872 70.1697 83.3266 69.0286 81.1754 68.1097C73.6271 64.8836 64.0044 69.0151 57.1151 75.9944C50.2282 82.9706 46.218 92.6526 49.3169 99.9608C51.0881 104.14 53.5998 106.463 56.4318 107.493C59.2493 108.518 62.44 108.257 65.6856 107.068C74.7311 103.749 84.2704 93.0826 86.5397 86.6128C87.5878 83.6194 88.4322 80.5568 89.0925 77.4493C95.2133 84.2307 98.235 94.2608 99.3437 105.395C101.754 129.593 95.0208 159.078 89.5799 173.769C89.2876 174.558 89.6917 175.432 90.481 175.725C91.2703 176.017 92.1477 175.615 92.4401 174.826C97.9884 159.844 104.835 129.771 102.376 105.094C101.107 92.3467 97.3283 81.0494 89.7851 73.8083C93.724 50.2335 88.0969 24.0483 83.5031 1.82835C83.3359 1.00552 82.5265 0.474413 81.7014 0.644648C80.8792 0.817229 80.3474 1.62123 80.5176 2.44642C84.9223 23.7587 90.4127 48.7852 87.0731 71.5062ZM86.498 74.9316C84.5819 73.3104 82.4147 71.9522 79.9735 70.9119C73.4412 68.1188 65.2458 72.0924 59.2822 78.1343C55.6283 81.8389 52.8024 86.3656 51.7359 90.8009C51.0642 93.589 51.0915 96.3331 52.1264 98.7707C53.4824 101.97 55.3077 103.842 57.4744 104.627C59.6533 105.422 62.1215 105.128 64.6339 104.204C72.8788 101.181 81.5963 91.4941 83.6612 85.6047C84.8801 82.1313 85.8101 78.5664 86.498 74.9316Z" fill="#8057FF"/>
+      </svg>
+    </div> 
+  }
+
+  
+  <div class="container">
+    <div class="wrap flex justify-center">
+      <!-- Card -->
+
+      {smallCard ? (
+        <div data-threshold="0.3" class="scroll-animation scroll-animation-scale card w-full relative rounded-xl bg-white px-4 pt-12 pb-[24px] flex flex-col 
+                    items-center justify-center -mb-[25px] 
+                    sm:max-w-[460px]
+                    lg:max-w-[658px] lg:py-[52ox] lg:-mb-[55px]">
+
+
+          <Image class="mb-4 md:mb-5" src={FileCheck} alt="File check image"/>
+
+          <div class="text-[28px] font-bold -tracking-[0.98px] leading-[109.5%] mb-2 md:texy-[48px] lg:text-[52px] lg:mb-3">
+          Request free audit
+          </div>
+
+          <p class="text-gray-700 text-center font-medium -tracking-[0.14px] leading-135 max-w-[238px] mb-6 
+                  md:max-w-none md:mb-10">
+                  Get a free audit of your product from PPC marketing experts
+          </p>
+
+          <MainButton style="w-full h-[59px] text-lg sm:max-w-[281px]" link="#header" title="Fill out form" />
+
+        </div>
+      ) : ( 
+        <div data-threshold="0.36" class={`scroll-animation scroll-animation-scale card w-full relative rounded-xl bg-white px-4 pt-12 pb-[36px] flex flex-col 
+                    items-center justify-center -mb-[25px] 
+                    sm:max-w-[460px]
+                    lg:max-w-[904px] lg:pt-[68px] lg:pb-[92px] lg:-mb-[75px] | ${cardStyle}`}>
+
+          {doubt && <div class="absolute left-1/2 -translate-x-1/2 -top-[18px] p-3 rounded-xl bg-primary-500 text-white text-sm font-bold -tracking-[0.49px] | lg:text-[22px]">Still in doubt? 🤔</div> }
+
+          <Image class="mb-4 md:mb-5" src={FileCheck} alt="File check image"/>
+
+          <div class="text-[28px] font-bold -tracking-[0.98px] leading-[109.5%] mb-2 md:texy-[48px] lg:text-[52px] lg:mb-3">
+            Get free audit
+          </div>
+
+          <p class="text-gray-700 text-center font-medium -tracking-[0.14px] leading-135 max-w-[238px] mb-6 
+                      md:max-w-none md:mb-10">
+            Get a free audit of your product from PPC marketing experts
+          </p>
+
+          <form action="" class="audit-form w-full flex flex-col items-center justify-center">
+
+            <div class="w-full flex flex-col items-center justify-center | lg:flex-row lg:mb-9">
+              <div class="input-wrap flex items-center  px-4 w-full rounded-xl border border-gray-100  mb-6
+                          sm:max-w-[340px] sm:w-full lg:max-w-[232px] lg:mr-4 lg:mb-0">
+                <Image width={24} class='mr-[5px] py-[14px]' src={UserPicIcon} alt="User Pic Icon" />
+                <input required placeholder="Your name" name="name" type="text" 
+                class="pl-[5px] h-[52px] font-medium placeholder:text-gray-500 text-black outline-none w-full">
+              </div>
+
+              <div class="input-wrap flex items-center  px-4 w-full rounded-xl border border-gray-100  mb-6
+                          sm:max-w-[340px] sm:w-full lg:max-w-[232px] lg:mr-4 lg:mb-0">
+                <Image width={24} class='mr-[5px] py-[14px]' src={MailIcon} alt="Mail Pic Icon" />
+                <input required placeholder="Enter your email" name="email" type="email" 
+                class=" pl-[5px] h-[52px] font-medium placeholder:text-gray-500 text-black outline-none w-full">
+              </div>
+
+              <div class="input-wrap flex items-center  px-4 w-full rounded-xl border border-gray-100  mb-6
+                          sm:max-w-[340px] sm:w-full lg:max-w-[232px] lg:mb-0">
+                <Image width={24} class='mr-[5px] py-[14px]' src={GlobeIcon} alt="Globe Pic Icon" />
+                <input required placeholder="Your website" name="website" type="text" 
+                class="pl-[5px] h-[52px] font-medium placeholder:text-gray-500 text-black outline-none w-full">
+              </div>
+            </div>
+
+            <button class="submit-btn btn w-full h-[59px] text-lg sm:max-w-[340px] lg:max-w-[727px]" type="submit">Submit</button>
+            
+          </form>
+        </div>
+        )}
+
+
+      
+    
+      
+    </div>
+  </div>
+
+</section>
+
+<style>
+
+</style>
+
+<script src="../../scripts/free-audit.js"></script>

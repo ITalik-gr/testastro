@@ -1,0 +1,102 @@
+{
+  "B2B-PPC-Agency": {
+    "title": "The B2B PPC Agency to Scale  Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/B2BPPCAgency-mob.svg",
+    "image": "/image/Industries/B2BPPCAgency.svg"
+  },
+  "SaaS-PPC-Agency": {
+    "title": "The SaaS PPC Agency to Scale  Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/SaaSPPCAgency-mob.svg",
+    "image": "/image/Industries/SaaSPPCAgency.svg"
+  },
+  "eCommerce-PPC-Agency": {
+    "title": "The eCommerce PPC Agency to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/eCommercePPCAgency-mob.svg",
+    "image": "/image/Industries/eCommercePPCAgency.svg"
+  },
+  "Lawyers-PPC-Agency": {
+    "title": "The PPC Agency for Lawyers to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/LawyersPPCAgency-mob.svg",
+    "image": "/image/Industries/LawyersPPCAgency.svg"
+  },
+  "Real-Estate-PPC-Agency": {
+    "title": "The Real Estate PPC Agency PPC Agency to Scale  Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/RealEstatePPCAgency-mob.svg",
+    "image": "/image/Industries/RealEstatePPCAgency.svg"
+  },
+  "Doctors-PPC-Agency": {
+    "title": "The PPC Agency for Doctors to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/DoctorsPPCAgency-mob.svg",
+    "image": "/image/Industries/DoctorsPPCAgency.svg"
+  },
+  "Accountants-PPC-Agency": {
+    "title": "The PPC Agency for Accountants to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/AccountantsPPCAgency-mob.svg",
+    "image": "/image/Industries/AccountantsPPCAgency.svg"
+  },
+  "Dentist-PPC-Agency": {
+    "title": "The PPC Agency for Dentists to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/DentistPPCAgency-mob.svg",
+    "image": "/image/Industries/DentistPPCAgency.svg"
+  },
+  "Car-Dealerships-PPC-Agency": {
+    "title": "The Car Dealership PPC Agency to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/CarDealershipsPPCAgency-mob.svg",
+    "image": "/image/Industries/CarDealershipsPPCAgency.svg"
+  },
+  "Hotels-PPC-Agency": {
+    "title": "The PPC Agency for Hotels to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/HotelsPPCAgency-mob.svg",
+    "image": "/image/Industries/HotelsPPCAgency.svg"
+  },
+  "Plumbers-PPC-Agency": {
+    "title": "The PPC Agency for Plumbers to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/PlumbersPPCAgency-mob.svg",
+    "image": "/image/Industries/PlumbersPPCAgency.svg"
+  },
+  "HVAC-PPC-Agency": {
+    "title": "The PPC Agency for HVAC to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/PPCforHVAC-mob.svg",
+    "image": "/image/Industries/PPCforHVAC.svg"
+  },
+  "Plastic-Surgery-PPC-Agency": {
+    "title": "The Plastic Surgery PPC Agency to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/PlasticSurgeryPPCAgency-mob.svg",
+    "image": "/image/Industries/PlasticSurgeryPPCAgency.svg"
+  },
+  "Gyms-PPC-Agency": {
+    "title": "The PPC Agency for Gyms to Scale Massive Growth",
+    "descr": "Paid ad strategy that drives massive growth",
+    "mobileImage": "/image/Industries/GymsPPCAgency-mob.svg",
+    "image": "/image/Industries/GymsPPCAgency.svg"
+  },
+
+  "Links": {
+    "Primary": [ "B2B-PPC-Agency","SaaS-PPC-Agency","eCommerce-PPC-Agency","Lawyers-PPC-Agency"],
+    "Others": [
+      "Real-Estate-PPC-Agency",
+      "Doctors-PPC-Agency",
+      "Accountants-PPC-Agency",
+      "Dentist-PPC-Agency",
+      "Car-Dealerships-PPC-Agency",
+      "Hotels-PPC-Agency",
+      "Plumbers-PPC-Agency",
+      "HVAC-PPC-Agency",
+      "Plastic-Surgery-PPC-Agency",
+      "Gyms-PPC-Agency"
+    ]
+  }
+}

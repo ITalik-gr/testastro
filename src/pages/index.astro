@@ -1,0 +1,89 @@
+---
+import '../styles/main.css';
+
+import MainLayout from "../layouts/MainLayout.astro";
+import MainHeader from "../components/Headers/MainHeader.astro";
+
+
+
+
+import OurCase from '../sections/Base/OurCase.astro';
+import VideoBlock from '../sections/VideoBlock.astro';
+
+import Footer from '../sections/Base/Footer.astro';
+import FreeAudit from '../sections/Base/FreeAudit.astro';
+
+import Price from '../sections/Price.astro';
+import Reviews from '../sections/Reviews.astro';
+import Numbers from '../sections/Numbers.astro';
+import Faq from '../sections/Faq.astro';
+import Approach from '../sections/Approach.astro';
+import FreeMarketingAudit from '../sections/FreeAudit/FreeMarketingAudit.astro';
+import Parthners from '../sections/Base/Parthners.astro';
+import InsaneGrowthMain from '../sections/InsaneGrowth/InsaneGrowthMain.astro';
+import ServicesItems from '../sections/ServicesItems.astro';
+
+const meta = {
+	title: "PPC.io",
+	descr: "PPC.io description",
+	metaImage: "https:metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png",
+}
+---
+
+
+	<MainLayout pageTitle="PPC.io" meta={meta}>
+
+		<MainHeader />
+
+
+		<!-- Approach block -->
+		<Approach />
+
+		<!-- partners -->
+		<Parthners />
+
+
+		<OurCase />
+	
+		<FreeMarketingAudit />
+
+
+		<InsaneGrowthMain />
+
+		<!-- Video -->
+		<VideoBlock />
+
+
+		<!-- Services Items -->
+		<ServicesItems />
+
+
+		<!-- Price -->
+		<Price />
+
+		<!-- Reviews -->
+		<Reviews sectionStyle="pt-16 !pb-16 md:pt-20 lg:pb-0 lg:pt-[144px]" />
+
+		<!-- Nummbers -->
+
+		<Numbers />
+
+		<!-- Faq -->
+		<Faq />
+
+
+		<!-- Audit -->
+		<FreeAudit cardStyle="pt-6" />
+
+		<Footer />
+		
+	</MainLayout>
+
+
+<style>
+
+
+
+</style>
+
+

@@ -1,0 +1,24 @@
+---
+
+const {items} = Astro.props
+
+---
+<ul class="mt-7 child:mb-7 last:!mb-0 | lg:my-5">
+  {items.map((text) => {
+    return (
+      <li class={`text-black flex -tacking-[0.24px] font-medium leading-6 | lg:text-xl lg:leading-8`}> 
+        <span class="pr-2">
+          <svg class="mt-1 | lg:mt-[9px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.3337 4L6.00033 11.3333L2.66699 8" stroke="#8057FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span> 
+        <Fragment set:html={text} />
+      </li>
+    )
+  })}
+  
+</ul>
+
+<style>
+
+</style>

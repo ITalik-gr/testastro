@@ -1,0 +1,133 @@
+---
+import { Image } from "astro:assets";
+import BlackButton from "../Buttons/BlackButton.astro";
+
+import Phone from '../../images/Icons/phone.svg'
+import MainButton from "../Buttons/MainButton.astro";
+
+const { type = "Starter", popular = false, callLink = "/", styles, white = false} = Astro.props
+
+
+const cardType = {
+  "Starter": {
+    name: "Starter",
+    price: "$2,000",
+    list: ["Google Ads Platform only", "Advanced Keyword Research", "Competitor Analysis", "Ongoing CPC Optimization", "Growth Ideast", "Conversion Rate Optimization", "Limited Landing Page Design", "Limited Ad Design"],
+    notIncluding: ["All Social Platforms - Facebook, Instagram, LinkedIn, Reddit, TikTok etc.", "Unlimited Ad Design", "Unlimited Landing Page Design"],
+    btnLabel: "Get Started",
+    btnLink: "/pricing"
+    // callLink: "/",
+  },
+  "Advanced": {
+    name: "Advanced",
+    price: "$4,000",
+    list: ["Google Ads Platform", "Advanced Keyword Research", "Competitor Analysis", "Ongoing Optimization", "Growth Ideas", "Conversion Rate Optimization", "All Social Platforms - Facebook, Instagram, LinkedIn, Reddit, TikTok etc.", "Unlimited Ad Design", "Unlimited Landing Page Design"],
+    btnLabel: "Let's Rock!",
+    btnLink: "/pricing",
+    // callLink: "/",
+  },
+  "from500": {
+    name: "From",
+    price: "$500",
+    list: ["Live performance dashboard", "Beautiful branded monthly reports", "Ideas list for your clients", "Landing page design", "Click fraud prevention", "Ongoing optimization", "A/B testing", "Copywriting"],
+    btnLabel: "Contact Us",
+    btnLink: "/pricing",
+    // callLink: "/",
+  },
+
+}
+
+
+
+---
+<div data-threshold="0.3" class={`${white ? 'bg-white' : 'bg-gray-900'} ${styles} rounded-xl px-4 py-6 w-full relative 
+              sm:pt-9 sm:px-[30px] sm:pb-[30px] sm:max-w-[426px] sm:rounded-3xl sm:h-[780px] sm:flex sm:flex-col sm:justify-between scroll-animation`}>
+
+  {popular && (
+    <div class="absolute -top-[9px] right-3 bg-[#F04438] uppercase px-[13px] text-xs py-[9px] text-white font-extrabold rounded-lg sm:rotate-3 sm:text-sm md:-right-5">
+      Most Popular
+    </div>
+  )}
+
+  <div class="bl ">
+    <!-- type -->
+    <div class=`mb-2 font-semibold ${type == "Starter" ? (white ? 'text-[#6880FF]' : 'text-[#CDD5FF]') : (white ? 
+    "text-primary-500" : "text-[#A182FF]")} ${type == 'from500' ? 'text-gray-200 !text-base sm:!mb-3' : ""}
+                sm:text-2xl sm:mb-4`>
+      {cardType[type].name}
+    </div>
+
+    <!-- Price -->
+    <div class="flex mb-5 items-end sm:mb-6">
+      <div class={`${white ? "text-black" : "text-white"} text-4xl font-bold leading-117 mr-1  -tracking-[1.08px] 
+                    sm:text-[52px] sm:mr-2`}>{cardType[type].price}</div>
+
+      <div class={`${white ? "text-gray-600" : "text-gray-200"} text-sm font-medium leading-117 mb-2 sm:text-base`}>
+        {type == 'from500' ? "/mo" : "Monthly Fee"}
+        </div>
+    </div>
+
+    <!-- Button -->
+
+    <div class="mb-6 sm:mb-10">
+      {type == "Starter" ? (
+        <BlackButton title={cardType[type].btnLabel} link={cardType[type].btnLink} />
+      ) : (
+        <MainButton style="sm:btn-shadow-2" title={cardType[type].btnLabel} link={cardType[type].btnLink}/>
+      )}
+    </div>
+  
+
+    <!-- List -->
+
+    <ul class="mb-6 sm:mb-7">
+      {cardType[type].list.map((item) => {
+        return (
+          <li class={`${white ? "text-black" : "text-white "} mb-[18px] -tracking-[0.16px] !leading-117 text-sm font-medium flex items-center sm:text-base`}>
+            <span class="mr-2 block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M11.6663 3.5L5.24967 9.91667L2.33301 7" stroke={white ? "#8057FF" : "white"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            {item}
+          </li>
+        )
+      })}
+      {cardType[type].notIncluding && cardType[type].notIncluding.map((item) => {
+        return (
+          <li class={`${white ? "text-gray-500" : "text-[rgba(255,255,255,0.5)]  "} -tracking-[0.16px] mb-[18px] !leading-117 text-sm font-medium flex items-center sm:text-base`}>
+            <span class="mr-2 block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <g opacity={white ? "1" : "0.5"}>
+                  <path d="M10.5 3.5L3.5 10.5M3.5 3.5L10.5 10.5" stroke={white ? "#A2A2C1" : "white"} stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </span>
+            {item}
+          </li>
+        )
+      })}
+    </ul>
+  </div>
+
+  <div class="bl">
+    <!-- hr -->
+    <div class={`w-full h-[1px]  ${white ? "bg-[#E5E5F9]" : "bg-[rgba(64,64,79,0.6)]"} mb-6 sm:mb-5`}></div>
+
+    <!-- Book a call btn -->
+
+    <a href="#" class={`font-bold ${white ? "text-black" : "text-white"} leading-117 flex items-center call-hover sm:text-lg`}>
+      <Image src={Phone} alt="Call" class="mr-2" />
+      Book a call
+    </a>
+  </div>
+
+
+
+  
+
+</div>
+
+<style>
+
+</style>

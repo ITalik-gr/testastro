@@ -1,0 +1,116 @@
+---
+import MainButton from "../components/Buttons/MainButton.astro";
+
+
+
+const Services = [
+  "Offline Conversion Tracking",
+  "Remarketing List For Search Ads",
+  "Bidding Strategy Variety",
+  "Keyword Tapering",
+  "New Keyword Expansions",
+  "Retargeting Improvements",
+  "Time Based Split Testing",
+  "Tailored Dashboard Reporting",
+  "Conversion Intent Grouping",
+  "New Google Ad Betas",
+  "Custom YouTube Audiences",
+  "Single Keyword Ad Groups",
+  "Copy Testing In Ads",
+  "Geographic Bid Adjustments",
+  "Display Ad Opportunities",
+  "New Creative Ad Launches",
+  "Conversion Quality Improving",
+  "Efficient Shopping Campaigns",
+  "Negative Keyword Additions",
+  "Sales Level Tracking"
+]
+
+const {} = Astro.props
+
+---
+<section class="py-16 lg:py-28 xl:pt-[140px] xl:pb-[214px]">
+  <div class="container">
+    <div class="wrap md:flex md:justify-between xl:items-center">
+
+      <!-- Text | left block -->
+      <div class="scroll-animation xl:max-w-[433px] lg:w-full">
+        <div class="mb-[10px] text-primary-500 font-bold text-sm -tracking-[0.42px] lg:text-base">We Get Results</div>
+        <div class="text-[28px] -tracking-[0.84px] !leading-117 font-bold mb-5 md:text-3xl lg:text-4xl xl:-tracking-[1.56px] xl:text-[52px]">
+          The List of Services we offer
+        </div>
+        <p class="text-sm text-gray-800 leading-135 font-medium -tracking-[0.42px] mb-5 md:max-w-xs lg:text-xl lg:max-w-[433px]">
+          If we somehow left something out, you can let us knowwhen we give you your free marketing plan.
+        </p>
+        <MainButton style="hidden max-w-[246px] xl:flex" title="Request Free Audit" link="/free-audit" lines={true} linesStyle="left-auto rotate-[-125deg] -right-10 -bottom-8" />
+      </div>
+
+      <!-- List | Right -->
+      <div class="flex flex-col-center lg:w-full lg:items-end xl:hidden">
+        <!-- Dropdown card -->
+        <div class="border rounded-[10px] max-w-sm w-full border-gray-100 px-3 py-[18px] mb-5 lg:max-w-md xl:border-none">
+
+          <!-- Dropdown nav -->
+          <div class="dropdown-nav flex items-center justify-between text-black font-bold leading-135 -tracking-[0.24px] cursor-pointer xl:hidden">
+            See All Services
+            <svg xmlns="http://www.w3.org/2000/svg" class="transition-all" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M6 9L12 15L18 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Dropdown body -->
+          <div class="dropdown-body max-h-0 overflow-hidden transition-all duration-700 ">
+            <ul class="child:mb-5 last:mb-0 mb-7 xl:columns-2">
+              {Services.map((item) => {
+                return (
+                  <li class="text-sm flex items-center font-semibold leading-117 text-gray-700 -tracking-[0.21px] md:text-base lg:text-lg">
+                    <span class="min-w-[8px] h-2 rounded-full bg-primary-500 mr-2"></span>
+                    {item}
+                  </li>
+                )
+              })}
+             
+            </ul>
+
+            <div class="dropdown-close font-bold text-center text-gray-700 pt-[18px] border-t border-[#E5E5F9] cursor-pointer 
+                        xl:hidden">Hide</div>
+          </div>
+        </div>
+
+        <MainButton style="max-w-sm w-full h-[60px] lg:max-w-md" title="Request Free Audit" />
+      </div>
+
+      <!-- Dscktop Right block -->
+      <div class="scroll-animation delay-200 hidden xl:flex">
+        <ul class="columns-2 child:mb-8 last:mb-0 gap-20">
+          {Services.map((item) => {
+            return (
+              <li class="text-sm flex items-center font-semibold leading-117 text-gray-700 -tracking-[0.21px] md:text-base lg:text-lg">
+                <span class="min-w-[8px] h-2 rounded-full bg-primary-500 mr-2"></span>
+                {item}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+<script>
+  const dropdownNav = document.querySelector('.dropdown-nav'),
+        dropdownBody = document.querySelector('.dropdown-body'),
+        dropdownClose = document.querySelector('.dropdown-close');
+
+
+  const toggleDropwodn = () => {
+    dropdownBody.classList.toggle('services-dropdown-active')
+    dropdownNav.querySelector('svg').classList.toggle('rotate-[180deg]')
+  }
+  dropdownNav.addEventListener('click', toggleDropwodn)
+  dropdownClose.addEventListener('click', toggleDropwodn)
+</script>

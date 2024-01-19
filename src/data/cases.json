@@ -1,0 +1,86 @@
+{
+  "JobSage": {
+    "name": "JobSage",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/image/Case/JobSage.svg",
+    "wrappedText": "14,852%",
+    "roas": "14,582%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "ARCRelocation": {
+    "name": "ARC Relocation",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/ARC.svg",
+    "wrappedText": "14,852%",
+    "roas": "14,582%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "OnlineCoursesSite": {
+    "name": "Online Courses Site",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/Udemy.svg",
+    "wrappedText": "14,852%",
+    "roas": "84,582%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "SnackNation": {
+    "name": "Snack Nation",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/SnackNation.svg",
+    "wrappedText": "14,852%",
+    "roas": "14,582%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "FollowUpBoss": {
+    "name": "Follow Up Boss",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/FollowUp.svg",
+    "wrappedText": "14,852%",
+    "roas": "357%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "PDFSimpli": {
+    "name": "PDF Simpli",
+    "title": "982% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/PDF.svg",
+    "wrappedText": "982%",
+    "roas": "983%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  },
+  "MachineryeCommerce": {
+    "name": "Machinery eCommerce",
+    "title": "14,852% Organic Traffic Growth for an employee transparency platform",
+    "image": "/public/image/Case/Machinery.svg",
+    "wrappedText": "14,852%",
+    "roas": "14,582%",
+    "IncreasedSales": "32%",
+    "IncreasedSalesBefore": "12%",
+    "ConversionRateIncrease": "1.2%",
+    "LeadDecrease": "-13.2%",
+    "RevenueIncrease": "1.2%"
+  }
+}

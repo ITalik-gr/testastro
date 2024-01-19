@@ -1,0 +1,50 @@
+---
+
+import IncludedCard from '../Cards/IncludedCard.astro';
+
+const Included = [
+  {
+    image: "Search",
+    title: "Fixing Leaks",
+    descr: "First and foremost, we’ll analyze your existing accounts to figure out what you could be doing better."
+  },
+  {
+    image: "ChartCircle",
+    title: "Strategy",
+    descr: "We’ll highlight some key strategies that we can implement to achieve significant growth."
+  },
+  {
+    image: "Telescope",
+    title: "Competitor Intelligence",
+    descr: "We’ll identify high-growth players in your industry and show you how they’re achieving growth. "
+  },
+  {
+    image: "Coins_2",
+    title: "Pricing Options",
+    descr: "We’ll give you a clear overview of exactly how much our services cost"
+  },
+  {
+    image: "PieChart",
+    title: "Expansion Ideas",
+    descr: "Once we have a good foundation, there’s going to be some obvious areas for expansion."
+  },
+]
+
+const {style = "|", data = Included} = Astro.props
+
+---
+
+    <div data-aligh-left="true" class={`slider scroll-animation flex w-full child:mr-5 ${style}`}>
+
+        <!-- Slides -->
+        {data.map((item) => {
+          return (
+          <div class="slider-item">
+            <IncludedCard title={item.title} descr={item.descr} image={item.image} />
+          </div>
+          )
+        })}
+        
+    </div>
+
+

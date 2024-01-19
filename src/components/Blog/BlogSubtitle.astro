@@ -1,0 +1,14 @@
+---
+
+
+const {title, id, style} = Astro.props
+
+---
+<div id={id ? id : ""} 
+     class={`text-gray-800 font-bold text-xl leading-[150%] -tracking-[0.3px] | lg:text-2xl xl:mb-5 ${style}`}>
+ {title}
+</div>
+
+<style>
+
+</style>

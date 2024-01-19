@@ -1,0 +1,56 @@
+---
+
+
+const {name, volume, trafficPotential, estimated, last} = Astro.props
+
+---
+<div class="group md:hover:bg-gray-800 transition-all duration-300 md:h-[73px] ">
+
+  <div class=`md:group-hover:hidden flex flex-col-center items-start border-b py-4 border-[#26262F] md:grid md:items-center md:grid-cols-5  md:px-8  ${last ? "!border-none" : ""}`>
+    <!-- Name -->
+    <div class="flex items-center mb-5 col-span-2 md:w-[270px] md:mb-0">
+      <svg class="max-w-4 mr-[6px] md:mr-2 md:max-w-none" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z" stroke="#64647B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class=" text-gray-200 font-semibold -tracking-[0.18px] sm:text-lg">
+        {name}
+      </div>
+    </div>
+  
+    <!-- Volume -->
+    <div class="col-span-1 w-full mb-3 flex items-center justify-between md:justify-center md:pl-5 md:mb-0">
+      <div class="text-xs text-white font-bold text-opacity-60 sm:text-base md:hidden">Search volume</div>
+      <div class=" text-white font-bold -tracking-[0.2px] md:text-xl">{volume}</div>
+    </div>
+  
+    <!-- Traffic potential -->
+    <div class="flex w-full mb-3  justify-between items-center md:justify-end md:mb-0">
+
+      <div class="text-xs text-white font-bold text-opacity-60 sm:text-base  md:hidden">Traffic potential</div>
+
+      <div class=" rounded-lg flex col-span-1 md:bg-primary-700 md:p-[10px]">
+        <div class="leading-none text-white font-bold -tracking-[0.2px] md:text-xl">{trafficPotential}</div>
+      </div>
+      
+    </div>
+  
+    <!-- Estimated CPC -->
+    <div class="w-full col-span-1 mb-3  flex justify-between items-center md:justify-end md:mb-0">
+      <div class="text-xs text-white font-bold text-opacity-60 sm:text-base  md:hidden">Estimated CPC</div>
+      <div class="leading-none text-white font-bold -tracking-[0.2px] md:text-xl">${estimated}</div>
+      
+    </div>
+  </div>
+
+  <!-- Hover -->
+  <a href="/" class="md:group-hover:flex h-full px-8 hidden justify-between items-center">
+    <div class="text-lg font-bold text-white">Request Free Audit for your business</div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
+
+<style>
+
+</style>

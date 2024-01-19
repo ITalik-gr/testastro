@@ -1,0 +1,79 @@
+---
+import AdditionalServicesCard from "../components/Cards/AdditionalServicesCard.astro";
+import AdditionalSlider from "../components/Slider/AdditionalSlider.astro";
+
+import Facebook from '../images/Icons/AdditionalFacebook.svg'
+import Linkedin from '../images/Icons/AdditionalLinkedin.svg'
+import Amazone from '../images/Icons/AdditionalAmazone.svg'
+import GoogleAn from '../images/Icons/AdditionalGoogleAnalytics.svg'
+import Figma from '../images/Icons/AdditionalFigma.svg'
+import BlockText from "../components/BlockText.astro";
+
+const {sectionStyle = ""} = Astro.props
+
+const Additional = [
+  {
+    image: Facebook,
+    title: "Facebook PPC",
+    descr: "Everything you need to know about Facebook Marketing",
+    link: "/services/Facebook"
+  },
+  {
+    image: Linkedin,
+    title: "Linkedin PPC",
+    descr: "Everything you need to know about Linkedin Marketing",
+    link: "/services/Linkedin"
+  },
+  {
+    image: Amazone,
+    title: "Amazon PPC",
+    descr: "Everything you need to know about Amazon Marketing",
+    link: "/services/Amazon"
+  },
+  {
+    image: GoogleAn,
+    title: "White Label PPC",
+    descr: "Everything you need to know about White Label Marketing",
+    link: "/services/GoogleAds"
+  },
+  {
+    image: Figma,
+    title: "Landing Page Design",
+    descr: "Everything you need to know about our design strategies",
+    link: "/services/LandingPage"
+  },
+
+]
+
+---
+<section class={`pt-16 pb-24 lg:py-[120px] ${sectionStyle}`}>
+
+ <div class="container xl:max-w-[1296px]">
+  <BlockText textLeft={true} subtitle="We Get Results" title="Additional Services" />
+ </div>
+
+  <!-- Mobile Slider -->
+  <AdditionalSlider data={Additional} />
+  
+  <!-- Descktop version -->
+  <div class="container hidden lg:block xl:max-w-[1296px]">
+    <div class="scroll-animation wrap mt-16 flex flex-wrap child:mb-5 md:[&>*:nth-child(3)]:mr-0 lg:child:mr-5 xl:[&>*:nth-child(3)]:mr-5 xl:four:mr-0">
+      {Additional.map((item, i) => {
+        return <AdditionalServicesCard image={item.image} title={item.title} descr={item.descr} link={item.link} />
+      })}
+      
+    </div>
+  </div>
+
+    <!-- Decorate line -->
+    <div class="w-full flex justify-center mt-[38px] md:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" width="78" height="80" viewBox="0 0 78 80" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2303 32.2165C38.4257 31.6143 37.5423 31.1002 36.5731 30.6862C33.1723 29.2327 28.8368 31.0941 25.7329 34.2386C22.63 37.3817 20.8233 41.7438 22.2195 45.0365C23.0175 46.9194 24.1491 47.9659 25.4251 48.4302C26.6945 48.8917 28.132 48.7743 29.5943 48.2385C33.6697 46.7431 37.9676 41.9376 38.99 39.0226C39.4622 37.674 39.8427 36.2941 40.1402 34.8941C42.8978 37.9494 44.2593 42.4684 44.7588 47.4848C45.8448 58.3871 42.8111 71.6714 40.3598 78.2903C40.228 78.6459 40.4101 79.0398 40.7657 79.1716C41.1214 79.3033 41.5167 79.1222 41.6484 78.7666C44.1482 72.0166 47.2327 58.4675 46.1249 47.3494C45.5532 41.606 43.8507 36.5161 40.4522 33.2537C42.2268 22.6321 39.6916 10.8346 37.6219 0.823464C37.5465 0.452738 37.1819 0.213455 36.8101 0.290151C36.4397 0.367903 36.2001 0.730144 36.2768 1.10193C38.2613 10.704 40.735 21.9796 39.2303 32.2165ZM38.9712 33.7598C38.1079 33.0293 37.1315 32.4174 36.0316 31.9487C33.0885 30.6903 29.3961 32.4805 26.7093 35.2027C25.0631 36.8718 23.7898 38.9113 23.3093 40.9096C23.0067 42.1657 23.019 43.4021 23.4853 44.5003C24.0962 45.9418 24.9186 46.785 25.8948 47.1388C26.8765 47.4969 27.9885 47.3647 29.1205 46.9484C32.8351 45.5864 36.7628 41.2219 37.6931 38.5685C38.2423 37.0035 38.6613 35.3974 38.9712 33.7598Z" fill="#8057FF"/>
+      </svg>
+    </div>
+      
+</section>
+
+<style>
+
+</style>
